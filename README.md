@@ -66,32 +66,58 @@
 
 ## 🛠️ Tech Stack
 
-**Sprachen**
-
-- Java · C · C++ · C#  
-- JavaScript / TypeScript · Lua  
-- Python
-
-**Backend & Runtime**
-
-- Node.js
-
-**Datenbanken**
-
-- SQL / MySQL  
-- MongoDB (NoSQL / Document-DB)
-
-**Build, Config & DevOps**
-
-- Maven · npm  
-- YAML/YML  
-- Docker  
-- Git / GitHub
+<p align="center">
+  <table>
+    <tr>
+      <td align="left" valign="top">
+        <b>Sprachen</b><br>
+        <code>Java</code> · <code>C</code> · <code>C++</code> · <code>C#</code><br>
+        <code>JavaScript</code> · <code>TypeScript</code> · <code>Lua</code><br>
+        <code>Python</code>
+      </td>
+      <td align="left" valign="top">
+        <b>Backend & Runtime</b><br>
+        <code>Node.js</code><br><br>
+        <b>Datenbanken</b><br>
+        <code>SQL</code> · <code>MySQL</code> · <code>MongoDB</code>
+      </td>
+      <td align="left" valign="top">
+        <b>Build, Config & DevOps</b><br>
+        <code>Maven</code> · <code>npm</code><br>
+        <code>YAML/YML</code><br>
+        <code>Docker</code><br>
+        <code>Git</code> · <code>GitHub</code>
+      </td>
+    </tr>
+  </table>
+</p>
 
 ## 🎯 Aktuell im Fokus
 
-- **KI & Orchestrierung** – schlanke Services, die sich zu größeren, automatisierten Systemen kombinieren lassen  
-- **Moderne Web-Stacks** – u. a. Next.js-Frontends, API-Backends und performante UI-Workflows
+<p align="center">
+  <table>
+    <tr>
+      <td align="left" width="50%" valign="top" style="padding: 8px;">
+        <b>🤖 KI & Orchestrierung</b><br>
+        <sub>Kleine Services, die zu größeren, automatisierten Systemen kombiniert werden (Bots, Tools, Game-Backends).</sub>
+      </td>
+      <td align="left" width="50%" valign="top" style="padding: 8px;">
+        <b>🎮 Game-Backends & Live-Services</b><br>
+        <sub>Auth, Matchmaking, Stat-Tracking und Economy-Systeme rund um Projekte wie <i>BioStrike</i>.</sub>
+      </td>
+    </tr>
+    <tr>
+      <td align="left" width="50%" valign="top" style="padding: 8px;">
+        <b>🌐 Moderne Web-Stacks</b><br>
+        <sub>Next.js-Frontends, API-Layer, Dark-UIs und performante, mobile-taugliche Oberflächen.</sub>
+      </td>
+      <td align="left" width="50%" valign="top" style="padding: 8px;">
+        <b>⚙️ DevOps & Automation</b><br>
+        <sub>Containerized Workflows mit Docker, einfache CI/CD-Pipelines und reproduzierbare Dev-Umgebungen.</sub>
+      </td>
+    </tr>
+  </table>
+</p>
 
 ## 📫 Kontakt & Austausch
 
