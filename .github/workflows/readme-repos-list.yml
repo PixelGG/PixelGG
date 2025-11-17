@@ -57,36 +57,61 @@ jobs:
           if not repos:
               md_block = "_Noch keine öffentlichen Repositories mit Aktivität._"
           else:
-              cards = []
-              for r in repos:
+              n = len(repos)
+
+              # 1 Repo -> 1 Spalte (schön breit)
+              if n == 1:
+                  r = repos[0]
                   name = r["name"]
                   full_name = r["full_name"]
-                  card = (
-                      '<td align="center" valign="top" width="50%" style="padding: 10px;">'
+                  table_html = (
+                      '<div align="center">\n'
+                      '  <table>\n'
+                      '    <tr>\n'
+                      '      <td align="center" valign="top" style="padding: 10px;">'
                       f'<a href="https://github.com/{full_name}">'
                       f'<img src="https://github-readme-stats.vercel.app/api/pin/?username={owner}&repo={name}&theme=radical&hide_border=true" '
                       f'alt="{name} repository card" />'
                       '</a>'
-                      '</td>'
+                      '</td>\n'
+                      '    </tr>\n'
+                      '  </table>\n'
+                      '</div>'
                   )
-                  cards.append(card)
+                  md_block = table_html
 
-              rows = []
-              for i in range(0, len(cards), 2):
-                  row_cells = cards[i:i+2]
-                  if len(row_cells) == 1:
-                      # Bei ungerader Anzahl rechte Spalte leer lassen
-                      row_cells.append('<td width="50%" style="padding: 10px;"></td>')
-                  rows.append("<tr>" + "".join(row_cells) + "</tr>")
+              # 2+ Repos -> 2-Spalten-Grid
+              else:
+                  cards = []
+                  for r in repos:
+                      name = r["name"]
+                      full_name = r["full_name"]
+                      card = (
+                          '<td align="center" valign="top" width="50%" style="padding: 10px;">'
+                          f'<a href="https://github.com/{full_name}">'
+                          f'<img src="https://github-readme-stats.vercel.app/api/pin/?username={owner}&repo={name}&theme=radical&hide_border=true" '
+                          f'alt="{name} repository card" />'
+                          '</a>'
+                          '</td>'
+                      )
+                      cards.append(card)
 
-              table_html = (
-                  '<div align="center">\n'
-                  '<table>\n' +
-                  "\n".join(rows) +
-                  "\n</table>\n"
-                  '</div>'
-              )
-              md_block = table_html
+                  rows = []
+                  for i in range(0, len(cards), 2):
+                      row_cells = cards[i:i+2]
+                      if len(row_cells) == 1:
+                          # Bei ungerader Anzahl rechte Spalte leer lassen
+                          row_cells.append('<td width="50%" style="padding: 10px;"></td>')
+                      rows.append("<tr>" + "".join(row_cells) + "</tr>")
+
+                  table_html = (
+                      '<div align="center">\n'
+                      '<table>\n' +
+                      "\n".join(rows) +
+                      "\n</table>\n"
+                      '</div>'
+                  )
+                  md_block = table_html
 
           path = pathlib.Path("README.md")
           text = path.read_text(encoding="utf-8")
