@@ -60,8 +60,6 @@ Dieser Abschnitt stellt deine öffentlichen Repositories mit GitHub‑Cards dar.
   </tr>
 </table>
 
-> *Hinweis:* Private Repositories können nicht automatisch angezeigt werden. Wenn du weitere Projekte präsentieren möchtest, stelle sie auf „Public“ oder füge sie hier manuell mit einem Link ein.
-
 ## 🛠️ Tech Stack
 
 Hier ist eine Übersicht der wichtigsten Technologien, mit denen ich arbeite:
