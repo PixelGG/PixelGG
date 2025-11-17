@@ -1,49 +1,68 @@
-<!-- Banner -->
+<!-- Profile Header -->
+<div align="center">
+
+  <!-- Banner -->
+  <img src="06c5c296-849d-4ba3-b3cd-cd7f7624b58c.png" alt="PixelGG Banner" style="max-width: 100%; border-radius: 12px;" />
+
+  <!-- Avatar & Intro -->
+  <br><br>
+  <img src="654150e0-0df6-4c53-aa93-d4340005e817.png" width="120" alt="Mike Avatar" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.35);" />
+
+  <h1>Hi, I’m Mike 👋</h1>
+  <p>
+    Software-Enthusiast, der Tools und Backends rund um Games baut – mit Fokus auf Automation, KI und Open Source.
+  </p>
+
+  <!-- Dynamic badges (alles automatisch aus GitHub) -->
+  <p>
+    <img src="https://komarev.com/ghpvc/?username=PixelGG&label=Profile%20views&color=1e90ff&style=flat" alt="Profile views"/>
+    <img src="https://img.shields.io/github/followers/PixelGG?style=flat&label=Followers" alt="GitHub Followers"/>
+    <img src="https://img.shields.io/github/stars/PixelGG?style=flat&label=Stars" alt="GitHub Stars"/>
+    <img src="https://img.shields.io/github/repos/PixelGG?style=flat&label=Public%20Repos" alt="Public Repos"/>
+  </p>
+
+</div>
+
+---
+
+## 📊 GitHub Stats
+
 <p align="center">
-  <img src="06c5c296-849d-4ba3-b3cd-cd7f7624b58c.png" alt="PixelGG Banner"/>
+  <!-- Alle Karten ziehen live Daten von GitHub / Stats-Services -->
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&theme=radical&hide_border=true"
+    alt="GitHub stats"
+    style="max-width: 49%;"
+  />
+  <img
+    src="https://github-readme-streak-stats.herokuapp.com?user=PixelGG&theme=radical&hide_border=true"
+    alt="Contribution streak"
+    style="max-width: 49%;"
+  />
 </p>
 
-<!-- Profilbereich -->
-<table align="center">
-  <tr>
-    <td width="170" align="center">
-      <img src="654150e0-0df6-4c53-aa93-d4340005e817.png" width="150" alt="Mike Avatar"/>
-    </td>
-    <td style="text-align: left;">
-      <h2>Hi, I’m Mike</h2>
-      <p>Software-Enthusiast, der Tools und Backends rund um Games baut – mit Fokus auf Automation, KI und Open Source.</p>
-      <p>
-        <img src="https://komarev.com/ghpvc/?username=PixelGG&label=Profile%20views&color=1e90ff&style=flat" alt="Profile views"/>
-      </p>
-    </td>
-  </tr>
-</table>
-
-<!-- GitHub Stats -->
-<table align="center">
-  <tr>
-    <td align="center" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&theme=radical&hide_border=true" alt="GitHub stats"/>
-    </td>
-    <td align="center" width="50%">
-      <img src="https://github-readme-streak-stats.herokuapp.com?user=PixelGG&theme=radical&hide_border=true" alt="Contribution streak"/>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&theme=radical&hide_border=true" alt="Top languages"/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&theme=radical&hide_border=true"
+    alt="Top languages"
+    style="max-width: 60%;"
+  />
+</p>
 
 <!-- Trophy section -->
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=PixelGG&theme=onedark&no-frame=true&margin-w=15" alt="GitHub trophies"/>
+  <img
+    src="https://github-profile-trophy.vercel.app/?username=PixelGG&theme=onedark&no-frame=true&margin-w=15"
+    alt="GitHub trophies"
+  />
 </p>
 
 <!-- Contribution graph -->
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=PixelGG&theme=github-compact&hide_border=true" alt="Contribution graph"/>
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=PixelGG&theme=github-compact&hide_border=true"
+    alt="Contribution graph"
+  />
 </p>
 
 ---
@@ -51,15 +70,6 @@
 ## 🚀 Projekte
 
 <!-- start: projects-list -->
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" valign="top" style="padding: 10px;"><a href="https://github.com/PixelGG/biostrike"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=biostrike&theme=radical&hide_border=true" alt="biostrike repository card" /></a></td>
-    </tr>
-  </table>
-</div>
-
 <!-- end: projects-list -->
 
 ---
@@ -124,6 +134,8 @@
     </tr>
   </table>
 </p>
+
+---
 
 ## 📫 Kontakt & Austausch
 
