@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 0 * * 1"
-  workflow_dispatch:
+    - cron: "0 0 * * 1"   # Wöchentlich (Montag 00:00 UTC)
+  workflow_dispatch:       # Manuell im Actions-Tab startbar
 
 jobs:
   update-projects:
@@ -20,8 +20,8 @@ jobs:
         uses: koj-co/readme-repos-list@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Nur Repos mit Topic "profile-project" anzeigen
-          query: "user:PixelGG fork:false topic:profile-project"
+          # Alle öffentlichen Repos von PixelGG
+          query: "user:PixelGG fork:false"
           max: 6
           path: "README.md"
           start: "readme-repos-list"
