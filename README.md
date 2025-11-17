@@ -52,9 +52,11 @@
 
 <!-- start: projects-list -->
 
-<table align="center">
-<tr><td valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><strong>biostrike</strong></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub></td><td valign="top" width="50%" style="padding: 8px;"></td></tr>
+<div align="center">
+<table>
+<tr><td align="center" valign="top" width="50%" style="padding: 10px;"><a href="https://github.com/PixelGG/biostrike"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=biostrike&theme=radical&hide_border=true" alt="biostrike repository card" /></a></td><td width="50%" style="padding: 10px;"></td></tr>
 </table>
+</div>
 
 <!-- end: projects-list -->
 
