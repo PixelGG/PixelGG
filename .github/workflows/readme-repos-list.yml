@@ -1,0 +1,30 @@
+name: README Repos List
+
+on:
+  # 1x pro Woche aktualisieren (Montag 00:00 UTC)
+  schedule:
+    - cron: "0 0 * * 1"
+  # Optional: bei Push auf main auch aktualisieren
+  push:
+    branches:
+      - main
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Update repo list in README
+        uses: koj-co/readme-repos-list@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Alle öffentlichen Repos des Users PixelGG, keine Forks
+          query: "user:PixelGG fork:false"
+          max: 10          # Anzahl der Repos in der Liste (bei Bedarf erhöhen/verkleinern)
+          path: "README.md"
+          start: "readme-repos-list"
+          end: "readme-repos-list"
+          sort: "updated"  # nach Aktualität sortieren
+          order: "desc"
