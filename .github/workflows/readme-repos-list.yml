@@ -19,16 +19,17 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate public repos list (sorted by activity)
+      - name: Generate project cards (sorted by activity)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python - << 'PY'
-          import os, json, urllib.request, pathlib, html
+          import os, json, urllib.request, pathlib
 
           owner = os.environ["OWNER"]
           token = os.environ["GITHUB_TOKEN"]
 
+          # Öffentliche Repos des Users, nach letzter Aktivität sortiert
           url = f"https://api.github.com/users/{owner}/repos?per_page=100&sort=pushed&direction=desc"
           req = urllib.request.Request(
               url,
@@ -41,7 +42,7 @@ jobs:
           with urllib.request.urlopen(req) as resp:
               data = json.load(resp)
 
-          # Nur öffentliche Repos ohne Forks, Profil-Repo explizit rausfiltern
+          # Nur öffentliche Repos ohne Forks, Profil-Repo OWNER/OWNER ausschließen
           excluded_fullname = f"{owner}/{owner}".lower()
           repos = [
               r for r in data
@@ -56,34 +57,34 @@ jobs:
           if not repos:
               md_block = "_Noch keine öffentlichen Repositories mit Aktivität._"
           else:
-              # 2-Spalten-Grid mit kleinen „Cards“
-              cells = []
+              cards = []
               for r in repos:
-                  name = html.escape(r["name"])
-                  html_url = r["html_url"]
-                  desc = (r.get("description") or "").strip()
-                  desc = html.escape(desc) if desc else "&nbsp;"
-
-                  cell = (
-                      '<td valign="top" width="50%" style="padding: 8px;">'
-                      f'<a href="{html_url}"><strong>{name}</strong></a><br/>'
-                      f'<sub>{desc}</sub>'
-                      "</td>"
+                  name = r["name"]
+                  full_name = r["full_name"]
+                  card = (
+                      '<td align="center" valign="top" width="50%" style="padding: 10px;">'
+                      f'<a href="https://github.com/{full_name}">'
+                      f'<img src="https://github-readme-stats.vercel.app/api/pin/?username={owner}&repo={name}&theme=radical&hide_border=true" '
+                      f'alt="{name} repository card" />'
+                      '</a>'
+                      '</td>'
                   )
-                  cells.append(cell)
+                  cards.append(card)
 
               rows = []
-              for i in range(0, len(cells), 2):
-                  row_cells = cells[i:i+2]
+              for i in range(0, len(cards), 2):
+                  row_cells = cards[i:i+2]
                   if len(row_cells) == 1:
-                      # Für ungerade Anzahl eine leere rechte Spalte einsetzen
-                      row_cells.append('<td valign="top" width="50%" style="padding: 8px;"></td>')
+                      # Bei ungerader Anzahl rechte Spalte leer lassen
+                      row_cells.append('<td width="50%" style="padding: 10px;"></td>')
                   rows.append("<tr>" + "".join(row_cells) + "</tr>")
 
               table_html = (
-                  '<table align="center">\n' +
+                  '<div align="center">\n'
+                  '<table>\n' +
                   "\n".join(rows) +
-                  "\n</table>"
+                  "\n</table>\n"
+                  '</div>'
               )
               md_block = table_html
 
