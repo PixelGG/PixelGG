@@ -77,24 +77,24 @@
 <p align="center">
   <table>
     <tr>
-      <td align="left" valign="top">
-        <b>Sprachen</b><br>
+      <td align="left" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
+        <b>💻 Sprachen & Scripting</b><br><br>
         <code>Java</code> · <code>C</code> · <code>C++</code> · <code>C#</code><br>
         <code>JavaScript</code> · <code>TypeScript</code> · <code>Lua</code><br>
         <code>Python</code>
       </td>
-      <td align="left" valign="top">
-        <b>Backend & Datenbanken</b><br>
+      <td align="left" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
+        <b>🧩 Backend & Data</b><br><br>
         <code>Node.js</code><br>
         <code>SQL</code> · <code>MySQL</code><br>
-        <code>MongoDB</code> (NoSQL)
+        <code>MongoDB</code> (NoSQL / Document)
       </td>
-      <td align="left" valign="top">
-        <b>Build, Config & DevOps</b><br>
-        <code>Maven</code> · <code>npm</code><br>
-        <code>YAML/YML</code><br>
-        <code>Docker</code><br>
-        <code>Git</code> · <code>GitHub</code>
+    </tr>
+    <tr>
+      <td align="left" valign="top" colspan="2" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117; margin-top: 8px;">
+        <b>⚙️ Build, Config & DevOps</b><br><br>
+        <code>Maven</code> · <code>npm</code> · <code>YAML/YML</code><br>
+        <code>Docker</code> · <code>Git</code> · <code>GitHub</code>
       </td>
     </tr>
   </table>
@@ -107,23 +107,17 @@
 <p align="center">
   <table>
     <tr>
-      <td align="left" width="50%" valign="top" style="padding: 10px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
-        <b>🤖 KI & Orchestrierung</b><br>
-        <sub>Aufbau kleiner Services, die sich zu größeren, automatisierten Systemen kombinieren lassen (Bots, Tools, Game-Backends).</sub>
+      <td align="left" width="33%" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
+        <b>🤖 KI & Orchestrierung</b><br><br>
+        <sub>Kleine Services, die zu größeren, automatisierten Systemen kombiniert werden – von Bots bis Game-Tools.</sub>
       </td>
-      <td align="left" width="50%" valign="top" style="padding: 10px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
-        <b>🎮 Game-Backends & Live-Services</b><br>
-        <sub>Auth, Matchmaking, Stat-Tracking und Economy-Systeme rund um Projekte wie <i>BioStrike</i>.</sub>
+      <td align="left" width="33%" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
+        <b>🎮 Game-Backends & Systems</b><br><br>
+        <sub>Auth, Matchmaking, Stat-Tracking und Economy für Projekte wie <i>BioStrike</i> – server-seitig und skalierbar.</sub>
       </td>
-    </tr>
-    <tr>
-      <td align="left" width="50%" valign="top" style="padding: 10px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
-        <b>🌐 Moderne Web-Stacks</b><br>
-        <sub>Next.js-Frontends, saubere API-Layer, Dark-UIs und performante, mobile-taugliche Oberflächen.</sub>
-      </td>
-      <td align="left" width="50%" valign="top" style="padding: 10px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
-        <b>⚙️ DevOps & Automation</b><br>
-        <sub>Containerized Workflows mit Docker, einfache CI/CD-Pipelines und reproduzierbare Dev-Umgebungen.</sub>
+      <td align="left" width="33%" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
+        <b>🌐 Web & DevOps</b><br><br>
+        <sub>Moderne Web-Stacks (z. B. Next.js), klare API-Schichten und Docker-basierte Dev-/CI-Setups.</sub>
       </td>
     </tr>
   </table>
@@ -134,3 +128,5 @@
 ## 📫 Kontakt & Austausch
 
 [![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)  
+[![Start Discussion](https://img.shields.io/badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
+
