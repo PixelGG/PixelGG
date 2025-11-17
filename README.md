@@ -76,6 +76,11 @@
 
 - Node.js
 
+**Datenbanken**
+
+- SQL / MySQL  
+- MongoDB (NoSQL / Document-DB)
+
 **Build, Config & DevOps**
 
 - Maven · npm  
