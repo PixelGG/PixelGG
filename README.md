@@ -43,6 +43,26 @@
 
 ## 🚀 Projekte
 
-<!-- start: readme-repos-list<p align="center">[![PixelGG/biostrike](https://images.weserv.nl/?url=avatars.githubusercontent.com%2Fu%2F30443644%3Fv%3D4&h=50&w=50&fit=cover&mask=circle&maxage=7d)](https://github.com/PixelGG/biostrike)
-</p>readme-repos-list
-<!-- This list is auto-generated using koj-co/
+<!-- start: readme-repos-list -->
+<!-- end: readme-repos-list -->
+
+## Tech Stack
+
+- Python  
+- JavaScript  
+- TypeScript  
+- Node.js  
+- C#  
+- C++  
+- Docker  
+- Git  
+
+## Aktuell im Fokus
+
+- KI und Orchestrierung – Frameworks für intelligente Automatisierung und Tooling  
+- Moderne Web-Stacks – unter anderem Next.js, Flutter und performante UI-Workflows  
+
+## Kontakt
+
+[![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)
+[![Start Discussion](https://img.shields.io/badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
