@@ -68,17 +68,20 @@
 
 **Sprachen**
 
-- Python · JavaScript · TypeScript  
-- C# · C++
+- Java · C · C++ · C#  
+- JavaScript / TypeScript · Lua  
+- Python
 
 **Backend & Runtime**
 
 - Node.js
 
-**Tools & DevOps**
+**Build, Config & DevOps**
 
+- Maven · npm  
+- YAML/YML  
 - Docker  
-- Git  
+- Git / GitHub
 
 ## 🎯 Aktuell im Fokus
 
@@ -89,5 +92,3 @@
 
 [![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)  
 [![Start Discussion](https://img.shields.io/badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
-
-Wenn du an BioStrike, Game-Tools oder Backend-Kram mitarbeiten möchtest, schreib einfach ein Issue oder starte eine Discussion.
