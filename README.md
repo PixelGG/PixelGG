@@ -48,17 +48,8 @@
 
 ## 🚀 Projekte
 
-Dieser Abschnitt stellt deine öffentlichen Repositories mit GitHub‑Cards dar. Aktuell ist nur das Profil‑Repository öffentlich; weitere Projekte erscheinen hier automatisch, sobald du sie auf „Public“ setzt.
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/PixelGG/PixelGG">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=PixelGG&theme=radical&hide_border=true" alt="PixelGG" />
-      </a>
-    </td>
-  </tr>
-</table>
+<!-- start: readme-repos-list -->
+<!-- end: readme-repos-list -->
 
 ## 🛠️ Tech Stack
 
