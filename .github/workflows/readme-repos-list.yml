@@ -24,7 +24,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python - << 'PY'
-          import os, json, urllib.request, pathlib
+          import os, json, urllib.request, pathlib, html
 
           owner = os.environ["OWNER"]
           token = os.environ["GITHUB_TOKEN"]
@@ -41,29 +41,51 @@ jobs:
           with urllib.request.urlopen(req) as resp:
               data = json.load(resp)
 
-          # Nur öffentliche Repos ohne Forks
+          # Nur öffentliche Repos ohne Forks, Profil-Repo explizit rausfiltern
+          excluded_fullname = f"{owner}/{owner}".lower()
           repos = [
               r for r in data
-              if not r.get("private") and not r.get("fork")
+              if (not r.get("private"))
+              and (not r.get("fork"))
+              and r.get("full_name", "").lower() != excluded_fullname
           ]
 
           max_repos = 6
           repos = repos[:max_repos]
 
-          lines = []
-          for r in repos:
-              name = r["name"]
-              html_url = r["html_url"]
-              desc = (r.get("description") or "").strip()
-              if desc:
-                  lines.append(f"- [{name}]({html_url}) — {desc}")
-              else:
-                  lines.append(f"- [{name}]({html_url})")
-
-          if lines:
-              md_list = "\n".join(lines)
+          if not repos:
+              md_block = "_Noch keine öffentlichen Repositories mit Aktivität._"
           else:
-              md_list = "_Noch keine öffentlichen Repositories mit Aktivität._"
+              # 2-Spalten-Grid mit kleinen „Cards“
+              cells = []
+              for r in repos:
+                  name = html.escape(r["name"])
+                  html_url = r["html_url"]
+                  desc = (r.get("description") or "").strip()
+                  desc = html.escape(desc) if desc else "&nbsp;"
+
+                  cell = (
+                      '<td valign="top" width="50%" style="padding: 8px;">'
+                      f'<a href="{html_url}"><strong>{name}</strong></a><br/>'
+                      f'<sub>{desc}</sub>'
+                      "</td>"
+                  )
+                  cells.append(cell)
+
+              rows = []
+              for i in range(0, len(cells), 2):
+                  row_cells = cells[i:i+2]
+                  if len(row_cells) == 1:
+                      # Für ungerade Anzahl eine leere rechte Spalte einsetzen
+                      row_cells.append('<td valign="top" width="50%" style="padding: 8px;"></td>')
+                  rows.append("<tr>" + "".join(row_cells) + "</tr>")
+
+              table_html = (
+                  '<table align="center">\n' +
+                  "\n".join(rows) +
+                  "\n</table>"
+              )
+              md_block = table_html
 
           path = pathlib.Path("README.md")
           text = path.read_text(encoding="utf-8")
@@ -79,9 +101,9 @@ jobs:
 
           new_text = (
               text[: start_idx + len(start_marker)]
-              + "\n"
-              + md_list
-              + "\n"
+              + "\n\n"
+              + md_block
+              + "\n\n"
               + text[end_idx:]
           )
           path.write_text(new_text, encoding="utf-8")
