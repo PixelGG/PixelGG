@@ -51,8 +51,11 @@
 ## 🚀 Projekte
 
 <!-- start: projects-list -->
-- [PixelGG](https://github.com/PixelGG/PixelGG) — Professionelle Profilseite für das GitHub‑Profil von PixelGG.
-- [biostrike](https://github.com/PixelGG/biostrike) — Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.
+
+<table align="center">
+<tr><td valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><strong>biostrike</strong></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub></td><td valign="top" width="50%" style="padding: 8px;"></td></tr>
+</table>
+
 <!-- end: projects-list -->
 
 ---
