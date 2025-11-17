@@ -66,21 +66,28 @@
 
 ## 🛠️ Tech Stack
 
-- Python  
-- JavaScript  
-- TypeScript  
-- Node.js  
-- C#  
-- C++  
+**Sprachen**
+
+- Python · JavaScript · TypeScript  
+- C# · C++
+
+**Backend & Runtime**
+
+- Node.js
+
+**Tools & DevOps**
+
 - Docker  
 - Git  
 
-## Aktuell im Fokus
+## 🎯 Aktuell im Fokus
 
-- KI und Orchestrierung – Frameworks für intelligente Automatisierung und Tooling  
-- Moderne Web-Stacks – unter anderem Next.js, Flutter und performante UI-Workflows  
+- **KI & Orchestrierung** – schlanke Services, die sich zu größeren, automatisierten Systemen kombinieren lassen  
+- **Moderne Web-Stacks** – u. a. Next.js-Frontends, API-Backends und performante UI-Workflows
 
-## Kontakt
+## 📫 Kontakt & Austausch
 
 [![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)  
 [![Start Discussion](https://img.shields.io/badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
+
+Wenn du an BioStrike, Game-Tools oder Backend-Kram mitarbeiten möchtest, schreib einfach ein Issue oder starte eine Discussion.
