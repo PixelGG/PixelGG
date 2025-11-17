@@ -1,7 +1,9 @@
+<!-- Banner -->
 <p align="center">
   <img src="06c5c296-849d-4ba3-b3cd-cd7f7624b58c.png" alt="PixelGG Banner"/>
 </p>
 
+<!-- Profilbereich -->
 <table align="center">
   <tr>
     <td width="170" align="center">
@@ -17,6 +19,7 @@
   </tr>
 </table>
 
+<!-- GitHub Stats -->
 <table align="center">
   <tr>
     <td align="center" width="50%">
@@ -33,16 +36,42 @@
   </tr>
 </table>
 
+<!-- Trophy section -->
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=PixelGG&theme=onedark&no-frame=true&margin-w=15" alt="GitHub trophies"/>
 </p>
 
+<!-- Contribution graph -->
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PixelGG&theme=github-compact&hide_border=true" alt="Contribution graph"/>
 </p>
 
+---
+
 ## 🚀 Projekte
 
-<!-- start: readme-repos-list<p align="center">[![PixelGG/biostrike](https://images.weserv.nl/?url=avatars.githubusercontent.com%2Fu%2F30443644%3Fv%3D4&h=50&w=50&fit=cover&mask=circle&maxage=7d)](https://github.com/PixelGG/biostrike)
-</p>readme-repos-list<p align="center">[![PixelGG/biostrike](https://images.weserv.nl/?url=avatars.githubusercontent.com%2Fu%2F30443644%3Fv%3D4&h=50&w=50&fit=cover&mask=circle&maxage=7d)](https://github.com/PixelGG/biostrike)
-</p>
+<!-- start: readme-repos-list -->
+<!-- end: readme-repos-list -->
+
+---
+
+## 🛠️ Tech Stack
+
+- Python  
+- JavaScript  
+- TypeScript  
+- Node.js  
+- C#  
+- C++  
+- Docker  
+- Git  
+
+## Aktuell im Fokus
+
+- KI und Orchestrierung – Frameworks für intelligente Automatisierung und Tooling  
+- Moderne Web-Stacks – unter anderem Next.js, Flutter und performante UI-Workflows  
+
+## Kontakt
+
+[![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)  
+[![Start Discussion](https://img.shields.io/badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
