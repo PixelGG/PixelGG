@@ -74,6 +74,15 @@
 ## 🚀 Projekte
 
 <!-- start: projects-list -->
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="top" style="padding: 10px;"><a href="https://github.com/PixelGG/biostrike"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=biostrike&theme=radical&hide_border=true" alt="biostrike repository card" /></a></td>
+    </tr>
+  </table>
+</div>
+
 <!-- end: projects-list -->
 
 ---
