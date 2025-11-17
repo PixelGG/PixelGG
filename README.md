@@ -130,32 +130,32 @@
       <td align="left" width="50%" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
         <div><b>🤖 KI & Orchestrierung</b></div>
         <br>
-        <div><sub>Services und Bots, die sich zu automatisierten Workflows fürs Game-Backend kombinieren lassen.</sub></div>
+        <div>Services und Bots, die sich zu automatisierten Workflows fürs Game-Backend kombinieren lassen.</div>
         <br>
-        <div><sub><code>Worker</code> · <code>Queues</code> · <code>APIs</code></sub></div>
+        <div><code>Worker</code> · <code>Queues</code> · <code>APIs</code></div>
       </td>
       <td align="left" width="50%" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
         <div><b>🎮 Game-Backends & Live-Systems</b></div>
         <br>
-        <div><sub>Auth, Matchmaking, Stat-Tracking und Economy für Projekte wie <i>BioStrike</i> – server-authoritativ gedacht.</sub></div>
+        <div>Auth, Matchmaking, Stat-Tracking und Economy für Projekte wie <i>BioStrike</i> – server-authoritativ gedacht.</div>
         <br>
-        <div><sub><code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code></sub></div>
+        <div><code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code></div>
       </td>
     </tr>
     <tr>
       <td align="left" width="50%" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117; margin-top: 8px;">
         <div><b>🌐 Moderne Web-Stacks</b></div>
         <br>
-        <div><sub>Frontends und Dashboards (z. B. mit Next.js), die saubere APIs und Dark-UIs für Game-Tools nutzen.</sub></div>
+        <div>Frontends und Dashboards (z. B. mit Next.js), die saubere APIs und Dark-UIs für Game-Tools nutzen.</div>
         <br>
-        <div><sub><code>Next.js</code> · <code>REST</code> · <code>Dark UI</code></sub></div>
+        <div><code>Next.js</code> · <code>REST</code> · <code>Dark UI</code></div>
       </td>
       <td align="left" width="50%" valign="top" style="padding: 12px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117; margin-top: 8px;">
         <div><b>⚙️ DevOps & Automation</b></div>
         <br>
-        <div><sub>Docker-Setups, kleine CI/CD-Pipelines und reproduzierbare Dev-Umgebungen für Services und Tools.</sub></div>
+        <div>Docker-Setups, kleine CI/CD-Pipelines und reproduzierbare Dev-Umgebungen für Services und Tools.</div>
         <br>
-        <div><sub><code>Docker</code> · <code>CI/CD</code> · <code>Infra as Code</code></sub></div>
+        <div><code>Docker</code> · <code>CI/CD</code> · <code>Infra as Code</code></div>
       </td>
     </tr>
   </table>
