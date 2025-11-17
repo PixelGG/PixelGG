@@ -46,53 +46,45 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PixelGG&theme=github-compact&hide_border=true" alt="Contribution graph"/>
 </p>
 
-## 🚀 Projects
+## 🚀 Projekte
 
-Dieser Abschnitt nutzt GitHub‑Cards, um deine öffentlichen Repositories automatisch darzustellen. Die Karten aktualisieren sich, wenn du das Repository öffentlich schaltest und geben einen schnellen Überblick über Stars, Forks und die Beschreibung.
+Dieser Abschnitt stellt deine öffentlichen Repositories mit GitHub‑Cards dar. Aktuell ist nur das Profil‑Repository öffentlich; weitere Projekte erscheinen hier automatisch, sobald du sie auf „Public“ setzt.
 
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/PixelGG/CitizenSync">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=CitizenSync&theme=radical&hide_border=true" alt="CitizenSync" />
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/PixelGG/HLL-RCONBOT">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=HLL-RCONBOT&theme=radical&hide_border=true" alt="HLL-RCONBOT" />
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/PixelGG/Ikarus-Ki">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=Ikarus-Ki&theme=radical&hide_border=true" alt="Ikarus-Ki" />
+      <a href="https://github.com/PixelGG/PixelGG">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=PixelGG&theme=radical&hide_border=true" alt="PixelGG" />
       </a>
     </td>
   </tr>
 </table>
 
+> *Hinweis:* Private Repositories können nicht automatisch angezeigt werden. Wenn du weitere Projekte präsentieren möchtest, stelle sie auf „Public“ oder füge sie hier manuell mit einem Link ein.
+
 ## 🛠️ Tech Stack
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img sXYZrc="https://img.shields.io-badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io-badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io-badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
-  <img src="https://img.shields.io-badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
-  <img src="https://img.shields.io-badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
-  <img src="https://img.shields.io-badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io-badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-</p>
+Hier ist eine Übersicht der wichtigsten Technologien, mit denen ich arbeite:
+
+- 🐍 **Python**
+- 📜 **JavaScript**
+- 🔷 **TypeScript**
+- 🧩 **Node.js**
+- ☕ **C#**
+- ➕ **C++**
+- 🐳 **Docker**
+- 🔧 **Git**
 
 ## 🧠 Currently Exploring
 
 I’m expanding my skillset with:
 
 - **🤖 Advanced AI & orchestration** – exploring frameworks that power intelligent systems and automation.
-- **🧠 Modern web ecosystems** – experimenting with **Next.js**, **Flutter**, and other cutting-edge UI frameworks.
+- **🧠 Modern web ecosystems** – experimenting with **Next.js**, **Flutter**, and other cutting‑edge UI frameworks.
 
 ## 📫 Connect with Me
 
 [![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)
-[![Start Discussion](https://img.shields.io-badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
+[![Start Discussion](https://img.shields.io/badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
 
 Feel free to reach out if you'd like to discuss projects or just say hello — I look forward to connecting!
