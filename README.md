@@ -1,42 +1,57 @@
 <!-- Banner -->
 <p align="center">
-  <img src="3c92b6e5-d106-4a77-96e1-087ff91625c3.png" alt="PixelGG Banner"/>
+  <img src="06c5c296-849d-4ba3-b3cd-cd7f7624b58c.png" alt="PixelGG Banner"/>
 </p>
 
-<h1 align="center">Hi, I'm Mike 👋</h1>
-
+<!-- Avatar -->
 <p align="center">
-  A passionate developer who loves building game‑related tools and backend systems.<br>
-  I enjoy automating workflows and exploring modern software technologies.
+  <img src="654150e0-0df6-4c53-aa93-d4340005e817.png" width="150" alt="Mike Avatar"/>
 </p>
 
-## 🚀 Projects & Highlights
+<h2 align="center">Hi, I'm Mike 👋</h2>
+<p align="center">
+  Software enthusiast creating game-related tools and backend systems.<br>
+  Passionate about automation, AI, and open source.
+</p>
 
-- **CitizenSync** – Keeps your Star Citizen data synchronized across various tools.  
-- **HLL‑RCONBOT** – Automates server administration for *Hell Let Loose*.  
+<!-- Trophy Section -->
+<p align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=PixelGG&theme=onestar&column=7&no-frame=true&no-bg=true" alt="GitHub Trophies" />
+  </a>
+</p>
+
+<!-- Stats Section -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=PixelGG&style=for-the-badge&color=678fc6" alt="profile views"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&theme=onedark&hide_border=true" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&theme=onedark&hide_border=true" alt="Top Languages"/>
+</p>
+
+## 🚀 Projects
+
+- **CitizenSync** – Keeps your Star Citizen data synchronized across various tools.
+- **HLL‑RCONBOT** – Automates server administration for *Hell Let Loose*.
 - **Ikarus‑Ki** – Experiments with game AI and machine learning.
 
-## 🛠️ Skills & Tools
-
-<p>
-  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-JavaScript-333?style=flat-square&logo=javascript&logoColor=F7DF1E"/>
-  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white"/>
-</p>
-
-## 📊 GitHub Stats
+## 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&theme=radical" alt="GitHub Stats"/><br>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&theme=radical" alt="Top Languages"/><br>
-  <img src="https://streak-stats.demolab.com/?user=PixelGG&theme=radical" alt="GitHub Streak"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 </p>
 
-## 📫 How to Reach Me
+## 🤠 Currently Learning
+
+- Advanced AI frameworks and orchestration.
+- Modern web frameworks like Next.js and Flutter.
+
+## 📧 How to Reach Me
 
 Feel free to open an [issue](https://github.com/PixelGG/PixelGG/issues) or start a [discussion](https://github.com/PixelGG/PixelGG/discussions) if you want to get in touch.
