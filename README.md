@@ -48,32 +48,10 @@
 
 ## 🚀 Projekte
 
-<!-- start: readme-repos-list -->
-<!-- end: readme-repos-list -->
-
-## 🛠️ Tech Stack
-
-Hier ist eine Übersicht der wichtigsten Technologien, mit denen ich arbeite:
-
-- 🐍 **Python**
-- 📜 **JavaScript**
-- 🔷 **TypeScript**
-- 🧩 **Node.js**
-- ☕ **C#**
-- ➕ **C++**
-- 🐳 **Docker**
-- 🔧 **Git**
-
-## 🧠 Currently Exploring
-
-I’m expanding my skillset with:
-
-- **🤖 Advanced AI & orchestration** – exploring frameworks that power intelligent systems and automation.
-- **🧠 Modern web ecosystems** – experimenting with **Next.js**, **Flutter**, and other cutting‑edge UI frameworks.
-
-## 📫 Connect with Me
-
-[![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)
-[![Start Discussion](https://img.shields.io/badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
-
-Feel free to reach out if you'd like to discuss projects or just say hello — I look forward to connecting!
+<!-- start: readme-repos-list
+<!-- This list is auto-generated using koj-co/readme-repos-list -->
+<!-- Do not edit this list manually, your changes will be overwritten -->
+[![PixelGG/PixelGG](https://images.weserv.nl/?url=avatars.githubusercontent.com%2Fu%2F30443644%3Fv%3D4&h=50&w=50&fit=cover&mask=circle&maxage=7d)](https://github.com/PixelGG/PixelGG)
+[![PixelGG/biostrike](https://images.weserv.nl/?url=avatars.githubusercontent.com%2Fu%2F30443644%3Fv%3D4&h=50&w=50&fit=cover&mask=circle&maxage=7d)](https://github.com/PixelGG/biostrike)
+readme-repos-list -->
+<!-- end: 
