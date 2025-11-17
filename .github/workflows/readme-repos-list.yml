@@ -5,14 +5,11 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 0 * * 1"   # wöchentlich (Montag 00:00 UTC)
-  workflow_dispatch:       # optional: manuell startbar in Actions-Tab
-  push:
-    branches:
-      - main               # ggf. anpassen, falls dein Default-Branch anders heißt
+    - cron: "0 0 * * 1"   # Wöchentlich (Montag 00:00 UTC)
+  workflow_dispatch:       # Manuell im Actions-Tab startbar
 
 jobs:
-  list:
+  update-projects:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +20,7 @@ jobs:
         uses: koj-co/readme-repos-list@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Alle öffentlichen Repos von PixelGG, aber ohne Profil-Repo
+          # Alle öffentlichen Repos von PixelGG, aber NICHT das Profil-Repo
           query: "user:PixelGG fork:false -repo:PixelGG/PixelGG"
           max: 6
           path: "README.md"
@@ -31,6 +28,6 @@ jobs:
           end: "readme-repos-list"
           sort: "updated"
           order: "desc"
-          # Optischer Rahmen: Liste wird zentriert
+          # Optische Einfassung, damit die Liste zentriert wirkt
           prefix: "<p align=\"center\">"
           suffix: "</p>"
