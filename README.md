@@ -10,7 +10,7 @@
       <img src="654150e0-0df6-4c53-aa93-d4340005e817.png" width="150" alt="Mike Avatar"/>
     </td>
     <td style="text-align: left;">
-      <h2>Hi, I’m Mike 👋</h2>
+      <h2>Hi, I’m Mike 👋</h2>
       <p>Software enthusiast building game‑related tools and backend systems. I enjoy automation, AI, and open source.</p>
       <p>
         <img src="https://komarev.com/ghpvc/?username=PixelGG&label=Profile%20views&color=1e90ff&style=flat" alt="Profile views"/>
@@ -46,34 +46,55 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PixelGG&theme=github-compact&hide_border=true" alt="Contribution graph"/>
 </p>
 
-## 🚀 Projects
+## 🚀 Projects
 
-| Project       | Description                                                                       | Technologies             |
-|---------------|-----------------------------------------------------------------------------------|--------------------------|
-| **CitizenSync** | Synchronises your Star Citizen data across various tools and platforms.            | Python, SQL              |
-| **HLL‑RCONBOT** | Automates server administration for *Hell Let Loose*.                             | Node.js, TypeScript      |
-| **Ikarus‑Ki**  | Experiments with game AI and machine learning.                                    | C++, Python, ML          |
+Dieser Abschnitt nutzt GitHub‑Cards, um deine öffentlichen Repositories automatisch darzustellen. Die Karten aktualisieren sich, wenn du das Repository öffentlich schaltest und geben einen schnellen Überblick über Stars, Forks und die Beschreibung.
 
-## 🔨 Tech Stack
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/PixelGG/CitizenSync">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=CitizenSync&theme=radical&hide_border=true" alt="CitizenSync" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/PixelGG/HLL-RCONBOT">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=HLL-RCONBOT&theme=radical&hide_border=true" alt="HLL-RCONBOT" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/PixelGG/Ikarus-Ki">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=Ikarus-Ki&theme=radical&hide_border=true" alt="Ikarus-Ki" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+> *Hinweis:* Private Repositories können nicht automatisch angezeigt werden. Wenn du weitere Projekte präsentieren möchtest, stelle sie auf „Public“ oder füge sie hier manuell hinzu.
+
+## 🛠️ Tech Stack
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+  <img sXYZrc="https://img.shields.io-badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io-badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io-badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
+  <img src="https://img.shields.io-badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
+  <img src="https://img.shields.io-badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io-badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io-badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 </p>
 
-## 🧠 Currently Learning
+## 🧠 Currently Exploring
 
-I’m diving deeper into:
+I’m expanding my skillset with:
 
-- Advanced AI frameworks and orchestration tools.
-- Modern web frameworks like Next.js and Flutter.
+- **🤖 Advanced AI & orchestration** – exploring frameworks that power intelligent systems and automation.
+- **🧠 Modern web ecosystems** – experimenting with **Next.js**, **Flutter**, and other cutting-edge UI frameworks.
 
-## 📫 Get in Touch
+## 📫 Connect with Me
 
-If you’d like to discuss projects, collaborations or just say hello, feel free to open an [issue](https://github.com/PixelGG/PixelGG/issues) or start a [discussion](https://github.com/PixelGG/PixelGG/discussions). I look forward to connecting with you!
+[![Create Issue](https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/issues/new)
+[![Start Discussion](https://img.shields.io-badge/Start%20Discussion-23272A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PixelGG/PixelGG/discussions)
+
+Feel free to reach out if you'd like to discuss projects or just say hello — I look forward to connecting!
