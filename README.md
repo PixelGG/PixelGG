@@ -70,8 +70,6 @@ Dieser Abschnitt nutzt GitHub‑Cards, um deine öffentlichen Repositories autom
   </tr>
 </table>
 
-> *Hinweis:* Private Repositories können nicht automatisch angezeigt werden. Wenn du weitere Projekte präsentieren möchtest, stelle sie auf „Public“ oder füge sie hier manuell hinzu.
-
 ## 🛠️ Tech Stack
 
 <p align="center">
