@@ -50,8 +50,8 @@
 
 ## 🚀 Projekte
 
-<!-- start: readme-repos-list -->
-<!-- end: readme-repos-list -->
+<!-- start: projects-list -->
+<!-- end: projects-list -->
 
 ---
 
