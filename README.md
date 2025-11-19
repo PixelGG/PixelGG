@@ -77,7 +77,8 @@
 
 <div align="center">
 <table>
-<tr><td align="center" valign="top" width="50%" style="padding: 10px;"><a href="https://github.com/PixelGG/biostrike"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=biostrike&theme=radical&hide_border=true" alt="biostrike repository card" /></a></td><td align="center" valign="top" width="50%" style="padding: 10px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=arvox-studio-bot&theme=radical&hide_border=true" alt="arvox-studio-bot repository card" /></a></td></tr>
+<tr><td align="center" valign="top" width="50%" style="padding: 10px;"><a href="https://github.com/PixelGG/CommissionHub"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=CommissionHub&theme=radical&hide_border=true" alt="CommissionHub repository card" /></a></td><td align="center" valign="top" width="50%" style="padding: 10px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=arvox-studio-bot&theme=radical&hide_border=true" alt="arvox-studio-bot repository card" /></a></td></tr>
+<tr><td align="center" valign="top" width="50%" style="padding: 10px;"><a href="https://github.com/PixelGG/biostrike"><img src="https://github-readme-stats.vercel.app/api/pin/?username=PixelGG&repo=biostrike&theme=radical&hide_border=true" alt="biostrike repository card" /></a></td><td width="50%" style="padding: 10px;"></td></tr>
 </table>
 </div>
 
