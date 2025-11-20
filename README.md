@@ -18,50 +18,142 @@
     </td>
     <td valign="middle">
       <h2>Hi, ich bin Mike 👋</h2>
-      <p>Ich entwickle <b>server‑authoritative Game‑Backends</b> & <b>Tools</b> – stabil, automatisiert und mit <b>praktischen KI‑Features</b>.</p>
-      <p><code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code> · <code>Queues</code> · <code>APIs</code></p>
+      <p>
+        Ich baue <b>Game-Backends, Tools und Automatisierung</b> – mit Fokus auf
+        <b>stabile Live-Systeme</b>, <b>saubere Infrastruktur</b> und <b>praktische KI-Features</b>.
+      </p>
+      <p>
+        <code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code> · <code>Queues</code> · <code>APIs</code>
+      </p>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=PixelGG&label=Profile%20Views&color=1e90ff&style=flat" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/PixelGG?style=flat&label=Followers" alt="GitHub Followers" />
+  <img src="https://img.shields.io/github/stars/PixelGG?style=flat&label=Stars" alt="GitHub Stars" />
+</p>
+
+---
+
+## 🔎 Snapshot
+
+<p align="center">
+<!-- start: metrics-summary -->
+<sub>Lädt…</sub>
+<!-- end: metrics-summary -->
+</p>
+
+---
+
+## 🧩 Was ich gerne baue
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <b>🎮 Game-Backends</b><br>
+      <sub>Server-authoritative Logik für Auth, Matchmaking, Stat-Tracking & Economy – so gedacht, dass Spiele auch nach Launch sauber skalieren.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <b>🤖 Automatisierung & Bots</b><br>
+      <sub>Discord-Bots, Worker-Services und kleine Tools, die sich zu größeren, automatisierten Pipelines fürs Game-Ökosystem kombinieren lassen.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <b>🧠 KI im Betrieb</b><br>
+      <sub>KI-gestützte Workflows, die beim Entwickeln, Überwachen und Operaten von Services unterstützen – nicht nur Spielerei, sondern für Alltag nutzbar.</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🔎 Snapshot
-<!-- start: metrics-summary -->\n\n<sub>Repos: <b>3</b> · Stars (gesamt): <b>0</b> · Top Language: <b>TypeScript</b> (76.3%)</sub>\n\n<!-- end: metrics-summary -->
+## 🛠️ Tech-Stack
 
----
-
-## 🛠️ Tech‑Stack
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,c,cpp,cs,js,ts,lua,python,nodejs,mysql,mongodb,maven,npm,docker,git,github&theme=dark" alt="Tech Stack" />
+  <b>Core & Scripting</b><br>
+  <img src="https://skillicons.dev/icons?i=java,c,cpp,cs,js,ts,lua,python&theme=dark" alt="Core Languages" />
+</p>
+
+<p align="center">
+  <b>Backend & Daten</b><br>
+  <img src="https://skillicons.dev/icons?i=nodejs,mysql,mongodb&theme=dark" alt="Backend & Databases" />
+</p>
+
+<p align="center">
+  <b>Build, Infra & Automation</b><br>
+  <img src="https://skillicons.dev/icons?i=maven,npm,docker,git,github&theme=dark" alt="Build & DevOps" /><br>
+  <sub><code>YAML</code> für Pipelines & Configs</sub>
 </p>
 
 ---
 
-## 📊 Language‑Mix
+## 📊 Language-Mix
+
 <p align="center">
-  <img src="assets/metrics/top-langs-bar.png" alt="Top Languages (Bar)" width="49%"/>
-  <img src="assets/metrics/top-langs-donut.png" alt="Top Languages (Donut)" width="49%"/>
+  <img src="assets/metrics/top-langs-bar.png" alt="Top Languages (Bar)" width="49%">
+  <img src="assets/metrics/top-langs-donut.png" alt="Top Languages (Donut)" width="49%">
 </p>
 
 ---
 
-## 🚀 Projekte · Aktuell
-<!-- start: projects-latest -->\n\n<div align="center">\n<table>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/CommissionHub-latest.png" alt="CommissionHub card" /></a></td><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/arvox-studio-bot-latest.png" alt="arvox-studio-bot card" /></a></td></tr>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/biostrike-latest.png" alt="biostrike card" /></a></td><td width="50%" style="padding: 8px;"></td></tr>\n</table>\n</div>\n\n<!-- end: projects-latest -->
+## 🚀 Projekte – Aktuell aktiv
 
-## ⭐ Projekte · Beliebt
-<!-- start: projects-stars -->\n\n<div align="center">\n<table>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/CommissionHub-stars.png" alt="CommissionHub card" /></a></td><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/arvox-studio-bot-stars.png" alt="arvox-studio-bot card" /></a></td></tr>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/biostrike-stars.png" alt="biostrike card" /></a></td><td width="50%" style="padding: 8px;"></td></tr>\n</table>\n</div>\n\n<!-- end: projects-stars -->
+<p align="center"><sub>Zuletzt geänderte Repositories, automatisch generiert.</sub></p>
+
+<!-- start: projects-latest -->
+
+<div align="center">
+  <!-- Automatisch erzeugt -->
+</div>
+
+<!-- end: projects-latest -->
 
 ---
 
-## 🎯 Woran ich arbeite
-- Stabil skalierende Backend‑Bausteine für Live‑Games
-- Telemetrie, Observability & Feature‑Flags für sichere Releases
-- KI‑gestützte Operator‑Workflows (Bots/Services)
+## ⭐ Projekte – Beliebt
+
+<p align="center"><sub>Repos mit den meisten Stars, automatisch generiert.</sub></p>
+
+<!-- start: projects-stars -->
+
+<div align="center">
+  <!-- Automatisch erzeugt -->
+</div>
+
+<!-- end: projects-stars -->
 
 ---
 
-## 📫 Kontakt
-<a href="https://github.com/PixelGG/PixelGG/issues/new">
-  <img src="https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white" alt="Create Issue" />
-</a>
+## 🎯 Fokus-Bereiche gerade
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <b>🔐 Live-Backends für Games</b>
+      <ul>
+        <li>Auth & Session Management</li>
+        <li>Matchmaking & Instancing</li>
+        <li>Stats, Events & Progression</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <b>⚙️ Dev-Automation & Tools</b>
+      <ul>
+        <li>Kleine Services, die CI/CD & Ops erleichtern</li>
+        <li>Discord-Integration für Studio & Community</li>
+        <li>KI-unterstützte Workflows für Devs</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+---
+
+## ✉️ Kontakt
+
+<p align="center">
+  <a href="https://github.com/PixelGG/PixelGG/issues/new">
+    <img src="https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white" alt="Create Issue">
+  </a>
+</p>
