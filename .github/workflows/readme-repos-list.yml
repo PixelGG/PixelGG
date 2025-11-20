@@ -1,148 +1,51 @@
-name: Update Projects in README
+name: Update Profile Assets
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # wöchentlich (Montag 05:00 UTC)
+  workflow_dispatch:
+  push:
+    paths:
+      - README.md
+      - .github/scripts/build_profile_assets.py
 
 permissions:
   contents: write
 
-on:
-  schedule:
-    - cron: "0 0 * * 1"   # Wöchentlich (Montag 00:00 UTC)
-  workflow_dispatch:       # Manuell im Actions-Tab startbar
-
 jobs:
-  update-projects:
+  build-and-update:
     runs-on: ubuntu-latest
-
     env:
       OWNER: ${{ github.repository_owner }}
-
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate project cards (sorted by activity)
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests matplotlib
+
+      - name: Build assets & update README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python - << 'PY'
-          import os, json, urllib.request, pathlib
+          python .github/scripts/build_profile_assets.py
 
-          owner = os.environ["OWNER"]
-          token = os.environ["GITHUB_TOKEN"]
-
-          # Öffentliche Repos des Users, nach letzter Aktivität sortiert
-          url = f"https://api.github.com/users/{owner}/repos?per_page=100&sort=pushed&direction=desc"
-          req = urllib.request.Request(
-              url,
-              headers={
-                  "Authorization": f"Bearer {token}",
-                  "Accept": "application/vnd.github+json",
-                  "User-Agent": "update-projects-readme",
-              },
-          )
-          with urllib.request.urlopen(req) as resp:
-              data = json.load(resp)
-
-          # Nur öffentliche Repos ohne Forks, Profil-Repo OWNER/OWNER ausschließen
-          excluded_fullname = f"{owner}/{owner}".lower()
-          repos = [
-              r for r in data
-              if (not r.get("private"))
-              and (not r.get("fork"))
-              and r.get("full_name", "").lower() != excluded_fullname
-          ]
-
-          max_repos = 6
-          repos = repos[:max_repos]
-
-          if not repos:
-              md_block = "_Noch keine öffentlichen Repositories mit Aktivität._"
-          else:
-              n = len(repos)
-
-              # 1 Repo -> 1 Spalte (schön breit)
-              if n == 1:
-                  r = repos[0]
-                  name = r["name"]
-                  full_name = r["full_name"]
-                  table_html = (
-                      '<div align="center">\n'
-                      '  <table>\n'
-                      '    <tr>\n'
-                      '      <td align="center" valign="top" style="padding: 10px;">'
-                      f'<a href="https://github.com/{full_name}">'
-                      f'<img src="https://github-readme-stats.vercel.app/api/pin/?username={owner}&repo={name}&theme=radical&hide_border=true" '
-                      f'alt="{name} repository card" />'
-                      '</a>'
-                      '</td>\n'
-                      '    </tr>\n'
-                      '  </table>\n'
-                      '</div>'
-                  )
-                  md_block = table_html
-
-              # 2+ Repos -> 2-Spalten-Grid
-              else:
-                  cards = []
-                  for r in repos:
-                      name = r["name"]
-                      full_name = r["full_name"]
-                      card = (
-                          '<td align="center" valign="top" width="50%" style="padding: 10px;">'
-                          f'<a href="https://github.com/{full_name}">'
-                          f'<img src="https://github-readme-stats.vercel.app/api/pin/?username={owner}&repo={name}&theme=radical&hide_border=true" '
-                          f'alt="{name} repository card" />'
-                          '</a>'
-                          '</td>'
-                      )
-                      cards.append(card)
-
-                  rows = []
-                  for i in range(0, len(cards), 2):
-                      row_cells = cards[i:i+2]
-                      if len(row_cells) == 1:
-                          # Bei ungerader Anzahl rechte Spalte leer lassen
-                          row_cells.append('<td width="50%" style="padding: 10px;"></td>')
-                      rows.append("<tr>" + "".join(row_cells) + "</tr>")
-
-                  table_html = (
-                      '<div align="center">\n'
-                      '<table>\n' +
-                      "\n".join(rows) +
-                      "\n</table>\n"
-                      '</div>'
-                  )
-                  md_block = table_html
-
-          path = pathlib.Path("README.md")
-          text = path.read_text(encoding="utf-8")
-
-          start_marker = "<!-- start: projects-list -->"
-          end_marker = "<!-- end: projects-list -->"
-
-          try:
-              start_idx = text.index(start_marker)
-              end_idx = text.index(end_marker, start_idx)
-          except ValueError:
-              raise SystemExit("Marker <!-- start: projects-list --> / <!-- end: projects-list --> nicht gefunden.")
-
-          new_text = (
-              text[: start_idx + len(start_marker)]
-              + "\n\n"
-              + md_block
-              + "\n\n"
-              + text[end_idx:]
-          )
-          path.write_text(new_text, encoding="utf-8")
-          PY
-
-      - name: Commit and push changes (if any)
+      - name: Commit & push (if changed)
         run: |
           if git diff --quiet; then
-            echo "Keine Änderungen an README.md"
+            echo "Keine Änderungen."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update projects list in README [skip ci]"
+          git add README.md assets/*.svg
+          git commit -m "chore(profile): refresh charts & projects"
           git push
+
