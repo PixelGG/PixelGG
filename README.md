@@ -19,8 +19,8 @@
     <td valign="middle">
       <h2>Hi, ich bin Mike 👋</h2>
       <p>
-        Ich baue <b>Game-Backends, Tools und Automatisierung</b> – mit Fokus auf
-        <b>stabile Live-Systeme</b>, <b>saubere Infrastruktur</b> und <b>praktische KI-Features</b>.
+        Ich baue <b>Game-Backends, Tools und Automatisierung</b> – von Prototypen bis Live-Services –
+        mit Fokus auf <b>Stabilität</b>, <b>saubere Infrastruktur</b> und <b>praktische KI-Features</b>.
       </p>
       <p>
         <code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code> · <code>Queues</code> · <code>APIs</code>
@@ -47,21 +47,21 @@
 
 ---
 
-## 🧩 Was ich gerne baue
+## 🧩 Was ich baue
 
 <table>
   <tr>
     <td width="33%" valign="top">
       <b>🎮 Game-Backends</b><br>
-      <sub>Server-authoritative Logik für Auth, Matchmaking, Stat-Tracking & Economy – so gedacht, dass Spiele auch nach Launch sauber skalieren.</sub>
+      <sub>Auth, Matchmaking, Stat-Tracking & Economy – server-authoritativ gedacht, damit Live-Spiele stabil bleiben.</sub>
     </td>
     <td width="33%" valign="top">
       <b>🤖 Automatisierung & Bots</b><br>
-      <sub>Discord-Bots, Worker-Services und kleine Tools, die sich zu größeren, automatisierten Pipelines fürs Game-Ökosystem kombinieren lassen.</sub>
+      <sub>Discord-Bots, Worker und kleine Services, die sich zu automatisierten Pipelines fürs Game-Ökosystem kombinieren lassen.</sub>
     </td>
     <td width="33%" valign="top">
       <b>🧠 KI im Betrieb</b><br>
-      <sub>KI-gestützte Workflows, die beim Entwickeln, Überwachen und Operaten von Services unterstützen – nicht nur Spielerei, sondern für Alltag nutzbar.</sub>
+      <sub>KI-gestützte Workflows, die beim Entwickeln, Überwachen und Operaten von Services helfen – nicht nur Spielerei.</sub>
     </td>
   </tr>
 </table>
@@ -99,7 +99,7 @@
 
 ## 🚀 Projekte – Aktuell aktiv
 
-<p align="center"><sub>Zuletzt geänderte Repositories, automatisch generiert.</sub></p>
+<p align="center"><sub>Zuletzt geänderte Repositories (Top 6).</sub></p>
 
 <!-- start: projects-latest -->
 
@@ -113,7 +113,7 @@
 
 ## ⭐ Projekte – Beliebt
 
-<p align="center"><sub>Repos mit den meisten Stars, automatisch generiert.</sub></p>
+<p align="center"><sub>Repositories mit den meisten Stars (Top 6).</sub></p>
 
 <!-- start: projects-stars -->
 
@@ -125,14 +125,14 @@
 
 ---
 
-## 🎯 Fokus-Bereiche gerade
+## 🎯 Fokus aktuell
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <b>🔐 Live-Backends für Games</b>
       <ul>
-        <li>Auth & Session Management</li>
+        <li>Auth & Session-Handling</li>
         <li>Matchmaking & Instancing</li>
         <li>Stats, Events & Progression</li>
       </ul>
@@ -140,8 +140,8 @@
     <td width="50%" valign="top">
       <b>⚙️ Dev-Automation & Tools</b>
       <ul>
-        <li>Kleine Services, die CI/CD & Ops erleichtern</li>
-        <li>Discord-Integration für Studio & Community</li>
+        <li>Services & Bots für CI/CD & Ops</li>
+        <li>Discord-Integration fürs Studio-Ökosystem</li>
         <li>KI-unterstützte Workflows für Devs</li>
       </ul>
     </td>
@@ -150,10 +150,10 @@
 
 ---
 
-## ✉️ Kontakt
+## 📫 Kontakt
 
 <p align="center">
   <a href="https://github.com/PixelGG/PixelGG/issues/new">
-    <img src="https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white" alt="Create Issue">
+    <img src="https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white" alt="Create Issue" />
   </a>
 </p>
