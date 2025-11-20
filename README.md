@@ -6,7 +6,7 @@
   </picture>
 </p>
 
-<!-- Intro -->
+<!-- Intro / Hero -->
 <table align="center">
   <tr>
     <td width="150" align="center" valign="top">
@@ -40,33 +40,63 @@
 ## 🔎 Snapshot
 
 <p align="center">
-<!-- start: metrics-summary -->
-
-<sub>Repos: <b>3</b> · Stars (gesamt): <b>0</b> · Top Language: <b>TypeScript</b> (76.3%)</sub>
-
-<!-- end: metrics-summary -->
+  <!-- start: metrics-summary -->
+  <sub>Lädt…</sub>
+  <!-- end: metrics-summary -->
 </p>
 
 ---
 
-## 🧩 Was ich baue
+## 🧩 Woran ich arbeite
 
 <table>
   <tr>
     <td width="33%" valign="top">
       <b>🎮 Game-Backends</b><br>
-      <sub>Auth, Matchmaking, Stat-Tracking & Economy – server-authoritativ gedacht, damit Live-Spiele stabil bleiben.</sub>
+      <sub>Server-authoritative Systeme für Auth, Matchmaking, Stat-Tracking & Economy – mit Blick auf Live-Operations.</sub>
     </td>
     <td width="33%" valign="top">
       <b>🤖 Automatisierung & Bots</b><br>
-      <sub>Discord-Bots, Worker und kleine Services, die sich zu automatisierten Pipelines fürs Game-Ökosystem kombinieren lassen.</sub>
+      <sub>Discord-Bots, Worker und kleine Services, die CI/CD, Monitoring und Community-Workflows abnehmen.</sub>
     </td>
     <td width="33%" valign="top">
-      <b>🧠 KI im Betrieb</b><br>
-      <sub>KI-gestützte Workflows, die beim Entwickeln, Überwachen und Operaten von Services helfen – nicht nur Spielerei.</sub>
+      <b>🧠 KI im Alltag</b><br>
+      <sub>KI-gestützte Tools, die Code, Ops und Game-Tools unterstützen – nicht als Gimmick, sondern als echtes Werkzeug.</sub>
     </td>
   </tr>
 </table>
+
+---
+
+## 🚀 Projekte
+
+<p align="center">
+  <b>Aktuell aktiv</b><br>
+  <sub>Zuletzt geänderte Repositories (Top 6, automatisch generiert).</sub>
+</p>
+
+<!-- start: projects-latest -->
+
+<div align="center">
+  <!-- Automatisch erzeugt -->
+</div>
+
+<!-- end: projects-latest -->
+
+<br>
+
+<p align="center">
+  <b>Beliebt</b><br>
+  <sub>Repositories mit den meisten Stars (Top 6, automatisch generiert).</sub>
+</p>
+
+<!-- start: projects-stars -->
+
+<div align="center">
+  <!-- Automatisch erzeugt -->
+</div>
+
+<!-- end: projects-stars -->
 
 ---
 
@@ -90,7 +120,7 @@
 
 ---
 
-## 📊 Language-Mix
+## 📊 Tech-Insights
 
 <p align="center">
   <img src="assets/metrics/top-langs-bar.png" alt="Top Languages (Bar)" width="49%">
@@ -99,41 +129,7 @@
 
 ---
 
-## 🚀 Projekte – Aktuell aktiv
-
-<p align="center"><sub>Zuletzt geänderte Repositories (Top 6).</sub></p>
-
-<!-- start: projects-latest -->
-
-<div align="center">
-<table>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><b>CommissionHub</b></a><br/><sub>Player-driven contract marketplace with built-in economy, jobs and addon support.</sub><br/><sub>⭐ 0 · Java · updated 2025-11-19</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><b>arvox-studio-bot</b></a><br/><sub>Modularer Discord-Bot für den Arvox Studio Server: Onboarding, Self-Roles, Tickets mit HTML-Transkripten, Voice-Support…</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-19</sub></td></tr>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><b>biostrike</b></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-18</sub></td><td width="50%" style="padding: 8px;"></td></tr>
-</table>
-</div>
-
-<!-- end: projects-latest -->
-
----
-
-## ⭐ Projekte – Beliebt
-
-<p align="center"><sub>Repositories mit den meisten Stars (Top 6).</sub></p>
-
-<!-- start: projects-stars -->
-
-<div align="center">
-<table>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><b>CommissionHub</b></a><br/><sub>Player-driven contract marketplace with built-in economy, jobs and addon support.</sub><br/><sub>⭐ 0 · Java · updated 2025-11-19</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><b>arvox-studio-bot</b></a><br/><sub>Modularer Discord-Bot für den Arvox Studio Server: Onboarding, Self-Roles, Tickets mit HTML-Transkripten, Voice-Support…</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-19</sub></td></tr>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><b>biostrike</b></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-18</sub></td><td width="50%" style="padding: 8px;"></td></tr>
-</table>
-</div>
-
-<!-- end: projects-stars -->
-
----
-
-## 🎯 Fokus aktuell
+## 🎯 Aktueller Fokus
 
 <table>
   <tr>
@@ -148,9 +144,9 @@
     <td width="50%" valign="top">
       <b>⚙️ Dev-Automation & Tools</b>
       <ul>
-        <li>Services & Bots für CI/CD & Ops</li>
-        <li>Discord-Integration fürs Studio-Ökosystem</li>
-        <li>KI-unterstützte Workflows für Devs</li>
+        <li>Services & Bots für CI/CD & Monitoring</li>
+        <li>Discord-Integration für Studio & Community</li>
+        <li>KI-unterstützte Workflows für Devs & Ops</li>
       </ul>
     </td>
   </tr>
