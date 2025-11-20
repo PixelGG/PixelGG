@@ -27,9 +27,7 @@
 ---
 
 ## 🔎 Snapshot
-<!-- start: metrics-summary -->
-<sub>Lädt…</sub>
-<!-- end: metrics-summary -->
+<!-- start: metrics-summary -->\n\n<sub>Repos: <b>3</b> · Stars (gesamt): <b>0</b> · Top Language: <b>TypeScript</b> (76.3%)</sub>\n\n<!-- end: metrics-summary -->
 
 ---
 
@@ -49,22 +47,10 @@
 ---
 
 ## 🚀 Projekte · Aktuell
-<!-- start: projects-latest -->
-
-<div align="center">
-  <!-- Automatisch erzeugt -->
-</div>
-
-<!-- end: projects-latest -->
+<!-- start: projects-latest -->\n\n<div align="center">\n<table>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/CommissionHub-latest.png" alt="CommissionHub card" /></a></td><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/arvox-studio-bot-latest.png" alt="arvox-studio-bot card" /></a></td></tr>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/biostrike-latest.png" alt="biostrike card" /></a></td><td width="50%" style="padding: 8px;"></td></tr>\n</table>\n</div>\n\n<!-- end: projects-latest -->
 
 ## ⭐ Projekte · Beliebt
-<!-- start: projects-stars -->
-
-<div align="center">
-  <!-- Automatisch erzeugt -->
-</div>
-
-<!-- end: projects-stars -->
+<!-- start: projects-stars -->\n\n<div align="center">\n<table>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/CommissionHub-stars.png" alt="CommissionHub card" /></a></td><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/arvox-studio-bot-stars.png" alt="arvox-studio-bot card" /></a></td></tr>\n<tr><td align="center" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><img src="/home/runner/work/PixelGG/PixelGG/assets/cards/biostrike-stars.png" alt="biostrike card" /></a></td><td width="50%" style="padding: 8px;"></td></tr>\n</table>\n</div>\n\n<!-- end: projects-stars -->
 
 ---
 
