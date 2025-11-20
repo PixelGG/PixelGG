@@ -45,7 +45,10 @@
 <!-- start: projects-list -->
 
 <div align="center">
-  <!-- Inhalt wird automatisch via Workflow generiert -->
+<table>
+<tr><td align="left" width="50%" valign="top"><a href="https://github.com/PixelGG/CommissionHub"><b>CommissionHub</b></a><br/><sub>Player-driven contract marketplace with built-in economy, jobs and addon support.</sub><br/><sub>⭐ 0 · Java · updated 2025-11-19</sub></td><td align="left" width="50%" valign="top"><a href="https://github.com/PixelGG/arvox-studio-bot"><b>arvox-studio-bot</b></a><br/><sub>Modularer Discord-Bot für den Arvox Studio Server: Onboarding, Self-Roles, Tickets mit HTML-Transkripten, Voice-Support…</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-19</sub></td></tr>
+<tr><td align="left" width="50%" valign="top"><a href="https://github.com/PixelGG/biostrike"><b>biostrike</b></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-18</sub></td><td width="50%"></td></tr>
+</table>
 </div>
 
 <!-- end: projects-list -->
@@ -53,8 +56,12 @@
 <details>
   <summary><b>Alle öffentlichen Repositories</b></summary>
   <!-- start: all-repos-list -->
-  <p>Wird automatisch generiert.</p>
-  <!-- end: all-repos-list -->
+
+- <a href="https://github.com/PixelGG/CommissionHub"><code>CommissionHub</code></a> — ⭐ 0 · Java · updated 2025-11-19
+- <a href="https://github.com/PixelGG/arvox-studio-bot"><code>arvox-studio-bot</code></a> — ⭐ 0 · TypeScript · updated 2025-11-19
+- <a href="https://github.com/PixelGG/biostrike"><code>biostrike</code></a> — ⭐ 0 · TypeScript · updated 2025-11-18
+
+<!-- end: all-repos-list -->
 </details>
 
 ---
