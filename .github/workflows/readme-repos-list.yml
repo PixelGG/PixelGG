@@ -36,11 +36,12 @@ jobs:
 
       - name: Commit & push if changed
         run: |
-          if git status --porcelain | grep -qE "(README.md|assets/)"; then
+          git add -A README.md assets/
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md assets/
             git commit -m "chore(profile): refresh visuals & projects"
             git push
-          else
-            echo "Keine Änderungen."
+          fi
