@@ -18,51 +18,18 @@
     </td>
     <td valign="middle">
       <h2>Hi, ich bin Mike 👋</h2>
-      <p>Ich entwickle <b>Game‑Backends und Tools</b> – vom Prototyp bis zum Live‑Service – mit Fokus auf <b>Stabilität</b>, <b>Automatisierung</b> und <b>praktische KI‑Features</b>.</p>
+      <p>Ich entwickle <b>server‑authoritative Game‑Backends</b> & <b>Tools</b> – stabil, automatisiert und mit <b>praktischen KI‑Features</b>.</p>
+      <p><code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code> · <code>Queues</code> · <code>APIs</code></p>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🎯 Fokus
-- Server‑authoritative Backends für Auth, Matchmaking, Stats/Events & Economy
-- Worker‑/Queue‑basierte Orchestrierung für skalierbare Live‑Features
-- Telemetrie & Robustheit: Observability, Feature Flags, sichere Deployments
-- KI‑gestützte Workflows im Betrieb
-
----
-
-## 📈 Visuals
-<p align="center">
-  <img src="assets/top-langs.svg" alt="Top-Sprachen über alle öffentlichen Repositories" width="49%"/>
-  <img src="assets/top-repos.svg" alt="Top-Repositories nach Stars" width="49%"/>
-</p>
-
----
-
-## 🚀 Projekte
-<!-- start: projects-list -->
-
-<div align="center">
-<table>
-<tr><td align="left" width="50%" valign="top"><a href="https://github.com/PixelGG/CommissionHub"><b>CommissionHub</b></a><br/><sub>Player-driven contract marketplace with built-in economy, jobs and addon support.</sub><br/><sub>⭐ 0 · Java · updated 2025-11-19</sub></td><td align="left" width="50%" valign="top"><a href="https://github.com/PixelGG/arvox-studio-bot"><b>arvox-studio-bot</b></a><br/><sub>Modularer Discord-Bot für den Arvox Studio Server: Onboarding, Self-Roles, Tickets mit HTML-Transkripten, Voice-Support…</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-19</sub></td></tr>
-<tr><td align="left" width="50%" valign="top"><a href="https://github.com/PixelGG/biostrike"><b>biostrike</b></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-18</sub></td><td width="50%"></td></tr>
-</table>
-</div>
-
-<!-- end: projects-list -->
-
-<details>
-  <summary><b>Alle öffentlichen Repositories</b></summary>
-  <!-- start: all-repos-list -->
-
-- <a href="https://github.com/PixelGG/CommissionHub"><code>CommissionHub</code></a> — ⭐ 0 · Java · updated 2025-11-19
-- <a href="https://github.com/PixelGG/arvox-studio-bot"><code>arvox-studio-bot</code></a> — ⭐ 0 · TypeScript · updated 2025-11-19
-- <a href="https://github.com/PixelGG/biostrike"><code>biostrike</code></a> — ⭐ 0 · TypeScript · updated 2025-11-18
-
-<!-- end: all-repos-list -->
-</details>
+## 🔎 Snapshot
+<!-- start: metrics-summary -->
+<sub>Lädt…</sub>
+<!-- end: metrics-summary -->
 
 ---
 
@@ -73,8 +40,42 @@
 
 ---
 
+## 📊 Language‑Mix
+<p align="center">
+  <img src="assets/metrics/top-langs-bar.png" alt="Top Languages (Bar)" width="49%"/>
+  <img src="assets/metrics/top-langs-donut.png" alt="Top Languages (Donut)" width="49%"/>
+</p>
+
+---
+
+## 🚀 Projekte · Aktuell
+<!-- start: projects-latest -->
+
+<div align="center">
+  <!-- Automatisch erzeugt -->
+</div>
+
+<!-- end: projects-latest -->
+
+## ⭐ Projekte · Beliebt
+<!-- start: projects-stars -->
+
+<div align="center">
+  <!-- Automatisch erzeugt -->
+</div>
+
+<!-- end: projects-stars -->
+
+---
+
+## 🎯 Woran ich arbeite
+- Stabil skalierende Backend‑Bausteine für Live‑Games
+- Telemetrie, Observability & Feature‑Flags für sichere Releases
+- KI‑gestützte Operator‑Workflows (Bots/Services)
+
+---
+
 ## 📫 Kontakt
 <a href="https://github.com/PixelGG/PixelGG/issues/new">
   <img src="https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white" alt="Create Issue" />
 </a>
-
