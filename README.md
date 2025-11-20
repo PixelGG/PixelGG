@@ -6,28 +6,26 @@
   </picture>
 </p>
 
-<!-- Intro / Hero -->
-<table align="center">
-  <tr>
-    <td width="150" align="center" valign="top">
-      <img
-        src="654150e0-0df6-4c53-aa93-d4340005e817.png"
-        width="120"
-        alt="Avatar von Mike (PixelGG)"
-      />
-    </td>
-    <td valign="middle">
-      <h2>Hi, ich bin Mike 👋</h2>
-      <p>
-        Ich baue <b>Game-Backends, Tools und Automatisierung</b> – von Prototypen bis Live-Services –
-        mit Fokus auf <b>Stabilität</b>, <b>saubere Infrastruktur</b> und <b>praktische KI-Features</b>.
-      </p>
-      <p>
-        <code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code> · <code>Queues</code> · <code>APIs</code>
-      </p>
-    </td>
-  </tr>
-</table>
+<!-- Hero / Intro -->
+<p align="center">
+  <img
+    src="654150e0-0df6-4c53-aa93-d4340005e817.png"
+    width="110"
+    alt="Avatar von Mike (PixelGG)"
+    style="border-radius: 50%;"
+  />
+</p>
+
+<h1 align="center">Mike · PixelGG</h1>
+
+<p align="center">
+  <b>Game-Backends · Tools · Automatisierung</b><br>
+  <sub>Von Prototypen bis Live-Services – mit Fokus auf Stabilität, saubere Infrastruktur und praktische KI-Features.</sub>
+</p>
+
+<p align="center">
+  <code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code> · <code>Queues</code> · <code>APIs</code>
+</p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=PixelGG&label=Profile%20Views&color=1e90ff&style=flat" alt="Profile views" />
@@ -35,9 +33,11 @@
   <img src="https://img.shields.io/github/stars/PixelGG?style=flat&label=Stars" alt="GitHub Stars" />
 </p>
 
+<br>
+
 ---
 
-## 🔎 Snapshot
+## 🔎 Snapshot & Fokus
 
 <p align="center">
   <!-- start: metrics-summary -->
@@ -45,30 +45,30 @@
   <!-- end: metrics-summary -->
 </p>
 
----
-
-## 🧩 Woran ich arbeite
+<br>
 
 <table>
   <tr>
     <td width="33%" valign="top">
       <b>🎮 Game-Backends</b><br>
-      <sub>Server-authoritative Systeme für Auth, Matchmaking, Stat-Tracking & Economy – mit Blick auf Live-Operations.</sub>
+      <sub>Server-authoritative Systeme für Auth, Matchmaking, Stat-Tracking & Economy – gebaut für Live-Operations.</sub>
     </td>
     <td width="33%" valign="top">
-      <b>🤖 Automatisierung & Bots</b><br>
-      <sub>Discord-Bots, Worker und kleine Services, die CI/CD, Monitoring und Community-Workflows abnehmen.</sub>
+      <b>🤖 Automatisierung</b><br>
+      <sub>Discord-Bots, Worker und Services, die Deployments, Monitoring und Community-Workflows automatisieren.</sub>
     </td>
     <td width="33%" valign="top">
       <b>🧠 KI im Alltag</b><br>
-      <sub>KI-gestützte Tools, die Code, Ops und Game-Tools unterstützen – nicht als Gimmick, sondern als echtes Werkzeug.</sub>
+      <sub>Tools, die KI dort einsetzen, wo sie wirklich hilft: beim Entwickeln, Operaten und Verwalten von Game-Ökosystemen.</sub>
     </td>
   </tr>
 </table>
 
+<br>
+
 ---
 
-## 🚀 Projekte
+## 🚀 Projekte · Dashboard
 
 <p align="center">
   <b>Aktuell aktiv</b><br>
@@ -78,12 +78,12 @@
 <!-- start: projects-latest -->
 
 <div align="center">
-  <!-- Automatisch erzeugt -->
+  <!-- Automatisch generiert -->
 </div>
 
 <!-- end: projects-latest -->
 
-<br>
+<br><br>
 
 <p align="center">
   <b>Beliebt</b><br>
@@ -93,14 +93,16 @@
 <!-- start: projects-stars -->
 
 <div align="center">
-  <!-- Automatisch erzeugt -->
+  <!-- Automatisch generiert -->
 </div>
 
 <!-- end: projects-stars -->
 
+<br>
+
 ---
 
-## 🛠️ Tech-Stack
+## 🧰 Tech-Stack
 
 <p align="center">
   <b>Core & Scripting</b><br>
@@ -118,18 +120,26 @@
   <sub><code>YAML</code> für Pipelines & Configs</sub>
 </p>
 
+<br>
+
 ---
 
 ## 📊 Tech-Insights
+
+<p align="center">
+  <sub>Language-Mix über deine öffentlichen Repositories – lokal gerendert.</sub>
+</p>
 
 <p align="center">
   <img src="assets/metrics/top-langs-bar.png" alt="Top Languages (Bar)" width="49%">
   <img src="assets/metrics/top-langs-donut.png" alt="Top Languages (Donut)" width="49%">
 </p>
 
+<br>
+
 ---
 
-## 🎯 Aktueller Fokus
+## 🎯 Was gerade wichtig ist
 
 <table>
   <tr>
@@ -151,6 +161,8 @@
     </td>
   </tr>
 </table>
+
+<br>
 
 ---
 
