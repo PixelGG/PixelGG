@@ -41,8 +41,10 @@
 
 <p align="center">
   <!-- start: metrics-summary -->
-  <sub>Lädt…</sub>
-  <!-- end: metrics-summary -->
+
+<sub>Repos: <b>3</b> · Stars (gesamt): <b>0</b> · Top Language: <b>TypeScript</b> (76.3%)</sub>
+
+<!-- end: metrics-summary -->
 </p>
 
 <br>
@@ -78,7 +80,10 @@
 <!-- start: projects-latest -->
 
 <div align="center">
-  <!-- Automatisch generiert -->
+<table>
+<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><b>CommissionHub</b></a><br/><sub>Player-driven contract marketplace with built-in economy, jobs and addon support.</sub><br/><sub>⭐ 0 · Java · updated 2025-11-19</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><b>arvox-studio-bot</b></a><br/><sub>Modularer Discord-Bot für den Arvox Studio Server: Onboarding, Self-Roles, Tickets mit HTML-Transkripten, Voice-Support…</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-19</sub></td></tr>
+<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><b>biostrike</b></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-18</sub></td><td width="50%" style="padding: 8px;"></td></tr>
+</table>
 </div>
 
 <!-- end: projects-latest -->
@@ -93,7 +98,10 @@
 <!-- start: projects-stars -->
 
 <div align="center">
-  <!-- Automatisch generiert -->
+<table>
+<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/CommissionHub"><b>CommissionHub</b></a><br/><sub>Player-driven contract marketplace with built-in economy, jobs and addon support.</sub><br/><sub>⭐ 0 · Java · updated 2025-11-19</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/arvox-studio-bot"><b>arvox-studio-bot</b></a><br/><sub>Modularer Discord-Bot für den Arvox Studio Server: Onboarding, Self-Roles, Tickets mit HTML-Transkripten, Voice-Support…</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-19</sub></td></tr>
+<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/biostrike"><b>biostrike</b></a><br/><sub>Server-authoritative, turn-based tactics game focusing on plant creatures, weather and ecology mechanics.</sub><br/><sub>⭐ 0 · TypeScript · updated 2025-11-18</sub></td><td width="50%" style="padding: 8px;"></td></tr>
+</table>
 </div>
 
 <!-- end: projects-stars -->
