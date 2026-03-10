@@ -2,7 +2,7 @@ name: Profile Visuals & Projects
 
 on:
   schedule:
-    - cron: "7 4 * * *"   # täglich 04:07 UTC
+    - cron: "7 4 * * *"   # täglich 04:07 UTc
   workflow_dispatch:
 
 permissions:
