@@ -1,35 +1,17 @@
-<p align="center">
-  <img
-    src="assets/hero.svg"
-    alt="Mike | PixelGG hero banner"
-    width="100%"
-  />
-</p>
-
-<h1 align="center">Professionelle Systeme für Games, Operations und interne Plattformen</h1>
+<h1 align="center">Mike | PixelGG</h1>
 
 <p align="center">
-  Ich entwickle Backend-Services, Automatisierung und AI-gestütztes Tooling mit Fokus auf Stabilität,
-  Observability und saubere Delivery. Nicht für die Demo, sondern für realen Betrieb.
+  <strong>Backend-Systeme, Automatisierung und AI-gestütztes Tooling</strong>
 </p>
 
 <p align="center">
-  <sub>Robust unter Last · Klar im Monitoring · Wartbar im Alltag</sub>
+  Professionelle Systeme für Games, Operations und interne Plattformen.
 </p>
 
 <p align="center">
-  <a href="https://github.com/PixelGG">
-    <img
-      src="https://img.shields.io/github/followers/PixelGG?style=for-the-badge&label=GitHub%20Follower&color=0B1120"
-      alt="GitHub Follower"
-    />
-  </a>
-  <a href="https://github.com/PixelGG/PixelGG/issues/new">
-    <img
-      src="https://img.shields.io/badge/Projekt%20oder%20Anfrage-Issue%20er%C3%B6ffnen-D8B36A?style=for-the-badge&logo=github&logoColor=0B1120"
-      alt="Projekt oder Anfrage"
-    />
-  </a>
+  <a href="https://github.com/PixelGG"><strong>GitHub Profil</strong></a>
+  ·
+  <a href="https://github.com/PixelGG/PixelGG/issues/new"><strong>Projekt oder Anfrage</strong></a>
 </p>
 
 <p align="center">
@@ -43,7 +25,9 @@
   <code>AI SYSTEMS</code>
 </p>
 
-## Positionierung
+> Ich entwickle keine reinen Showcase-Projekte, sondern Systeme, die im Alltag stabil laufen, sauber beobachtbar bleiben und langfristig wartbar sind.
+
+## Profil
 
 <table>
   <tr>
@@ -51,14 +35,14 @@
       <strong>Woran ich arbeite</strong><br><br>
       <sub>
         Server-authoritative Backends, Worker, Bots und interne Plattformen für Games,
-        Communities und operative Prozesse mit hoher technischer Verlässlichkeit.
+        Communities und operative Prozesse mit hohem Anspruch an Verlässlichkeit.
       </sub>
     </td>
     <td width="50%" valign="top">
       <strong>Worauf ich Wert lege</strong><br><br>
       <sub>
-        Gute Systeme sind nicht nur schnell gebaut, sondern auch nachvollziehbar,
-        beobachtbar und langfristig ohne unnötige Reibung betreibbar.
+        Gute Systeme sind nicht nur schnell entwickelt, sondern auch klar strukturiert,
+        nachvollziehbar im Betrieb und ohne unnötige Reibung erweiterbar.
       </sub>
     </td>
   </tr>
@@ -78,15 +62,15 @@
     <td width="33%" valign="top">
       <strong>Automation & Internal Tools</strong><br><br>
       <sub>
-        Bots, Worker und interne Werkzeuge, die Teams beschleunigen,
-        Fehlerquellen reduzieren und operative Abläufe glätten.
+        Bots, Worker und interne Werkzeuge, die Teams entlasten,
+        Fehlerquellen reduzieren und Abläufe beschleunigen.
       </sub>
     </td>
     <td width="33%" valign="top">
       <strong>AI-Assisted Operations</strong><br><br>
       <sub>
         KI gezielt dort einsetzen, wo sie technische Routinearbeit,
-        Support-Flows und Wissensarbeit spürbar verbessert.
+        Support-Flows und Wissensarbeit wirklich verbessert.
       </sub>
     </td>
   </tr>
@@ -95,9 +79,9 @@
 ## Arbeitsweise
 
 - Architektur, Delivery und Monitoring von Anfang an gemeinsam denken.
-- Komplexität reduzieren, bevor sie im Betrieb teuer wird.
+- Komplexität früh reduzieren, bevor sie im Betrieb teuer wird.
 - Automatisierung nur dort einsetzen, wo sie reale Reibung entfernt.
-- Lösungen für langfristige Wartung und Incident-Fälle mitentwickeln.
+- Systeme für langfristige Wartung und Incident-Fälle mitentwickeln.
 
 ## Snapshot
 
@@ -105,19 +89,6 @@
 <!-- start: metrics-summary -->
 <sub>Repos: <b>0</b> · Stars (gesamt): <b>0</b> · Top Language: —</sub>
 <!-- end: metrics-summary -->
-</p>
-
-<p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&hide_border=true&bg_color=0B1120&title_color=D8B36A&text_color=E5EEF7&icon_color=2DD4BF"
-    alt="GitHub Stats von PixelGG"
-    height="170"
-  />
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&hide_border=true&bg_color=12344D&title_color=D8B36A&text_color=E5EEF7"
-    alt="Top Sprachen von PixelGG"
-    height="170"
-  />
 </p>
 
 ## Projektfenster
@@ -162,30 +133,29 @@
 </table>
 
 <p align="center">
-  <img
-    src="https://skillicons.dev/icons?i=java,cs,cpp,js,ts,lua,python,nodejs,mysql,mongodb,docker,git,github,githubactions,npm&perline=8"
-    alt="Tech Stack"
-  />
+  <code>Java</code>
+  <code>C#</code>
+  <code>C++</code>
+  <code>TypeScript</code>
+  <code>JavaScript</code>
+  <code>Lua</code>
+  <code>Python</code>
+  <code>Node.js</code>
+  <code>MySQL</code>
+  <code>MongoDB</code>
+  <code>Docker</code>
+  <code>GitHub Actions</code>
 </p>
 
 ## Zusammenarbeit
 
 <p align="center">
   Wenn es um belastbare Services, gute Delivery oder hochwertige interne Tools geht,
-  ist genau das mein Schwerpunkt.
+  liegt genau dort mein Schwerpunkt.
 </p>
 
 <p align="center">
-  <a href="https://github.com/PixelGG">
-    <img
-      src="https://img.shields.io/badge/GitHub-Profil%20ansehen-0B1120?style=for-the-badge&logo=github&logoColor=white"
-      alt="GitHub Profil ansehen"
-    />
-  </a>
-  <a href="https://github.com/PixelGG/PixelGG/issues/new">
-    <img
-      src="https://img.shields.io/badge/Zusammenarbeit-starten-D8B36A?style=for-the-badge&logo=github&logoColor=0B1120"
-      alt="Zusammenarbeit starten"
-    />
-  </a>
+  <a href="https://github.com/PixelGG"><strong>Profil ansehen</strong></a>
+  ·
+  <a href="https://github.com/PixelGG/PixelGG/issues/new"><strong>Kontakt aufnehmen</strong></a>
 </p>
