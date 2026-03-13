@@ -1,173 +1,147 @@
-<!-- Banner -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="06c5c296-849d-4ba3-b3cd-cd7f7624b58c.png">
-    <img src="06c5c296-849d-4ba3-b3cd-cd7f7624b58c.png" alt="PixelGG Banner" width="100%">
-  </picture>
-</p>
-
-<!-- Hero / Intro -->
 <p align="center">
   <img
-    src="654150e0-0df6-4c53-aa93-d4340005e817.png"
-    width="110"
-    alt="Avatar von Mike (PixelGG)"
-    style="border-radius: 50%;"
+    src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0b1220,45:0f3d5e,100:1e90ff&text=Mike%20%7C%20PixelGG&fontColor=ffffff&fontSize=44&fontAlignY=38&desc=Game%20Backends%20%E2%80%A2%20Automation%20%E2%80%A2%20AI-gest%C3%BCtzte%20Tools&descAlignY=58&animation=fadeIn"
+    alt="Mike | PixelGG Banner"
   />
 </p>
 
-<h1 align="center">Mike · PixelGG</h1>
+<h1 align="center">Robuste Services für Games, DevOps und Community-Workflows</h1>
 
 <p align="center">
-  <b>Game-Backends · Tools · Automatisierung</b><br>
-  <sub>Von Prototypen bis Live-Services – mit Fokus auf Stabilität, saubere Infrastruktur und praktische KI-Features.</sub>
+  Ich baue Backend-Systeme, Bots und interne Tools mit Fokus auf Stabilität,
+  klare Prozesse und sinnvolle Automatisierung.
 </p>
 
 <p align="center">
-  <code>Auth</code> · <code>Matchmaking</code> · <code>Stats</code> · <code>Queues</code> · <code>APIs</code>
+  <a href="https://github.com/PixelGG">
+    <img
+      src="https://img.shields.io/github/followers/PixelGG?style=for-the-badge&label=GitHub%20Follower&color=1e90ff"
+      alt="GitHub Follower"
+    />
+  </a>
+  <img
+    src="https://komarev.com/ghpvc/?username=PixelGG&style=for-the-badge&label=Profile%20Views&color=0f3d5e"
+    alt="Profile Views"
+  />
+  <img
+    src="https://img.shields.io/badge/Fokus-Live%20Services-0b1220?style=for-the-badge"
+    alt="Fokus Live Services"
+  />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=PixelGG&label=Profile%20Views&color=1e90ff&style=flat" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/PixelGG?style=flat&label=Followers" alt="GitHub Followers" />
-  <img src="https://img.shields.io/github/stars/PixelGG?style=flat&label=Stars" alt="GitHub Stars" />
+  <code>Auth</code>
+  <code>Matchmaking</code>
+  <code>Stats</code>
+  <code>Queues</code>
+  <code>APIs</code>
+  <code>Automation</code>
+  <code>AI Tooling</code>
 </p>
 
-<br>
-
----
-
-## 🔎 Snapshot & Fokus
+## Snapshot
 
 <p align="center">
-  <!-- start: metrics-summary -->
-
+<!-- start: metrics-summary -->
 <sub>Repos: <b>0</b> · Stars (gesamt): <b>0</b> · Top Language: —</sub>
-
 <!-- end: metrics-summary -->
 </p>
 
-<br>
+## Fokusfelder
 
 <table>
   <tr>
     <td width="33%" valign="top">
-      <b>🎮 Game-Backends</b><br>
-      <sub>Server-authoritative Systeme für Auth, Matchmaking, Stat-Tracking & Economy – gebaut für Live-Operations.</sub>
+      <strong>Game Backends</strong><br>
+      <sub>Server-authoritative Systeme für Auth, Matchmaking, Progression, Events und Live-Ops.</sub>
     </td>
     <td width="33%" valign="top">
-      <b>🤖 Automatisierung</b><br>
-      <sub>Discord-Bots, Worker und Services, die Deployments, Monitoring und Community-Workflows automatisieren.</sub>
+      <strong>Automation</strong><br>
+      <sub>Bots, Worker und Services für Deployments, Moderation, Monitoring und interne Abläufe.</sub>
     </td>
     <td width="33%" valign="top">
-      <b>🧠 KI im Alltag</b><br>
-      <sub>Tools, die KI dort einsetzen, wo sie wirklich hilft: beim Entwickeln, Operaten und Verwalten von Game-Ökosystemen.</sub>
+      <strong>Praktische KI</strong><br>
+      <sub>KI dort einsetzen, wo sie echten Zeitgewinn bringt: im Tooling, im Betrieb und in Developer-Workflows.</sub>
     </td>
   </tr>
 </table>
 
-<br>
+## Arbeitsweise
 
----
+- Systeme so bauen, dass Betrieb und Debugging im Alltag schnell bleiben.
+- Wiederkehrende Prozesse automatisieren, bevor sie Teams ausbremsen.
+- Infrastruktur und Produktcode gemeinsam denken statt getrennt zu verwalten.
+- KI als Werkzeug für Qualität und Tempo nutzen, nicht als Selbstzweck.
 
-## 🚀 Projekte · Dashboard
+## Projekte
 
 <p align="center">
-  <b>Aktuell aktiv</b><br>
-  <sub>Zuletzt geänderte Repositories (Top 6, automatisch generiert).</sub>
+  <strong>Zuletzt bewegt</strong><br>
+  <sub>Aktualisierte Repositories und laufende Arbeit.</sub>
 </p>
 
 <!-- start: projects-latest -->
-
 <div align="center"><i>Keine öffentlichen Repositories.</i></div>
-
 <!-- end: projects-latest -->
 
-<br><br>
+<br>
 
 <p align="center">
-  <b>Beliebt</b><br>
-  <sub>Repositories mit den meisten Stars (Top 6, automatisch generiert).</sub>
+  <strong>Am meisten Interesse</strong><br>
+  <sub>Öffentliche Projekte mit der stärksten Resonanz.</sub>
 </p>
 
 <!-- start: projects-stars -->
-
 <div align="center"><i>Keine öffentlichen Repositories.</i></div>
-
 <!-- end: projects-stars -->
 
-<br>
-
----
-
-## 🧰 Tech-Stack
+## Stack
 
 <p align="center">
-  <b>Core & Scripting</b><br>
-  <img src="https://skillicons.dev/icons?i=java,c,cpp,cs,js,ts,lua,python&theme=dark" alt="Core Languages" />
+  <img
+    src="https://skillicons.dev/icons?i=java,cs,cpp,js,ts,lua,python,nodejs,mysql,mongodb,docker,git,github,githubactions,npm&perline=8"
+    alt="Tech Stack"
+  />
 </p>
 
 <p align="center">
-  <b>Backend & Daten</b><br>
-  <img src="https://skillicons.dev/icons?i=nodejs,mysql,mongodb&theme=dark" alt="Backend & Databases" />
+  <sub>Zusätzlich regelmäßig im Einsatz: REST APIs, queue-basierte Workflows, YAML-Konfigurationen und Build-Automation.</sub>
 </p>
 
+## GitHub Einblick
+
 <p align="center">
-  <b>Build, Infra & Automation</b><br>
-  <img src="https://skillicons.dev/icons?i=maven,npm,docker,git,github&theme=dark" alt="Build & DevOps" /><br>
-  <sub><code>YAML</code> für Pipelines & Configs</sub>
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&hide_border=true&rank_icon=github&theme=transparent"
+    alt="GitHub Stats von PixelGG"
+    height="165"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&hide_border=true&theme=transparent"
+    alt="Top Sprachen von PixelGG"
+    height="165"
+  />
 </p>
 
-<br>
+## Gerade wichtig
 
----
+- Live-Backends für Auth, Sessions, Matchmaking und Stat-Tracking.
+- Tools und Bots für CI/CD, Community-Management und Observability.
+- KI-unterstützte Workflows für Entwicklung, Betrieb und Wissenspflege.
 
-## 📊 Tech-Insights
-
-<p align="center">
-  <sub>Language-Mix über deine öffentlichen Repositories – lokal gerendert.</sub>
-</p>
+## Kontakt
 
 <p align="center">
-  <img src="assets/metrics/top-langs-bar.png" alt="Top Languages (Bar)" width="49%">
-  <img src="assets/metrics/top-langs-donut.png" alt="Top Languages (Donut)" width="49%">
-</p>
-
-<br>
-
----
-
-## 🎯 Was gerade wichtig ist
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <b>🔐 Live-Backends für Games</b>
-      <ul>
-        <li>Auth & Session-Handling</li>
-        <li>Matchmaking & Instancing</li>
-        <li>Stats, Events & Progression</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <b>⚙️ Dev-Automation & Tools</b>
-      <ul>
-        <li>Services & Bots für CI/CD & Monitoring</li>
-        <li>Discord-Integration für Studio & Community</li>
-        <li>KI-unterstützte Workflows für Devs & Ops</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-<br>
-
----
-
-## 📫 Kontakt
-
-<p align="center">
+  <a href="https://github.com/PixelGG">
+    <img
+      src="https://img.shields.io/badge/GitHub-Profile-0b1220?style=for-the-badge&logo=github&logoColor=white"
+      alt="GitHub Profil"
+    />
+  </a>
   <a href="https://github.com/PixelGG/PixelGG/issues/new">
-    <img src="https://img.shields.io/badge/Create%20Issue-007ACC?style=for-the-badge&logo=github&logoColor=white" alt="Create Issue" />
+    <img
+      src="https://img.shields.io/badge/Projekt%20anfragen-Issue%20er%C3%B6ffnen-1e90ff?style=for-the-badge&logo=github&logoColor=white"
+      alt="Issue eröffnen"
+    />
   </a>
 </p>
