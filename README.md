@@ -1,14 +1,46 @@
-<h1 align="center">Mike | PixelGG</h1>
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0b1120,45:12344d,100:d8b36a&text=Mike%20%7C%20PixelGG&fontColor=f8fafc&fontSize=44&fontAlignY=38&desc=Backend-Systeme%20%E2%80%A2%20Automation%20%E2%80%A2%20KI-gest%C3%BCtztes%20Tooling&descAlignY=58&descSize=18&animation=fadeIn"
+    alt="Mike | PixelGG Banner"
+    width="100%"
+  />
+</p>
+
+<h1 align="center">Professionelle Systeme für Games, Communities und operative Plattformen</h1>
 
 <p align="center">
-  <strong>Backend-Systeme, Automatisierung und KI-gestütztes Tooling</strong><br>
-  <sub>Für Games, Communities und operative Plattformen mit Fokus auf Stabilität, Beobachtbarkeit und saubere Auslieferung.</sub>
+  Ich entwickle belastbare Backends, interne Werkzeuge und Automatisierung mit Fokus auf Stabilität,
+  Beobachtbarkeit und saubere Auslieferung.
 </p>
 
 <p align="center">
-  <a href="https://github.com/PixelGG"><strong>GitHub Profil</strong></a>
-  ·
-  <a href="https://github.com/PixelGG/PixelGG/issues/new"><strong>Projekt oder Anfrage</strong></a>
+  <a href="https://github.com/PixelGG">
+    <img
+      src="https://img.shields.io/badge/GitHub-Profil-0B1120?style=for-the-badge&logo=github&logoColor=white"
+      alt="GitHub Profil"
+    />
+  </a>
+  <a href="https://github.com/PixelGG/PixelGG/issues/new">
+    <img
+      src="https://img.shields.io/badge/Projekt%20oder%20Anfrage-Issue%20er%C3%B6ffnen-D8B36A?style=for-the-badge&logo=github&logoColor=0B1120"
+      alt="Projekt oder Anfrage"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <img
+    src="https://img.shields.io/github/followers/PixelGG?style=flat-square&label=Follower&color=12344D"
+    alt="GitHub Follower"
+  />
+  <img
+    src="https://komarev.com/ghpvc/?username=PixelGG&style=flat-square&label=Profilaufrufe&color=0F766E"
+    alt="Profilaufrufe"
+  />
+  <img
+    src="https://img.shields.io/badge/Fokus-Live%20Services%20%26%20Ops-0B1120?style=flat-square"
+    alt="Fokus Live Services und Ops"
+  />
 </p>
 
 <p align="center">
@@ -51,14 +83,31 @@
 
 ## Schwerpunkte
 
-### 01. Live-Backend-Systeme
-Auth, Sessions, Matchmaking, Progression, Events und belastbare Service-Architekturen für laufende Plattformen.
-
-### 02. Automatisierung und interne Werkzeuge
-Bots, Worker und interne Werkzeuge, die Teams entlasten, Fehlerquellen reduzieren und operative Abläufe beschleunigen.
-
-### 03. KI-gestützte Betriebsabläufe
-KI gezielt dort einsetzen, wo sie technische Routinearbeit, Support-Abläufe und Wissensarbeit tatsächlich verbessert.
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>01. Live-Backend-Systeme</strong><br><br>
+      <sub>
+        Auth, Sessions, Matchmaking, Progression, Events und belastbare Service-Architekturen
+        für laufende Plattformen.
+      </sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>02. Automatisierung</strong><br><br>
+      <sub>
+        Bots, Worker und interne Werkzeuge, die Teams entlasten,
+        Fehlerquellen reduzieren und operative Abläufe beschleunigen.
+      </sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>03. KI im Betrieb</strong><br><br>
+      <sub>
+        KI gezielt dort einsetzen, wo sie technische Routinearbeit,
+        Support-Abläufe und Wissensarbeit tatsächlich verbessert.
+      </sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -77,6 +126,19 @@ KI gezielt dort einsetzen, wo sie technische Routinearbeit, Support-Abläufe und
 <!-- start: metrics-summary -->
 <sub>Repos: <b>0</b> · Stars (gesamt): <b>0</b> · Top Language: —</sub>
 <!-- end: metrics-summary -->
+</p>
+
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&hide_border=true&bg_color=0B1120&title_color=D8B36A&text_color=E5EEF7&icon_color=2DD4BF"
+    alt="GitHub Statistiken von PixelGG"
+    height="168"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&hide_border=true&bg_color=12344D&title_color=D8B36A&text_color=E5EEF7"
+    alt="Top-Sprachen von PixelGG"
+    height="168"
+  />
 </p>
 
 ---
@@ -106,6 +168,13 @@ KI gezielt dort einsetzen, wo sie technische Routinearbeit, Support-Abläufe und
 ---
 
 ## Technologieprofil
+
+<p align="center">
+  <img
+    src="https://skillicons.dev/icons?i=java,cs,cpp,js,ts,lua,python,nodejs,mysql,mongodb,docker,git,github,githubactions,npm&perline=8"
+    alt="Technologieprofil"
+  />
+</p>
 
 **Kernentwicklung**  
 <sub>Java, C#, C++, TypeScript, JavaScript, Lua und Python für Services, Werkzeuge und Integrationen.</sub>
