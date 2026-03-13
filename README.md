@@ -1,65 +1,103 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0f172a,38:12344d,72:0f766e,100:d4a85f&text=Mike%20%7C%20PixelGG&fontColor=f8fafc&fontSize=48&fontAlignY=38&desc=Game%20Infrastructure%20%E2%80%A2%20Automation%20%E2%80%A2%20AI-Driven%20Operations&descAlignY=58&descSize=18&animation=fadeIn"
-    alt="Mike | PixelGG Banner"
+    src="assets/hero.svg"
+    alt="Mike | PixelGG hero banner"
+    width="100%"
   />
 </p>
 
+<h1 align="center">Professionelle Systeme für Games, Operations und interne Plattformen</h1>
+
 <p align="center">
-  <img
-    src="https://img.shields.io/badge/Midnight-0F172A?style=for-the-badge"
-    alt="Midnight"
-  />
-  <img
-    src="https://img.shields.io/badge/Teal-0F766E?style=for-the-badge"
-    alt="Teal"
-  />
-  <img
-    src="https://img.shields.io/badge/Cyan-06B6D4?style=for-the-badge"
-    alt="Cyan"
-  />
-  <img
-    src="https://img.shields.io/badge/Gold-D4A85F?style=for-the-badge"
-    alt="Gold"
-  />
+  Ich entwickle Backend-Services, Automatisierung und AI-gestütztes Tooling mit Fokus auf Stabilität,
+  Observability und saubere Delivery. Nicht für die Demo, sondern für realen Betrieb.
 </p>
 
-<h1 align="center">Backends, die live bestehen. Tooling, das Teams spürbar schneller macht.</h1>
-
 <p align="center">
-  Ich entwickle hochwertige Backend-Systeme, Bots und interne Plattformen für Games,
-  Communities und operative Workflows mit Fokus auf Stabilität, Observability und saubere Automatisierung.
+  <sub>Robust unter Last · Klar im Monitoring · Wartbar im Alltag</sub>
 </p>
 
 <p align="center">
   <a href="https://github.com/PixelGG">
     <img
-      src="https://img.shields.io/github/followers/PixelGG?style=for-the-badge&label=GitHub%20Follower&color=0F172A"
+      src="https://img.shields.io/github/followers/PixelGG?style=for-the-badge&label=GitHub%20Follower&color=0B1120"
       alt="GitHub Follower"
     />
   </a>
-  <img
-    src="https://komarev.com/ghpvc/?username=PixelGG&style=for-the-badge&label=Profile%20Views&color=0F766E"
-    alt="Profile Views"
-  />
-  <img
-    src="https://img.shields.io/badge/Fokus-Live%20Services%20%26%20Ops-D4A85F?style=for-the-badge&labelColor=12344D"
-    alt="Fokus Live Services und Ops"
-  />
+  <a href="https://github.com/PixelGG/PixelGG/issues/new">
+    <img
+      src="https://img.shields.io/badge/Projekt%20oder%20Anfrage-Issue%20er%C3%B6ffnen-D8B36A?style=for-the-badge&logo=github&logoColor=0B1120"
+      alt="Projekt oder Anfrage"
+    />
+  </a>
 </p>
 
 <p align="center">
-  <code>Auth</code>
-  <code>Matchmaking</code>
-  <code>Queues</code>
-  <code>Stats</code>
-  <code>APIs</code>
-  <code>Observability</code>
-  <code>Automation</code>
-  <code>AI Tooling</code>
+  <code>AUTH</code>
+  <code>MATCHMAKING</code>
+  <code>QUEUES</code>
+  <code>STATS</code>
+  <code>APIS</code>
+  <code>AUTOMATION</code>
+  <code>OPERATIONS</code>
+  <code>AI SYSTEMS</code>
 </p>
 
-> Ich baue keine reinen Showcase-Projekte, sondern Systeme, die im Alltag unter Last, im Monitoring und im Betrieb bestehen müssen.
+## Positionierung
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Woran ich arbeite</strong><br><br>
+      <sub>
+        Server-authoritative Backends, Worker, Bots und interne Plattformen für Games,
+        Communities und operative Prozesse mit hoher technischer Verlässlichkeit.
+      </sub>
+    </td>
+    <td width="50%" valign="top">
+      <strong>Worauf ich Wert lege</strong><br><br>
+      <sub>
+        Gute Systeme sind nicht nur schnell gebaut, sondern auch nachvollziehbar,
+        beobachtbar und langfristig ohne unnötige Reibung betreibbar.
+      </sub>
+    </td>
+  </tr>
+</table>
+
+## Kernbereiche
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>Live Backend Systems</strong><br><br>
+      <sub>
+        Auth, Sessions, Matchmaking, Progression, Events und belastbare Service-Architekturen
+        für laufende Plattformen.
+      </sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>Automation & Internal Tools</strong><br><br>
+      <sub>
+        Bots, Worker und interne Werkzeuge, die Teams beschleunigen,
+        Fehlerquellen reduzieren und operative Abläufe glätten.
+      </sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>AI-Assisted Operations</strong><br><br>
+      <sub>
+        KI gezielt dort einsetzen, wo sie technische Routinearbeit,
+        Support-Flows und Wissensarbeit spürbar verbessert.
+      </sub>
+    </td>
+  </tr>
+</table>
+
+## Arbeitsweise
+
+- Architektur, Delivery und Monitoring von Anfang an gemeinsam denken.
+- Komplexität reduzieren, bevor sie im Betrieb teuer wird.
+- Automatisierung nur dort einsetzen, wo sie reale Reibung entfernt.
+- Lösungen für langfristige Wartung und Incident-Fälle mitentwickeln.
 
 ## Snapshot
 
@@ -69,55 +107,24 @@
 <!-- end: metrics-summary -->
 </p>
 
-## Kernbereiche
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>01 · Live Game Backends</strong><br><br>
-      <sub>
-        Auth, Sessions, Matchmaking, Progression, Events und service-orientierte Gameplay-Systeme
-        für einen verlässlichen Live-Betrieb.
-      </sub>
-    </td>
-    <td width="50%" valign="top">
-      <strong>02 · Automation & Bots</strong><br><br>
-      <sub>
-        Worker, Discord-Integrationen und interne Services, die wiederkehrende Prozesse
-        automatisieren und operative Reibung reduzieren.
-      </sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>03 · AI-gestütztes Tooling</strong><br><br>
-      <sub>
-        Praktische KI für Entwicklung, Support, Wissenspflege und Operations,
-        dort eingesetzt, wo sie realen Nutzen liefert.
-      </sub>
-    </td>
-    <td width="50%" valign="top">
-      <strong>04 · Qualität im Betrieb</strong><br><br>
-      <sub>
-        Systeme so aufbauen, dass Logging, Debugging, Erweiterbarkeit und Deployment
-        nicht nachträglich teuer werden.
-      </sub>
-    </td>
-  </tr>
-</table>
-
-## Arbeitsprinzipien
-
-- Stabilität vor Blendwerk: Systeme müssen in Produktion sauber laufen, nicht nur in einer Demo.
-- Weniger Reibung, mehr Wirkung: Automatisierung soll Teams entlasten und nicht neue Komplexität erzeugen.
-- Infrastruktur gehört zum Produkt: Delivery, Monitoring und Wartbarkeit werden von Anfang an mitgedacht.
-- KI mit Maß: eingesetzt für bessere Geschwindigkeit und Qualität, nicht für künstliche Fülle.
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&hide_border=true&bg_color=0B1120&title_color=D8B36A&text_color=E5EEF7&icon_color=2DD4BF"
+    alt="GitHub Stats von PixelGG"
+    height="170"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&hide_border=true&bg_color=12344D&title_color=D8B36A&text_color=E5EEF7"
+    alt="Top Sprachen von PixelGG"
+    height="170"
+  />
+</p>
 
 ## Projektfenster
 
 <p align="center">
   <strong>Zuletzt bewegt</strong><br>
-  <sub>Aktuelle Arbeit, jüngste Änderungen und laufende Schwerpunkte.</sub>
+  <sub>Aktuelle Arbeit, letzte Änderungen und laufende Entwicklung.</sub>
 </p>
 
 <!-- start: projects-latest -->
@@ -128,95 +135,57 @@
 
 <p align="center">
   <strong>Meiste Resonanz</strong><br>
-  <sub>Öffentliche Projekte mit der stärksten Sichtbarkeit.</sub>
+  <sub>Öffentliche Projekte mit der höchsten Sichtbarkeit.</sub>
 </p>
 
 <!-- start: projects-stars -->
 <div align="center"><i>Keine öffentlichen Repositories.</i></div>
 <!-- end: projects-stars -->
 
-## Tech Stack
+## Technologieprofil
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>Core Engineering</strong><br><br>
+      <sub>Java, C#, C++, TypeScript, JavaScript, Lua und Python für Services, Tools und Integrationen.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>Services & Data</strong><br><br>
+      <sub>Node.js, MySQL und MongoDB für APIs, Persistenz, Worker und datengetriebene Backends.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>Delivery & Ops</strong><br><br>
+      <sub>Docker, Git, GitHub, GitHub Actions, NPM, YAML-Workflows und service-orientierte Deployment-Prozesse.</sub>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <img
-    src="https://img.shields.io/badge/Core%20Engineering-0F172A?style=for-the-badge&logoColor=white"
-    alt="Core Engineering"
+    src="https://skillicons.dev/icons?i=java,cs,cpp,js,ts,lua,python,nodejs,mysql,mongodb,docker,git,github,githubactions,npm&perline=8"
+    alt="Tech Stack"
   />
 </p>
+
+## Zusammenarbeit
 
 <p align="center">
-  <img
-    src="https://skillicons.dev/icons?i=java,cs,cpp,js,ts,lua,python&perline=7"
-    alt="Core Engineering Stack"
-  />
+  Wenn es um belastbare Services, gute Delivery oder hochwertige interne Tools geht,
+  ist genau das mein Schwerpunkt.
 </p>
-
-<p align="center">
-  <img
-    src="https://img.shields.io/badge/Backend%20%26%20Data-12344D?style=for-the-badge&logoColor=white"
-    alt="Backend und Data"
-  />
-</p>
-
-<p align="center">
-  <img
-    src="https://skillicons.dev/icons?i=nodejs,mysql,mongodb&perline=3"
-    alt="Backend und Data Stack"
-  />
-</p>
-
-<p align="center">
-  <img
-    src="https://img.shields.io/badge/Delivery%20%26%20Ops-D4A85F?style=for-the-badge&labelColor=0F766E"
-    alt="Delivery und Ops"
-  />
-</p>
-
-<p align="center">
-  <img
-    src="https://skillicons.dev/icons?i=docker,git,github,githubactions,npm&perline=5"
-    alt="Delivery und Ops Stack"
-  />
-</p>
-
-<p align="center">
-  <sub>Ergänzend regelmäßig im Einsatz: REST APIs, YAML-Konfigurationen, queue-basierte Workflows und Service-Automation.</sub>
-</p>
-
-## GitHub Einblick
-
-<p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&hide_border=true&bg_color=0F172A&title_color=D4A85F&text_color=E2E8F0&icon_color=06B6D4"
-    alt="GitHub Stats von PixelGG"
-    height="170"
-  />
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&hide_border=true&bg_color=12344D&title_color=D4A85F&text_color=E2E8F0"
-    alt="Top Sprachen von PixelGG"
-    height="170"
-  />
-</p>
-
-## Gerade im Fokus
-
-- Backend-Architektur für Auth, Sessions, Matchmaking und fortlaufendes Stat-Tracking.
-- Automatisierte Workflows für Deployments, Community-Prozesse und operative Sichtbarkeit.
-- KI-unterstützte Tools, die Entwicklungs- und Betriebsabläufe konkret beschleunigen.
-
-## Kontakt
 
 <p align="center">
   <a href="https://github.com/PixelGG">
     <img
-      src="https://img.shields.io/badge/GitHub-Profil%20ansehen-0F172A?style=for-the-badge&logo=github&logoColor=white"
+      src="https://img.shields.io/badge/GitHub-Profil%20ansehen-0B1120?style=for-the-badge&logo=github&logoColor=white"
       alt="GitHub Profil ansehen"
     />
   </a>
   <a href="https://github.com/PixelGG/PixelGG/issues/new">
     <img
-      src="https://img.shields.io/badge/Zusammenarbeit-Issue%20er%C3%B6ffnen-D4A85F?style=for-the-badge&logo=github&logoColor=0F172A"
-      alt="Zusammenarbeit per Issue"
+      src="https://img.shields.io/badge/Zusammenarbeit-starten-D8B36A?style=for-the-badge&logo=github&logoColor=0B1120"
+      alt="Zusammenarbeit starten"
     />
   </a>
 </p>
