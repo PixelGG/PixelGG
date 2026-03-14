@@ -124,7 +124,9 @@
 
 <p align="center">
 <!-- start: metrics-summary -->
+
 <sub>Repos: <b>0</b> · Stars (gesamt): <b>0</b> · Top Language: —</sub>
+
 <!-- end: metrics-summary -->
 </p>
 
@@ -151,7 +153,9 @@
 </p>
 
 <!-- start: projects-latest -->
-<div align="center"><i>Derzeit keine öffentlichen Repositories sichtbar.</i></div>
+
+<div align="center"><i>Keine öffentlichen Repositories.</i></div>
+
 <!-- end: projects-latest -->
 
 <br>
@@ -162,7 +166,9 @@
 </p>
 
 <!-- start: projects-stars -->
-<div align="center"><i>Sobald öffentliche Projekte vorhanden sind, erscheinen sie hier.</i></div>
+
+<div align="center"><i>Keine öffentlichen Repositories.</i></div>
+
 <!-- end: projects-stars -->
 
 ---
