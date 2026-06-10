@@ -125,7 +125,7 @@
 <p align="center">
 <!-- start: metrics-summary -->
 
-<sub>Repos: <b>0</b> · Stars (gesamt): <b>0</b> · Top Language: —</sub>
+<sub>Repos: <b>1</b> · Stars (gesamt): <b>0</b> · Top Language: <b>Lua</b> (100.0%)</sub>
 
 <!-- end: metrics-summary -->
 </p>
@@ -154,7 +154,11 @@
 
 <!-- start: projects-latest -->
 
-<div align="center"><i>Keine öffentlichen Repositories.</i></div>
+<div align="center">
+<table>
+<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-06-09</sub></td><td width="50%" style="padding: 8px;"></td></tr>
+</table>
+</div>
 
 <!-- end: projects-latest -->
 
@@ -167,7 +171,11 @@
 
 <!-- start: projects-stars -->
 
-<div align="center"><i>Keine öffentlichen Repositories.</i></div>
+<div align="center">
+<table>
+<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-06-09</sub></td><td width="50%" style="padding: 8px;"></td></tr>
+</table>
+</div>
 
 <!-- end: projects-stars -->
 
