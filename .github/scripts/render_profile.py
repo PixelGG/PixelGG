@@ -1,6 +1,6 @@
 import os
 import sys
-import json
+import html
 from datetime import datetime, timezone
 from urllib.parse import quote
 
@@ -22,11 +22,20 @@ METRICS_DIR.mkdir(parents=True, exist_ok=True)
 session = requests.Session()
 session.headers.update(
     {
-        "Authorization": f"Bearer {TOKEN}",
         "Accept": "application/vnd.github+json",
-        "User-Agent": "pixelgg-profile-v3",
+        "User-Agent": "pixelgg-profile-v4",
     }
 )
+if TOKEN:
+    session.headers["Authorization"] = f"Bearer {TOKEN}"
+
+PROJECT_COPY = {
+    "Arvox_Core": "Sicherer FiveM-Kern für Accounts, Sessions, Characters und Permissions.",
+    "Arvox_Inventory": "Transaktionssicheres Inventarsystem für Arvox Core.",
+    "Arvox_Phone": "Gerätebasiertes, serverautorisiertes FiveM-Phone mit PulseOS.",
+    "DXForge": "Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.",
+    "LuaScripts": "Experimentierfeld und Sammlung wiederverwendbarer Lua-Systeme.",
+}
 
 def gh(url: str):
     r = session.get(url, timeout=30)
@@ -96,28 +105,28 @@ def primary_language(langs: dict) -> str:
 def set_dark_style():
     plt.rcParams.update(
         {
-            "figure.facecolor": "#0d1117",
-            "axes.facecolor": "#0d1117",
-            "savefig.facecolor": "#0d1117",
-            "text.color": "#c9d1d9",
-            "axes.labelcolor": "#c9d1d9",
-            "axes.edgecolor": "#30363d",
-            "xtick.color": "#8b949e",
-            "ytick.color": "#8b949e",
-            "grid.color": "#30363d",
+            "figure.facecolor": "#07111f",
+            "axes.facecolor": "#07111f",
+            "savefig.facecolor": "#07111f",
+            "text.color": "#e5eef7",
+            "axes.labelcolor": "#9fb3c8",
+            "axes.edgecolor": "#193451",
+            "xtick.color": "#7f96ad",
+            "ytick.color": "#e5eef7",
+            "grid.color": "#193451",
             "font.size": 11,
         }
     )
 
 PALETTE = [
-    "#58a6ff",
-    "#f78166",
-    "#d2a8ff",
-    "#79c0ff",
-    "#ffa657",
-    "#7ee787",
-    "#1f6feb",
-    "#ff7b72",
+    "#2dd4bf",
+    "#d8b36a",
+    "#4f9fca",
+    "#7dd3c7",
+    "#afc4d8",
+    "#8d7cc7",
+    "#cf8f6a",
+    "#5e7994",
 ]
 
 def build_language_charts(language_totals: dict):
@@ -147,18 +156,32 @@ def build_language_charts(language_totals: dict):
 
     pcts = [v / total * 100 for v in vals]
 
-    # Bar
+    # Kompakter, README-tauglicher Signal-Chart.
     set_dark_style()
-    fig, ax = plt.subplots(figsize=(9, 5), dpi=180)
-    y = list(range(len(labels)))[::-1]
+    fig, ax = plt.subplots(figsize=(10, 4.2), dpi=160)
+    display_labels = labels[::-1]
+    display_pcts = pcts[::-1]
     colors = [PALETTE[i % len(PALETTE)] for i in range(len(labels))][::-1]
-    ax.barh(y, pcts[::-1], color=colors)
-    ax.set_yticks(y, labels=labels[::-1])
-    ax.set_xlabel("Anteil (%)")
-    ax.set_title("Top Languages (öffentlich)")
-    ax.grid(axis="x", linestyle="--", alpha=0.35)
-    fig.tight_layout()
-    fig.savefig(METRICS_DIR / "top-langs-bar.png")
+    bars = ax.barh(display_labels, display_pcts, color=colors, height=0.56)
+    ax.set_xlabel("Anteil am öffentlichen Code (%)")
+    ax.set_title("LANGUAGE SIGNAL", loc="left", pad=18, color="#d8b36a", fontweight="bold")
+    ax.grid(axis="x", linestyle=(0, (2, 4)), alpha=0.6)
+    ax.set_axisbelow(True)
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    ax.tick_params(axis="y", length=0, pad=10)
+    ax.bar_label(
+        bars,
+        labels=[
+            "<0.1%" if 0 < value < 0.05 else f"{value:.1f}%"
+            for value in display_pcts
+        ],
+        padding=6,
+        color="#e5eef7",
+        fontsize=9,
+    )
+    ax.set_xlim(0, max(display_pcts) * 1.14)
+    fig.tight_layout(pad=1.4)
+    fig.savefig(METRICS_DIR / "top-langs-bar.png", bbox_inches="tight")
     plt.close(fig)
 
     # Donut
@@ -201,17 +224,22 @@ def build_projects_table(repos, lang_map, mode: str) -> str:
     for r in chosen:
         full = r["full_name"]
         name = r["name"]
-        desc = truncate(r.get("description") or "", 120)
+        desc = truncate(PROJECT_COPY.get(name) or r.get("description") or "", 120)
         stars = int(r.get("stargazers_count") or 0)
         langs = lang_map.get(full) or {}
         lang = primary_language(langs)
         updated = iso_date(r.get("pushed_at") or r.get("updated_at") or "")
 
+        safe_full = quote(full, safe="/")
+        safe_name = html.escape(name)
+        safe_desc = html.escape(desc) if desc else "<i>Noch ohne Kurzbeschreibung</i>"
+        safe_lang = html.escape(lang)
+        star_part = f" · ⭐ {stars}" if stars else ""
         cell = (
-            '<td align="left" valign="top" width="50%" style="padding: 8px;">'
-            f'<a href="https://github.com/{full}"><b>{name}</b></a><br/>'
-            f'<sub>{desc or "<i>Keine Beschreibung</i>"}</sub><br/>'
-            f'<sub>⭐ {stars} · {lang} · updated {updated}</sub>'
+            '<td align="left" valign="top" width="50%">'
+            f'<a href="https://github.com/{safe_full}"><b>{safe_name}</b></a><br/>'
+            f'<sub>{safe_desc}</sub><br/>'
+            f'<sub>{safe_lang}{star_part} · zuletzt aktiv {updated}</sub>'
             "</td>"
         )
         cells.append(cell)
@@ -220,11 +248,11 @@ def build_projects_table(repos, lang_map, mode: str) -> str:
     for i in range(0, len(cells), 2):
         row = cells[i : i + 2]
         if len(row) == 1:
-            row.append('<td width="50%" style="padding: 8px;"></td>')
+            row.append('<td width="50%"></td>')
         rows.append("<tr>" + "".join(row) + "</tr>")
 
-    html = '<div align="center">\n<table>\n' + "\n".join(rows) + "\n</table>\n</div>"
-    return html
+    table_html = '<div align="center">\n<table>\n' + "\n".join(rows) + "\n</table>\n</div>"
+    return table_html
 
 # ---------- README-Aktualisierung ----------
 
@@ -236,8 +264,8 @@ def replace_between(text: str, start_marker: str, end_marker: str, replacement: 
     return text[: s + len(start_marker)] + "\n\n" + replacement + "\n\n" + text[e:]
 
 def main():
-    if not OWNER or not TOKEN:
-        print("OWNER oder GITHUB_TOKEN fehlt.", file=sys.stderr)
+    if not OWNER:
+        print("OWNER fehlt.", file=sys.stderr)
         sys.exit(1)
 
     repos = fetch_all_repos(OWNER)
@@ -264,14 +292,14 @@ def main():
     else:
         lang_part = "Top Language: —"
 
+    star_part = f" · Stars: <b>{total_stars}</b>" if total_stars else ""
     metrics_summary = (
-        f"<sub>Repos: <b>{total_repos}</b> · Stars (gesamt): <b>{total_stars}</b> · {lang_part}</sub>"
+        f"<sub>Public Repositories: <b>{total_repos}</b>{star_part} "
+        f"· Primary Signal: {lang_part.removeprefix('Top Language: ')}</sub>"
     )
 
     # Projekte
     latest_html = build_projects_table(repos, lang_map, "latest")
-    stars_html = build_projects_table(repos, lang_map, "stars")
-
     readme_path = ROOT / "README.md"
     md = readme_path.read_text(encoding="utf-8")
 
@@ -281,12 +309,8 @@ def main():
     md = replace_between(
         md, "<!-- start: projects-latest -->", "<!-- end: projects-latest -->", latest_html
     )
-    md = replace_between(
-        md, "<!-- start: projects-stars -->", "<!-- end: projects-stars -->", stars_html
-    )
-
     readme_path.write_text(md, encoding="utf-8")
-    print("README, Snapshot & Projektlisten aktualisiert.")
+    print("README-Telemetrie, Sprachsignal und Projektliste aktualisiert.")
 
 if __name__ == "__main__":
     main()

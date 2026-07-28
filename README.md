@@ -1,234 +1,263 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0b1120,45:12344d,100:d8b36a&text=Mike%20%7C%20PixelGG&fontColor=f8fafc&fontSize=44&fontAlignY=38&desc=Backend-Systeme%20%E2%80%A2%20Automation%20%E2%80%A2%20KI-gest%C3%BCtztes%20Tooling&descAlignY=58&descSize=18&animation=fadeIn"
-    alt="Mike | PixelGG Banner"
+    src="./assets/pixelgg-system-banner.png"
+    alt="PixelGG – abstrakte Systemarchitektur mit Datenpfaden und einem zentralen Gateway"
     width="100%"
   />
 </p>
 
-<h1 align="center">Professionelle Systeme für Games, Communities und operative Plattformen</h1>
+<h1 align="center">MIKE <code>//</code> PIXELGG</h1>
 
 <p align="center">
-  Ich entwickle belastbare Backends, interne Werkzeuge und Automatisierung mit Fokus auf Stabilität,
-  Beobachtbarkeit und saubere Auslieferung.
+  <strong>Ich baue die Schicht, die Spieler niemals bemerken sollten — weil sie zuverlässig funktioniert.</strong>
+</p>
+
+<p align="center">
+  Serverautoritative Game-Systeme, sichere Datenflüsse und operative Werkzeuge<br>
+  für FiveM, Live-Services und anspruchsvolle Community-Plattformen.
 </p>
 
 <p align="center">
   <a href="https://github.com/PixelGG">
     <img
-      src="https://img.shields.io/badge/GitHub-Profil-0B1120?style=for-the-badge&logo=github&logoColor=white"
-      alt="GitHub Profil"
+      src="https://img.shields.io/badge/SYSTEMS-SERVER%20AUTHORITATIVE-2DD4BF?style=for-the-badge&labelColor=07111F"
+      alt="Serverautoritative Systeme"
+    />
+  </a>
+  <a href="https://github.com/PixelGG?tab=repositories">
+    <img
+      src="https://img.shields.io/badge/CURRENT%20SIGNAL-ARVOX-D8B36A?style=for-the-badge&labelColor=07111F"
+      alt="Aktueller Fokus: Arvox"
     />
   </a>
   <a href="https://github.com/PixelGG/PixelGG/issues/new">
     <img
-      src="https://img.shields.io/badge/Projekt%20oder%20Anfrage-Issue%20er%C3%B6ffnen-D8B36A?style=for-the-badge&logo=github&logoColor=0B1120"
-      alt="Projekt oder Anfrage"
+      src="https://img.shields.io/badge/CONTACT-OPEN%20A%20CHANNEL-F8FAFC?style=for-the-badge&labelColor=07111F"
+      alt="Kontakt über ein GitHub Issue"
     />
   </a>
 </p>
 
 <p align="center">
-  <img
-    src="https://img.shields.io/github/followers/PixelGG?style=flat-square&label=Follower&color=12344D"
-    alt="GitHub Follower"
-  />
-  <img
-    src="https://komarev.com/ghpvc/?username=PixelGG&style=flat-square&label=Profilaufrufe&color=0F766E"
-    alt="Profilaufrufe"
-  />
-  <img
-    src="https://img.shields.io/badge/Fokus-Live%20Services%20%26%20Ops-0B1120?style=flat-square"
-    alt="Fokus Live Services und Ops"
-  />
-</p>
-
-<p align="center">
-  <code>Auth</code>
-  <code>Matchmaking</code>
-  <code>Queues</code>
-  <code>Stats</code>
-  <code>APIs</code>
+  <code>Lua</code>
+  <code>TypeScript</code>
+  <code>React</code>
+  <code>FiveM</code>
+  <code>MySQL</code>
   <code>Automation</code>
   <code>Operations</code>
-  <code>KI-Systeme</code>
 </p>
 
-> Ich entwickle keine reinen Showcase-Projekte, sondern Systeme, die im Alltag stabil laufen, sauber beobachtbar bleiben und langfristig wartbar sind.
-
----
-
-## Profil
+<br>
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <strong>Woran ich arbeite</strong><br><br>
+    <td>
+      <strong>OPERATING PRINCIPLE</strong><br><br>
+      <code>CLIENTS REQUEST&nbsp;&nbsp;·&nbsp;&nbsp;SERVERS DECIDE&nbsp;&nbsp;·&nbsp;&nbsp;OPERATIONS PROVE</code><br><br>
       <sub>
-        Serverautoritative Backends, Worker, Bots und interne Plattformen für Games,
-        Communities und operative Prozesse mit hohem Anspruch an Verlässlichkeit.
-      </sub>
-    </td>
-    <td width="50%" valign="top">
-      <strong>Worauf ich Wert lege</strong><br><br>
-      <sub>
-        Gute Systeme sind nicht nur schnell entwickelt, sondern auch klar strukturiert,
-        nachvollziehbar im Betrieb und ohne unnötige Reibung erweiterbar.
+        Gute Systeme schützen ihre Grenzen, erklären ihren Zustand und bleiben auch dann beherrschbar,
+        wenn etwas nicht nach Plan läuft.
       </sub>
     </td>
   </tr>
 </table>
 
----
-
-## Schwerpunkte
+## `01 // SYSTEMSIGNATUR`
 
 <table>
   <tr>
-    <td width="33%" valign="top">
-      <strong>01. Live-Backend-Systeme</strong><br><br>
+    <td width="50%" valign="top">
+      <strong>Was ich baue</strong><br><br>
       <sub>
-        Auth, Sessions, Matchmaking, Progression, Events und belastbare Service-Architekturen
-        für laufende Plattformen.
+        Serverautoritative Game-Plattformen, versionierte Schnittstellen, transaktionale Fachsysteme,
+        Worker, Bots und interne Werkzeuge für echte Betriebsabläufe.
       </sub>
     </td>
-    <td width="33%" valign="top">
-      <strong>02. Automatisierung</strong><br><br>
+    <td width="50%" valign="top">
+      <strong>Wofür ich optimiere</strong><br><br>
       <sub>
-        Bots, Worker und interne Werkzeuge, die Teams entlasten,
-        Fehlerquellen reduzieren und operative Abläufe beschleunigen.
+        Klare Ownership, Default-Deny, begrenzte Laufzeitkosten, nachvollziehbare Migrationen,
+        aussagekräftige Telemetrie und kontrollierbare Recovery.
       </sub>
     </td>
-    <td width="33%" valign="top">
-      <strong>03. KI im Betrieb</strong><br><br>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Wie ich entwickle</strong><br><br>
       <sub>
-        KI gezielt dort einsetzen, wo sie technische Routinearbeit,
-        Support-Abläufe und Wissensarbeit tatsächlich verbessert.
+        Architektur, Sicherheitsgrenzen, Delivery und Betrieb werden als ein System entworfen —
+        nicht als vier nachträgliche Aufgaben.
+      </sub>
+    </td>
+    <td width="50%" valign="top">
+      <strong>Wann Automatisierung gewinnt</strong><br><br>
+      <sub>
+        Wenn sie wiederholbare Arbeit entfernt, Fehler sichtbar macht und Menschen mehr Raum
+        für gute Entscheidungen gibt.
       </sub>
     </td>
   </tr>
 </table>
 
----
+## `02 // REQUEST LIFECYCLE`
 
-## Arbeitsweise
+<p align="center">
+  <code>PLAYER INTENT</code>
+  &nbsp;→&nbsp;
+  <code>GUARDED GATEWAY</code>
+  &nbsp;→&nbsp;
+  <code>DOMAIN DECISION</code>
+  &nbsp;→&nbsp;
+  <code>AUDITABLE RESULT</code>
+</p>
 
-- Architektur, Delivery und Monitoring von Anfang an gemeinsam denken.
-- Komplexität früh reduzieren, bevor sie im Betrieb teuer wird.
-- Automatisierung nur dort einsetzen, wo sie reale Reibung entfernt.
-- Systeme für langfristige Wartung und Incident-Fälle mitentwickeln.
+<table>
+  <tr>
+    <td width="25%" valign="top">
+      <strong>01 · Intent</strong><br><br>
+      <sub>Der Client beschreibt eine Absicht, niemals die Wahrheit.</sub>
+    </td>
+    <td width="25%" valign="top">
+      <strong>02 · Guard</strong><br><br>
+      <sub>Session, Schema, Rate, Rechte und Zustand werden geprüft.</sub>
+    </td>
+    <td width="25%" valign="top">
+      <strong>03 · Commit</strong><br><br>
+      <sub>Die Domäne entscheidet und persistiert atomar.</sub>
+    </td>
+    <td width="25%" valign="top">
+      <strong>04 · Proof</strong><br><br>
+      <sub>Audit, Health und Telemetrie machen das Ergebnis erklärbar.</sub>
+    </td>
+  </tr>
+</table>
 
----
+## `03 // FLAGSHIP SYSTEMS`
 
-## Snapshot
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>◈ <a href="https://github.com/PixelGG/Arvox_Core">Arvox Core</a></strong><br><br>
+      <sub>
+        Der gehärtete Mittelpunkt des Ökosystems: Accounts, Sessions, Characters, Permissions,
+        versionierte Requests, Audit, Outbox und Health — mit bewusst kleiner Angriffsfläche.
+      </sub><br><br>
+      <code>Lua</code> <code>FiveM</code> <code>Security</code> <code>oxmysql</code>
+    </td>
+    <td width="50%" valign="top">
+      <strong>◇ <a href="https://github.com/PixelGG/Arvox_Inventory">Arvox Inventory</a></strong><br><br>
+      <sub>
+        Ein transaktionssicheres Inventarsystem mit geordneten Locks, Revisionen, Idempotenz,
+        atomarem Crafting und einer zugänglichen React-NUI von 720p bis 4K.
+      </sub><br><br>
+      <code>Lua</code> <code>React</code> <code>TypeScript</code> <code>InnoDB</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>◎ <a href="https://github.com/PixelGG/Arvox_Phone">Arvox Pulse</a></strong><br><br>
+      <sub>
+        Kein Menü in Telefonform, sondern ein persistentes Gerät: Calls, Messaging, Media,
+        GPS, Social, Marketplace und ein erweiterbares App-SDK auf serverautoritativer Basis.
+      </sub><br><br>
+      <code>PulseOS</code> <code>React</code> <code>Lua</code> <code>App SDK</code>
+    </td>
+    <td width="50%" valign="top">
+      <strong>⌁ <a href="https://github.com/PixelGG/DXForge">DXForge</a></strong><br><br>
+      <sub>
+        Eine eigenständige DX9-Lua-UI-Bibliothek mit Windowing, Controls, Themes,
+        Animationen, Tooltips, Notifications und fallback-sicherem Rendering.
+      </sub><br><br>
+      <code>Lua 5.1</code> <code>DX9</code> <code>UI Systems</code> <code>MIT</code>
+    </td>
+  </tr>
+</table>
+
+## `04 // LIVE TELEMETRY`
 
 <p align="center">
 <!-- start: metrics-summary -->
 
-<sub>Repos: <b>5</b> · Stars (gesamt): <b>0</b> · Top Language: <b>Lua</b> (83.3%)</sub>
+<sub>Public Repositories: <b>5</b> · Primary Signal: <b>Lua</b> (83.3%)</sub>
 
 <!-- end: metrics-summary -->
 </p>
 
 <p align="center">
   <img
-    src="https://github-readme-stats.vercel.app/api?username=PixelGG&show_icons=true&hide_border=true&bg_color=0B1120&title_color=D8B36A&text_color=E5EEF7&icon_color=2DD4BF"
-    alt="GitHub Statistiken von PixelGG"
-    height="168"
-  />
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=PixelGG&layout=compact&hide_border=true&bg_color=12344D&title_color=D8B36A&text_color=E5EEF7"
-    alt="Top-Sprachen von PixelGG"
-    height="168"
+    src="./assets/metrics/top-langs-bar.png"
+    alt="Verteilung der Programmiersprachen in den öffentlichen PixelGG-Repositories"
+    width="760"
   />
 </p>
 
----
+<p align="center">
+  <sub>
+    Automatisch aus den öffentlichen Repositories erzeugt · tägliche Aktualisierung via GitHub Actions
+  </sub>
+</p>
 
-## Projektfenster
+## `05 // RECENT TRANSMISSIONS`
 
 <p align="center">
-  <strong>Zuletzt bewegt</strong><br>
-  <sub>Aktuelle Arbeit, letzte Änderungen und laufende Entwicklung.</sub>
+  <sub>Die zuletzt bewegten öffentlichen Systeme — direkt aus der GitHub API.</sub>
 </p>
 
 <!-- start: projects-latest -->
 
 <div align="center">
 <table>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/Arvox_Inventory"><b>Arvox_Inventory</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-07-26</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/Arvox_Phone"><b>Arvox_Phone</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-07-25</sub></td></tr>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/Arvox_Core"><b>Arvox_Core</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-07-25</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/DXForge"><b>DXForge</b></a><br/><sub>DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tab…</sub><br/><sub>⭐ 0 · Lua · updated 2026-07-02</sub></td></tr>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-06-09</sub></td><td width="50%" style="padding: 8px;"></td></tr>
+<tr><td align="left" valign="top" width="50%"><a href="https://github.com/PixelGG/Arvox_Inventory"><b>Arvox_Inventory</b></a><br/><sub>Transaktionssicheres Inventarsystem für Arvox Core.</sub><br/><sub>Lua · zuletzt aktiv 2026-07-26</sub></td><td align="left" valign="top" width="50%"><a href="https://github.com/PixelGG/Arvox_Phone"><b>Arvox_Phone</b></a><br/><sub>Gerätebasiertes, serverautorisiertes FiveM-Phone mit PulseOS.</sub><br/><sub>Lua · zuletzt aktiv 2026-07-25</sub></td></tr>
+<tr><td align="left" valign="top" width="50%"><a href="https://github.com/PixelGG/Arvox_Core"><b>Arvox_Core</b></a><br/><sub>Sicherer FiveM-Kern für Accounts, Sessions, Characters und Permissions.</sub><br/><sub>Lua · zuletzt aktiv 2026-07-25</sub></td><td align="left" valign="top" width="50%"><a href="https://github.com/PixelGG/DXForge"><b>DXForge</b></a><br/><sub>Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.</sub><br/><sub>Lua · zuletzt aktiv 2026-07-02</sub></td></tr>
+<tr><td align="left" valign="top" width="50%"><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub>Experimentierfeld und Sammlung wiederverwendbarer Lua-Systeme.</sub><br/><sub>Lua · zuletzt aktiv 2026-06-09</sub></td><td width="50%"></td></tr>
 </table>
 </div>
 
 <!-- end: projects-latest -->
 
-<br>
+## `06 // TOOLCHAIN`
 
-<p align="center">
-  <strong>Meiste Resonanz</strong><br>
-  <sub>Öffentliche Projekte mit der höchsten Sichtbarkeit.</sub>
-</p>
-
-<!-- start: projects-stars -->
-
-<div align="center">
 <table>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/Arvox_Inventory"><b>Arvox_Inventory</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-07-26</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/Arvox_Phone"><b>Arvox_Phone</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-07-25</sub></td></tr>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/Arvox_Core"><b>Arvox_Core</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-07-25</sub></td><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/DXForge"><b>DXForge</b></a><br/><sub>DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tab…</sub><br/><sub>⭐ 0 · Lua · updated 2026-07-02</sub></td></tr>
-<tr><td align="left" valign="top" width="50%" style="padding: 8px;"><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub><i>Keine Beschreibung</i></sub><br/><sub>⭐ 0 · Lua · updated 2026-06-09</sub></td><td width="50%" style="padding: 8px;"></td></tr>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>Runtime</strong><br><br>
+      <sub>Lua · TypeScript · JavaScript · Node.js · React</sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>State & Data</strong><br><br>
+      <sub>MySQL · MariaDB · InnoDB · oxmysql · JSON contracts</sub>
+    </td>
+    <td width="33%" valign="top">
+      <strong>Delivery & Ops</strong><br><br>
+      <sub>Git · GitHub Actions · Docker · CI/CD · structured logging</sub>
+    </td>
+  </tr>
 </table>
-</div>
-
-<!-- end: projects-stars -->
-
----
-
-## Technologieprofil
 
 <p align="center">
   <img
-    src="https://skillicons.dev/icons?i=java,cs,cpp,js,ts,lua,python,nodejs,mysql,mongodb,docker,git,github,githubactions,npm&perline=8"
-    alt="Technologieprofil"
+    src="https://skillicons.dev/icons?i=lua,ts,js,nodejs,react,mysql,docker,git,github,githubactions&perline=10"
+    alt="PixelGG Toolchain"
   />
 </p>
 
-**Kernentwicklung**  
-<sub>Java, C#, C++, TypeScript, JavaScript, Lua und Python für Services, Werkzeuge und Integrationen.</sub>
+<br>
 
-**Services und Daten**  
-<sub>Node.js, MySQL und MongoDB für APIs, Persistenz, Worker und datengetriebene Backends.</sub>
-
-**Auslieferung und Betrieb**  
-<sub>Docker, Git, GitHub, GitHub Actions, NPM, YAML-Workflows und service-orientierte Deployment-Prozesse.</sub>
-
-<p align="center">
-  <code>Java</code>
-  <code>C#</code>
-  <code>C++</code>
-  <code>TypeScript</code>
-  <code>JavaScript</code>
-  <code>Lua</code>
-  <code>Python</code>
-  <code>Node.js</code>
-  <code>MySQL</code>
-  <code>MongoDB</code>
-  <code>Docker</code>
-  <code>GitHub Actions</code>
-</p>
-
----
-
-## Zusammenarbeit
+<table>
+  <tr>
+    <td align="center">
+      <strong>Hast du ein Systemproblem, das mehr als nur einen schnellen Patch verdient?</strong><br><br>
+      <sub>
+        Dann lass uns über Grenzen, Datenflüsse, Betrieb und die eigentliche Ursache sprechen.
+      </sub><br><br>
+      <a href="https://github.com/PixelGG/PixelGG/issues/new"><strong>OPEN A CHANNEL →</strong></a>
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      <a href="https://github.com/PixelGG?tab=repositories"><strong>EXPLORE SYSTEMS →</strong></a>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
-  Wenn es um belastbare Services, gute Delivery oder hochwertige interne Werkzeuge geht,
-  liegt genau dort mein Schwerpunkt.
-</p>
-
-<p align="center">
-  <a href="https://github.com/PixelGG"><strong>Profil ansehen</strong></a>
-  ·
-  <a href="https://github.com/PixelGG/PixelGG/issues/new"><strong>Kontakt aufnehmen</strong></a>
+  <sub><code>DESIGNED FOR FAILURE · BUILT FOR RECOVERY · DOCUMENTED FOR HUMANS</code></sub>
 </p>
