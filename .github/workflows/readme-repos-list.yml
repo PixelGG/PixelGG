@@ -1,8 +1,8 @@
-name: Profile Visuals & Projects
+name: Profile Control Plane
 
 on:
   schedule:
-    - cron: "7 4 * * *"   # täglich 04:07 UTc
+    - cron: "7 4 * * *"   # täglich 04:07 UTC
   workflow_dispatch:
 
 permissions:
@@ -23,12 +23,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: Install dependency
         run: |
           python -m pip install --upgrade pip
-          pip install requests matplotlib
+          pip install requests
 
-      - name: Build visuals & update README
+      - name: Render signal and update README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -36,7 +36,7 @@ jobs:
 
       - name: Commit & push if changed
         run: |
-          git add -A README.md assets/
+          git add -A README.md .github/assets/signal.svg
           if git diff --cached --quiet; then
             echo "Keine Änderungen."
           else

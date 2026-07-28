@@ -1,71 +1,80 @@
+import html
 import os
 import sys
-import html
 from datetime import datetime, timezone
+from pathlib import Path
 from urllib.parse import quote
 
 import requests
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from pathlib import Path
+
 
 OWNER = os.environ.get("OWNER")
 TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO_LIMIT = int(os.environ.get("REPO_LIMIT", "6"))
 
 ROOT = Path(__file__).resolve().parents[2]
-ASSETS = ROOT / "assets"
-METRICS_DIR = ASSETS / "metrics"
-METRICS_DIR.mkdir(parents=True, exist_ok=True)
+PROFILE_ASSETS = ROOT / ".github" / "assets"
+PROFILE_ASSETS.mkdir(parents=True, exist_ok=True)
 
 session = requests.Session()
 session.headers.update(
     {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "pixelgg-profile-v4",
+        "User-Agent": "pixelgg-profile-v5",
     }
 )
 if TOKEN:
     session.headers["Authorization"] = f"Bearer {TOKEN}"
 
 PROJECT_COPY = {
-    "Arvox_Core": "Sicherer FiveM-Kern für Accounts, Sessions, Characters und Permissions.",
+    "Arvox_Core": "Sicherer Plattformkern für Accounts, Sessions, Characters und Permissions.",
     "Arvox_Inventory": "Transaktionssicheres Inventarsystem für Arvox Core.",
-    "Arvox_Phone": "Gerätebasiertes, serverautorisiertes FiveM-Phone mit PulseOS.",
+    "Arvox_Phone": "Gerätebasiertes, serverautorisiertes Game-Phone mit PulseOS.",
     "DXForge": "Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.",
     "LuaScripts": "Experimentierfeld und Sammlung wiederverwendbarer Lua-Systeme.",
 }
 
+PALETTE = (
+    "#2DD4BF",
+    "#D8B36A",
+    "#55A6CF",
+    "#78C8C0",
+    "#A6B9C8",
+    "#8C7FC2",
+)
+
+
 def gh(url: str):
-    r = session.get(url, timeout=30)
-    r.raise_for_status()
-    return r.json()
+    response = session.get(url, timeout=30)
+    response.raise_for_status()
+    return response.json()
+
 
 def fetch_all_repos(owner: str):
     repos = []
     page = 1
     while True:
-        url = f"https://api.github.com/users/{quote(owner)}/repos?per_page=100&page={page}&sort=pushed&direction=desc"
+        url = (
+            f"https://api.github.com/users/{quote(owner)}/repos"
+            f"?per_page=100&page={page}&sort=pushed&direction=desc"
+        )
         data = gh(url)
         if not data:
             break
         repos.extend(data)
-        if len(data) < 100:
+        if len(data) < 100 or page >= 10:
             break
         page += 1
-        if page > 10:
-            break
 
-    profile_full = f"{owner}/{owner}".lower()
-    repos = [
-        r
-        for r in repos
-        if not r.get("private")
-        and not r.get("fork")
-        and r.get("full_name", "").lower() != profile_full
+    profile_full_name = f"{owner}/{owner}".lower()
+    return [
+        repo
+        for repo in repos
+        if not repo.get("private")
+        and not repo.get("fork")
+        and repo.get("full_name", "").lower() != profile_full_name
     ]
-    return repos
+
 
 def fetch_languages(url: str):
     if not url:
@@ -75,6 +84,7 @@ def fetch_languages(url: str):
     except Exception:
         return {}
 
+
 def dt(iso: str) -> datetime:
     if not iso:
         return datetime(1970, 1, 1, tzinfo=timezone.utc)
@@ -83,185 +93,195 @@ def dt(iso: str) -> datetime:
     except Exception:
         return datetime(1970, 1, 1, tzinfo=timezone.utc)
 
+
 def iso_date(iso: str) -> str:
-    try:
-        return dt(iso).strftime("%Y-%m-%d")
-    except Exception:
-        return iso or ""
+    return dt(iso).strftime("%Y-%m-%d")
 
-def truncate(text: str, n: int) -> str:
-    if not text:
-        return ""
-    t = " ".join(text.split())
-    return t if len(t) <= n else t[: n - 1] + "…"
 
-def primary_language(langs: dict) -> str:
-    if not langs:
+def truncate(text: str, limit: int) -> str:
+    normalized = " ".join((text or "").split())
+    return normalized if len(normalized) <= limit else normalized[: limit - 1] + "…"
+
+
+def primary_language(languages: dict) -> str:
+    if not languages:
         return "—"
-    return max(langs.items(), key=lambda kv: kv[1])[0]
+    return max(languages.items(), key=lambda item: item[1])[0]
 
-# ---------- Charts ----------
 
-def set_dark_style():
-    plt.rcParams.update(
-        {
-            "figure.facecolor": "#07111f",
-            "axes.facecolor": "#07111f",
-            "savefig.facecolor": "#07111f",
-            "text.color": "#e5eef7",
-            "axes.labelcolor": "#9fb3c8",
-            "axes.edgecolor": "#193451",
-            "xtick.color": "#7f96ad",
-            "ytick.color": "#e5eef7",
-            "grid.color": "#193451",
-            "font.size": 11,
-        }
+def percent_label(value: float) -> str:
+    if 0 < value < 0.05:
+        return "&lt;0.1%"
+    return f"{value:.1f}%"
+
+
+def build_language_signal(language_totals: dict, repo_count: int, star_count: int):
+    ordered = sorted(language_totals.items(), key=lambda item: item[1], reverse=True)
+    if len(ordered) > 6:
+        ordered = ordered[:5] + [("Other", sum(value for _, value in ordered[5:]))]
+
+    total = sum(value for _, value in ordered)
+    entries = [
+        (name, value / total * 100 if total else 0.0)
+        for name, value in ordered
+    ]
+    if not entries:
+        entries = [("No public language data", 100.0)]
+
+    segments = []
+    cursor = 72.0
+    bar_width = 1256.0
+    for index, (_, percentage) in enumerate(entries):
+        width = bar_width * percentage / 100
+        segments.append(
+            f'<rect x="{cursor:.2f}" y="111" width="{max(width, 1):.2f}" '
+            f'height="30" fill="{PALETTE[index % len(PALETTE)]}"/>'
+        )
+        cursor += width
+
+    cards = []
+    for index, (name, percentage) in enumerate(entries[:6]):
+        column = index % 3
+        row = index // 3
+        x = 72 + column * 424
+        y = 178 + row * 82
+        color = PALETTE[index % len(PALETTE)]
+        safe_name = html.escape(name)
+        safe_percentage = percent_label(percentage)
+        progress_width = max(2, 318 * percentage / 100)
+        cards.append(
+            f"""
+            <g transform="translate({x} {y})">
+              <circle cx="5" cy="7" r="5" fill="{color}"/>
+              <text x="22" y="13" class="sans" fill="#E7EEF4" font-size="17"
+                    font-weight="700">{safe_name}</text>
+              <text x="358" y="13" class="mono" fill="#9CB0BF" font-size="14"
+                    text-anchor="end">{safe_percentage}</text>
+              <rect y="30" width="358" height="5" rx="2.5" fill="#152B3B"/>
+              <rect y="30" width="{progress_width:.2f}" height="5" rx="2.5" fill="{color}"/>
+            </g>"""
+        )
+
+    top_language = entries[0]
+    star_part = f" · {star_count:02d} STARS" if star_count else ""
+    summary = (
+        f"{repo_count:02d} PUBLIC REPOSITORIES{star_part} · "
+        f"PRIMARY SIGNAL {html.escape(top_language[0].upper())} {top_language[1]:.1f}%"
     )
 
-PALETTE = [
-    "#2dd4bf",
-    "#d8b36a",
-    "#4f9fca",
-    "#7dd3c7",
-    "#afc4d8",
-    "#8d7cc7",
-    "#cf8f6a",
-    "#5e7994",
-]
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 370"
+     role="img" aria-labelledby="title desc">
+  <title id="title">PixelGG public code signal</title>
+  <desc id="desc">Automatically generated language distribution across public repositories.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050D17"/>
+      <stop offset=".5" stop-color="#0A1928"/>
+      <stop offset="1" stop-color="#050D17"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0v36" fill="none" stroke="#8BA7BC" stroke-opacity=".045"/>
+    </pattern>
+    <clipPath id="bar"><rect x="72" y="111" width="1256" height="30" rx="8"/></clipPath>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .sans{{font-family:"Segoe UI",Arial,sans-serif}}
+      .mono{{font-family:Consolas,"Courier New",monospace}}
+      .sweep{{animation:sweep 6s linear infinite}}
+      @keyframes sweep{{0%{{transform:translateX(-80px)}}100%{{transform:translateX(1336px)}}}}
+      @media (prefers-reduced-motion:reduce){{.sweep{{display:none}}}}
+    </style>
+  </defs>
+  <rect width="1400" height="370" rx="24" fill="url(#bg)"/>
+  <rect width="1400" height="370" rx="24" fill="url(#grid)"/>
+  <circle cx="76" cy="62" r="5" fill="#2DD4BF"/>
+  <text x="94" y="68" class="mono" fill="#D8B36A" font-size="15"
+        font-weight="700" letter-spacing="2.4">PUBLIC CODE SIGNAL</text>
+  <text x="1328" y="68" class="mono" fill="#617C90" font-size="12"
+        text-anchor="end" letter-spacing="1.8">GENERATED DAILY / GITHUB ACTIONS</text>
+  <g clip-path="url(#bar)">
+    {''.join(segments)}
+    <rect class="sweep" x="-80" y="111" width="60" height="30" fill="#FFFFFF"
+          opacity=".18" transform="skewX(-18)"/>
+  </g>
+  {''.join(cards)}
+  <path d="M72 332H1328" stroke="#233F53"/>
+  <text x="72" y="352" class="mono" fill="#6E879A" font-size="11"
+        letter-spacing="1.6">{summary}</text>
+  <circle cx="1324" cy="348" r="4" fill="#2DD4BF" filter="url(#glow)"/>
+  <rect x=".75" y=".75" width="1398.5" height="368.5" rx="23.25"
+        fill="none" stroke="#294157" stroke-width="1.5"/>
+</svg>
+"""
+    (PROFILE_ASSETS / "signal.svg").write_text(svg, encoding="utf-8", newline="\n")
 
-def build_language_charts(language_totals: dict):
-    items = sorted(language_totals.items(), key=lambda kv: kv[1], reverse=True)
 
-    if not items:
-        # Placeholder-Bilder
-        for name in ("top-langs-bar.png", "top-langs-donut.png"):
-            fig, ax = plt.subplots(figsize=(6, 4))
-            ax.text(0.5, 0.5, "Keine Sprachdaten", ha="center", va="center")
-            ax.axis("off")
-            fig.tight_layout()
-            fig.savefig(METRICS_DIR / name, dpi=180)
-            plt.close(fig)
-        return
-
-    labels = [k for k, _ in items]
-    vals = [v for _, v in items]
-    total = sum(vals)
-
-    # Begrenzen + "Other"
-    maxn = 8
-    if len(labels) > maxn:
-        other = sum(vals[maxn:])
-        labels = labels[:maxn] + ["Other"]
-        vals = vals[:maxn] + [other]
-
-    pcts = [v / total * 100 for v in vals]
-
-    # Kompakter, README-tauglicher Signal-Chart.
-    set_dark_style()
-    fig, ax = plt.subplots(figsize=(10, 4.2), dpi=160)
-    display_labels = labels[::-1]
-    display_pcts = pcts[::-1]
-    colors = [PALETTE[i % len(PALETTE)] for i in range(len(labels))][::-1]
-    bars = ax.barh(display_labels, display_pcts, color=colors, height=0.56)
-    ax.set_xlabel("Anteil am öffentlichen Code (%)")
-    ax.set_title("LANGUAGE SIGNAL", loc="left", pad=18, color="#d8b36a", fontweight="bold")
-    ax.grid(axis="x", linestyle=(0, (2, 4)), alpha=0.6)
-    ax.set_axisbelow(True)
-    ax.spines[["top", "right", "left"]].set_visible(False)
-    ax.tick_params(axis="y", length=0, pad=10)
-    ax.bar_label(
-        bars,
-        labels=[
-            "<0.1%" if 0 < value < 0.05 else f"{value:.1f}%"
-            for value in display_pcts
-        ],
-        padding=6,
-        color="#e5eef7",
-        fontsize=9,
-    )
-    ax.set_xlim(0, max(display_pcts) * 1.14)
-    fig.tight_layout(pad=1.4)
-    fig.savefig(METRICS_DIR / "top-langs-bar.png", bbox_inches="tight")
-    plt.close(fig)
-
-    # Donut
-    set_dark_style()
-    fig, ax = plt.subplots(figsize=(6, 6), dpi=180)
-    ax.pie(
-        vals,
-        startangle=140,
-        colors=[PALETTE[i % len(PALETTE)] for i in range(len(vals))],
-        wedgeprops=dict(width=0.38, edgecolor="#0d1117"),
-    )
-    ax.set(aspect="equal", title="Language Share (Donut)")
-    fig.tight_layout()
-    fig.savefig(METRICS_DIR / "top-langs-donut.png")
-    plt.close(fig)
-
-# ---------- Projekte-HTML ----------
-
-def build_projects_table(repos, lang_map, mode: str) -> str:
-    if not repos:
+def build_projects_table(repos, language_map) -> str:
+    chosen = sorted(
+        repos,
+        key=lambda repo: dt(repo.get("pushed_at") or repo.get("updated_at")),
+        reverse=True,
+    )[:REPO_LIMIT]
+    if not chosen:
         return '<div align="center"><i>Keine öffentlichen Repositories.</i></div>'
 
-    if mode == "latest":
-        chosen = sorted(
-            repos,
-            key=lambda r: dt(r.get("pushed_at") or r.get("updated_at")),
-            reverse=True,
-        )[:REPO_LIMIT]
-    else:
-        chosen = sorted(
-            repos,
-            key=lambda r: (
-                int(r.get("stargazers_count") or 0),
-                dt(r.get("pushed_at") or r.get("updated_at")),
-            ),
-            reverse=True,
-        )[:REPO_LIMIT]
-
     cells = []
-    for r in chosen:
-        full = r["full_name"]
-        name = r["name"]
-        desc = truncate(PROJECT_COPY.get(name) or r.get("description") or "", 120)
-        stars = int(r.get("stargazers_count") or 0)
-        langs = lang_map.get(full) or {}
-        lang = primary_language(langs)
-        updated = iso_date(r.get("pushed_at") or r.get("updated_at") or "")
+    for repo in chosen:
+        full_name = repo["full_name"]
+        name = repo["name"]
+        description = truncate(
+            PROJECT_COPY.get(name) or repo.get("description") or "",
+            116,
+        )
+        language = primary_language(language_map.get(full_name) or {})
+        updated = iso_date(repo.get("pushed_at") or repo.get("updated_at") or "")
+        stars = int(repo.get("stargazers_count") or 0)
 
-        safe_full = quote(full, safe="/")
+        safe_url = quote(full_name, safe="/")
         safe_name = html.escape(name)
-        safe_desc = html.escape(desc) if desc else "<i>Noch ohne Kurzbeschreibung</i>"
-        safe_lang = html.escape(lang)
-        star_part = f" · ⭐ {stars}" if stars else ""
-        cell = (
+        safe_description = (
+            html.escape(description)
+            if description
+            else "<i>Noch ohne Kurzbeschreibung</i>"
+        )
+        safe_language = html.escape(language)
+        star_part = f" · {stars} stars" if stars else ""
+
+        cells.append(
             '<td align="left" valign="top" width="50%">'
-            f'<a href="https://github.com/{safe_full}"><b>{safe_name}</b></a><br/>'
-            f'<sub>{safe_desc}</sub><br/>'
-            f'<sub>{safe_lang}{star_part} · zuletzt aktiv {updated}</sub>'
+            f'<sub><code>{safe_language} · {updated}{star_part}</code></sub><br/><br/>'
+            f'<a href="https://github.com/{safe_url}"><b>{safe_name}</b></a><br/>'
+            f'<sub>{safe_description}</sub><br/><br/>'
+            f'<a href="https://github.com/{safe_url}"><sub>OPEN REPOSITORY →</sub></a>'
             "</td>"
         )
-        cells.append(cell)
 
     rows = []
-    for i in range(0, len(cells), 2):
-        row = cells[i : i + 2]
+    for index in range(0, len(cells), 2):
+        row = cells[index : index + 2]
         if len(row) == 1:
             row.append('<td width="50%"></td>')
         rows.append("<tr>" + "".join(row) + "</tr>")
 
-    table_html = '<div align="center">\n<table>\n' + "\n".join(rows) + "\n</table>\n</div>"
-    return table_html
+    return '<div align="center">\n<table>\n' + "\n".join(rows) + "\n</table>\n</div>"
 
-# ---------- README-Aktualisierung ----------
 
-def replace_between(text: str, start_marker: str, end_marker: str, replacement: str) -> str:
+def replace_between(text: str, start_marker: str, end_marker: str, replacement: str):
     if start_marker not in text or end_marker not in text:
         raise SystemExit(f"Marker {start_marker} / {end_marker} nicht gefunden.")
-    s = text.index(start_marker)
-    e = text.index(end_marker, s)
-    return text[: s + len(start_marker)] + "\n\n" + replacement + "\n\n" + text[e:]
+    start = text.index(start_marker)
+    end = text.index(end_marker, start)
+    return (
+        text[: start + len(start_marker)]
+        + "\n\n"
+        + replacement
+        + "\n\n"
+        + text[end:]
+    )
+
 
 def main():
     if not OWNER:
@@ -269,48 +289,47 @@ def main():
         sys.exit(1)
 
     repos = fetch_all_repos(OWNER)
+    language_map = {}
+    language_totals = {}
+    for repo in repos:
+        languages = fetch_languages(repo.get("languages_url", ""))
+        language_map[repo["full_name"]] = languages
+        for language, size in languages.items():
+            language_totals[language] = language_totals.get(language, 0) + int(size)
 
-    # Sprachen sammeln
-    lang_map = {}
-    totals = {}
-    for r in repos:
-        langs = fetch_languages(r.get("languages_url", ""))
-        lang_map[r["full_name"]] = langs
-        for k, v in (langs or {}).items():
-            totals[k] = totals.get(k, 0) + int(v)
+    total_stars = sum(int(repo.get("stargazers_count") or 0) for repo in repos)
+    build_language_signal(language_totals, len(repos), total_stars)
 
-    # Charts generieren
-    build_language_charts(totals)
-
-    # Snapshot
-    total_repos = len(repos)
-    total_stars = sum(int(r.get("stargazers_count") or 0) for r in repos)
-    if totals:
-        top_lang, top_bytes = max(totals.items(), key=lambda kv: kv[1])
-        pct = top_bytes / sum(totals.values()) * 100.0
-        lang_part = f"Top Language: <b>{top_lang}</b> ({pct:.1f}%)"
+    if language_totals:
+        top_language, top_size = max(language_totals.items(), key=lambda item: item[1])
+        top_percentage = top_size / sum(language_totals.values()) * 100
+        primary_part = f"<b>{html.escape(top_language)}</b> {top_percentage:.1f}%"
     else:
-        lang_part = "Top Language: —"
+        primary_part = "—"
 
-    star_part = f" · Stars: <b>{total_stars}</b>" if total_stars else ""
+    star_part = f" · <b>{total_stars}</b> Stars" if total_stars else ""
     metrics_summary = (
-        f"<sub>Public Repositories: <b>{total_repos}</b>{star_part} "
-        f"· Primary Signal: {lang_part.removeprefix('Top Language: ')}</sub>"
+        f"<sub><b>{len(repos)}</b> Public Repositories{star_part} "
+        f"· Primary Signal {primary_part} · updated daily</sub>"
     )
 
-    # Projekte
-    latest_html = build_projects_table(repos, lang_map, "latest")
     readme_path = ROOT / "README.md"
-    md = readme_path.read_text(encoding="utf-8")
+    readme = readme_path.read_text(encoding="utf-8")
+    readme = replace_between(
+        readme,
+        "<!-- start: metrics-summary -->",
+        "<!-- end: metrics-summary -->",
+        metrics_summary,
+    )
+    readme = replace_between(
+        readme,
+        "<!-- start: projects-latest -->",
+        "<!-- end: projects-latest -->",
+        build_projects_table(repos, language_map),
+    )
+    readme_path.write_text(readme, encoding="utf-8", newline="\n")
+    print("README und .github/assets/signal.svg aktualisiert.")
 
-    md = replace_between(
-        md, "<!-- start: metrics-summary -->", "<!-- end: metrics-summary -->", metrics_summary
-    )
-    md = replace_between(
-        md, "<!-- start: projects-latest -->", "<!-- end: projects-latest -->", latest_html
-    )
-    readme_path.write_text(md, encoding="utf-8")
-    print("README-Telemetrie, Sprachsignal und Projektliste aktualisiert.")
 
 if __name__ == "__main__":
     main()
