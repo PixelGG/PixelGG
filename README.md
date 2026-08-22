@@ -129,7 +129,7 @@ Ich entwickle nicht nur Funktionen, sondern die Regeln, Grenzen und Betriebswege
 <p align="center">
 <!-- start: metrics-summary -->
 
-<sub><b>5</b> Public Repositories · Primary Signal <b>Lua</b> 83.3% · updated daily</sub>
+<sub><b>2</b> Public Repositories · Primary Signal <b>Lua</b> 100.0% · updated daily</sub>
 
 <!-- end: metrics-summary -->
 </p>
@@ -166,9 +166,7 @@ Ich entwickle nicht nur Funktionen, sondern die Regeln, Grenzen und Betriebswege
 
 <div align="center">
 <table>
-<tr><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-07-26</code></sub><br/><br/><a href="https://github.com/PixelGG/Arvox_Inventory"><b>Arvox_Inventory</b></a><br/><sub>Transaktionssicheres Inventarsystem für Arvox Core.</sub><br/><br/><a href="https://github.com/PixelGG/Arvox_Inventory"><sub>OPEN REPOSITORY →</sub></a></td><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-07-25</code></sub><br/><br/><a href="https://github.com/PixelGG/Arvox_Phone"><b>Arvox_Phone</b></a><br/><sub>Gerätebasiertes, serverautorisiertes Game-Phone mit PulseOS.</sub><br/><br/><a href="https://github.com/PixelGG/Arvox_Phone"><sub>OPEN REPOSITORY →</sub></a></td></tr>
-<tr><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-07-25</code></sub><br/><br/><a href="https://github.com/PixelGG/Arvox_Core"><b>Arvox_Core</b></a><br/><sub>Sicherer Plattformkern für Accounts, Sessions, Characters und Permissions.</sub><br/><br/><a href="https://github.com/PixelGG/Arvox_Core"><sub>OPEN REPOSITORY →</sub></a></td><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-07-02</code></sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><b>DXForge</b></a><br/><sub>Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.</sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><sub>OPEN REPOSITORY →</sub></a></td></tr>
-<tr><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-06-09</code></sub><br/><br/><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub>Experimentierfeld und Sammlung wiederverwendbarer Lua-Systeme.</sub><br/><br/><a href="https://github.com/PixelGG/LuaScripts"><sub>OPEN REPOSITORY →</sub></a></td><td width="50%"></td></tr>
+<tr><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-07-02</code></sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><b>DXForge</b></a><br/><sub>Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.</sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><sub>OPEN REPOSITORY →</sub></a></td><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-06-09</code></sub><br/><br/><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub>Experimentierfeld und Sammlung wiederverwendbarer Lua-Systeme.</sub><br/><br/><a href="https://github.com/PixelGG/LuaScripts"><sub>OPEN REPOSITORY →</sub></a></td></tr>
 </table>
 </div>
 
