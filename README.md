@@ -129,7 +129,7 @@ Ich entwickle nicht nur Funktionen, sondern die Regeln, Grenzen und Betriebswege
 <p align="center">
 <!-- start: metrics-summary -->
 
-<sub><b>3</b> Public Repositories · Primary Signal <b>Lua</b> 70.9% · updated daily</sub>
+<sub><b>3</b> Public Repositories · Primary Signal <b>Lua</b> 67.9% · updated daily</sub>
 
 <!-- end: metrics-summary -->
 </p>
