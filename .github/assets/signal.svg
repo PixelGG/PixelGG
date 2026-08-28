@@ -32,7 +32,7 @@
   <text x="1328" y="68" class="mono" fill="#617C90" font-size="12"
         text-anchor="end" letter-spacing="1.8">GENERATED DAILY / GITHUB ACTIONS</text>
   <g clip-path="url(#bar)">
-    <rect x="72.00" y="111" width="688.37" height="30" fill="#2DD4BF"/><rect x="760.37" y="111" width="562.74" height="30" fill="#D8B36A"/><rect x="1323.11" y="111" width="2.90" height="30" fill="#55A6CF"/><rect x="1326.01" y="111" width="1.84" height="30" fill="#78C8C0"/><rect x="1327.85" y="111" width="1.00" height="30" fill="#A6B9C8"/>
+    <rect x="72.00" y="111" width="701.70" height="30" fill="#2DD4BF"/><rect x="773.70" y="111" width="537.72" height="30" fill="#D8B36A"/><rect x="1311.41" y="111" width="10.08" height="30" fill="#55A6CF"/><rect x="1321.50" y="111" width="6.37" height="30" fill="#78C8C0"/><rect x="1327.87" y="111" width="1.00" height="30" fill="#A6B9C8"/>
     <rect class="sweep" x="-80" y="111" width="60" height="30" fill="#FFFFFF"
           opacity=".18" transform="skewX(-18)"/>
   </g>
@@ -42,34 +42,34 @@
               <text x="22" y="13" class="sans" fill="#E7EEF4" font-size="17"
                     font-weight="700">Lua</text>
               <text x="358" y="13" class="mono" fill="#9CB0BF" font-size="14"
-                    text-anchor="end">54.8%</text>
+                    text-anchor="end">55.9%</text>
               <rect y="30" width="358" height="5" rx="2.5" fill="#152B3B"/>
-              <rect y="30" width="174.28" height="5" rx="2.5" fill="#2DD4BF"/>
+              <rect y="30" width="177.66" height="5" rx="2.5" fill="#2DD4BF"/>
             </g>
             <g transform="translate(496 178)">
               <circle cx="5" cy="7" r="5" fill="#D8B36A"/>
               <text x="22" y="13" class="sans" fill="#E7EEF4" font-size="17"
                     font-weight="700">TypeScript</text>
               <text x="358" y="13" class="mono" fill="#9CB0BF" font-size="14"
-                    text-anchor="end">44.8%</text>
+                    text-anchor="end">42.8%</text>
               <rect y="30" width="358" height="5" rx="2.5" fill="#152B3B"/>
-              <rect y="30" width="142.48" height="5" rx="2.5" fill="#D8B36A"/>
+              <rect y="30" width="136.14" height="5" rx="2.5" fill="#D8B36A"/>
             </g>
             <g transform="translate(920 178)">
               <circle cx="5" cy="7" r="5" fill="#55A6CF"/>
               <text x="22" y="13" class="sans" fill="#E7EEF4" font-size="17"
-                    font-weight="700">JavaScript</text>
+                    font-weight="700">CSS</text>
               <text x="358" y="13" class="mono" fill="#9CB0BF" font-size="14"
-                    text-anchor="end">0.2%</text>
+                    text-anchor="end">0.8%</text>
               <rect y="30" width="358" height="5" rx="2.5" fill="#152B3B"/>
-              <rect y="30" width="2.00" height="5" rx="2.5" fill="#55A6CF"/>
+              <rect y="30" width="2.55" height="5" rx="2.5" fill="#55A6CF"/>
             </g>
             <g transform="translate(72 260)">
               <circle cx="5" cy="7" r="5" fill="#78C8C0"/>
               <text x="22" y="13" class="sans" fill="#E7EEF4" font-size="17"
-                    font-weight="700">CSS</text>
+                    font-weight="700">JavaScript</text>
               <text x="358" y="13" class="mono" fill="#9CB0BF" font-size="14"
-                    text-anchor="end">0.1%</text>
+                    text-anchor="end">0.5%</text>
               <rect y="30" width="358" height="5" rx="2.5" fill="#152B3B"/>
               <rect y="30" width="2.00" height="5" rx="2.5" fill="#78C8C0"/>
             </g>
@@ -84,7 +84,7 @@
             </g>
   <path d="M72 332H1328" stroke="#233F53"/>
   <text x="72" y="352" class="mono" fill="#6E879A" font-size="11"
-        letter-spacing="1.6">03 PUBLIC REPOSITORIES · PRIMARY SIGNAL LUA 54.8%</text>
+        letter-spacing="1.6">03 PUBLIC REPOSITORIES · PRIMARY SIGNAL LUA 55.9%</text>
   <circle cx="1324" cy="348" r="4" fill="#2DD4BF" filter="url(#glow)"/>
   <rect x=".75" y=".75" width="1398.5" height="368.5" rx="23.25"
         fill="none" stroke="#294157" stroke-width="1.5"/>
