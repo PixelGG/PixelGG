@@ -129,7 +129,7 @@ Ich entwickle nicht nur Funktionen, sondern die Regeln, Grenzen und Betriebswege
 <p align="center">
 <!-- start: metrics-summary -->
 
-<sub><b>3</b> Public Repositories · Primary Signal <b>Lua</b> 55.9% · updated daily</sub>
+<sub><b>3</b> Public Repositories · Primary Signal <b>Lua</b> 56.6% · updated daily</sub>
 
 <!-- end: metrics-summary -->
 </p>
@@ -166,7 +166,7 @@ Ich entwickle nicht nur Funktionen, sondern die Regeln, Grenzen und Betriebswege
 
 <div align="center">
 <table>
-<tr><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-08-28</code></sub><br/><br/><a href="https://github.com/PixelGG/Synex_Framework"><b>Synex_Framework</b></a><br/><sub>⚡ **Synex** — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean developme…</sub><br/><br/><a href="https://github.com/PixelGG/Synex_Framework"><sub>OPEN REPOSITORY →</sub></a></td><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-07-02</code></sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><b>DXForge</b></a><br/><sub>Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.</sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><sub>OPEN REPOSITORY →</sub></a></td></tr>
+<tr><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-08-31</code></sub><br/><br/><a href="https://github.com/PixelGG/Synex_Framework"><b>Synex_Framework</b></a><br/><sub>⚡ **Synex** — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean developme…</sub><br/><br/><a href="https://github.com/PixelGG/Synex_Framework"><sub>OPEN REPOSITORY →</sub></a></td><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-07-02</code></sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><b>DXForge</b></a><br/><sub>Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.</sub><br/><br/><a href="https://github.com/PixelGG/DXForge"><sub>OPEN REPOSITORY →</sub></a></td></tr>
 <tr><td align="left" valign="top" width="50%"><sub><code>Lua · 2026-06-09</code></sub><br/><br/><a href="https://github.com/PixelGG/LuaScripts"><b>LuaScripts</b></a><br/><sub>Experimentierfeld und Sammlung wiederverwendbarer Lua-Systeme.</sub><br/><br/><a href="https://github.com/PixelGG/LuaScripts"><sub>OPEN REPOSITORY →</sub></a></td><td width="50%"></td></tr>
 </table>
 </div>
