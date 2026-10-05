@@ -1,0 +1,8 @@
+{
+  "name": "pixelgg-profile-export",
+  "private": true,
+  "description": "Build-time GIF encoding for the original pixel artwork; no browser dependencies.",
+  "dependencies": {
+    "sharp": "0.35.4"
+  }
+}

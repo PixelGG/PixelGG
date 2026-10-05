@@ -17,6 +17,14 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up image export runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+
+      - name: Install pinned image encoder
+        run: npm ci --prefix .github/profile --ignore-scripts --no-audit --no-fund
+
       - name: Test snapshot synchronization
         run: python3 -m unittest discover -s .github/scripts -p 'test_*.py'
 
@@ -25,3 +33,6 @@ jobs:
 
       - name: Validate local images and SVGs
         run: python3 .github/scripts/check_profile.py
+
+      - name: Verify looping GIF exports and source fingerprints
+        run: node .github/scripts/render_motion.cjs --check

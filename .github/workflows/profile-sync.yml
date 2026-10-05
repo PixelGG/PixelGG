@@ -30,6 +30,14 @@ jobs:
           # Checkout removes them in its post-job cleanup.
           persist-credentials: true
 
+      - name: Set up image export runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+
+      - name: Install pinned image encoder
+        run: npm ci --prefix .github/profile --ignore-scripts --no-audit --no-fund
+
       - name: Fetch complete public repository snapshot
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -37,6 +45,9 @@ jobs:
 
       - name: Render profile from snapshot
         run: python3 .github/scripts/render_profile.py
+
+      - name: Export original artwork as looping GIFs
+        run: node .github/scripts/render_motion.cjs
 
       - name: Test snapshot synchronization
         run: python3 -m unittest discover -s .github/scripts -p 'test_*.py'
@@ -46,6 +57,9 @@ jobs:
 
       - name: Validate local images and SVGs
         run: python3 .github/scripts/check_profile.py
+
+      - name: Verify looping GIF exports and source fingerprints
+        run: node .github/scripts/render_motion.cjs --check
 
       - name: Commit validated changes
         env:

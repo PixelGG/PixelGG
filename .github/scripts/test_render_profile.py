@@ -3,9 +3,12 @@ from copy import deepcopy
 from pathlib import Path
 import tempfile
 import unittest
+from html.parser import HTMLParser
+from urllib.parse import urlsplit, parse_qs
 import xml.etree.ElementTree as ET
 
 from render_profile import apply_outputs, build_outputs
+from motion_frames import has_motion, sample_frame
 
 CONFIG = {"owner": "PixelGG", "name": "Mike", "intro": "Game systems.", "project_limit": 6}
 
@@ -25,11 +28,52 @@ def snapshot(repos):
 
 
 class ProfileBehavior(unittest.TestCase):
+    def test_github_uses_versioned_gifs_and_keeps_reduced_motion_sources(self):
+        class Pictures(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.tags = []
+            def handle_starttag(self, tag, attrs):
+                if tag in {'img', 'source'}:
+                    self.tags.append((tag, dict(attrs)))
+        outputs = build_outputs(snapshot([repository()]), CONFIG)
+        parsed = Pictures()
+        parsed.feed(outputs[Path('README.md')])
+        images = [attrs for tag, attrs in parsed.tags if tag == 'img']
+        self.assertTrue(images[0]['src'].split('?')[0].endswith('world.gif'))
+        self.assertTrue(any('prefers-reduced-motion: reduce' in attrs.get('media', '')
+                            and urlsplit(attrs['srcset']).path.endswith('world.svg')
+                            for tag, attrs in parsed.tags if tag == 'source'))
+        for tag, attrs in parsed.tags:
+            source = attrs.get('src') or attrs['srcset']
+            self.assertTrue(parse_qs(urlsplit(source).query).get('v'))
+        # No mobile desk animation exists, so mobile intro must stay an SVG.
+        self.assertFalse(any('intro-mobile.gif' in str(attrs) for _, attrs in parsed.tags))
+        changed = repository()
+        changed['description'] = 'Updated public metadata.'
+        newer = build_outputs(snapshot([changed]), CONFIG)
+        self.assertNotEqual(outputs[Path('README.md')], newer[Path('README.md')])
+
+    def test_baked_motion_changes_pose_and_loops_without_css(self):
+        outputs = build_outputs(snapshot([repository()]), CONFIG)
+        svg = outputs[Path('.github/assets/world.svg')]
+        self.assertTrue(has_motion(svg))
+        first, later = sample_frame(svg, .25), sample_frame(svg, 1.75)
+        self.assertNotEqual(first, later)
+        self.assertEqual(first, sample_frame(svg, 6.25))
+        self.assertNotIn('<style', first)
+        self.assertNotIn('animation-delay', first)
+        self.assertIn('url(#fall)', first)
+        ET.fromstring(first)
+        self.assertFalse(has_motion(outputs[Path('.github/assets/intro-mobile.svg')]))
+
     def test_repository_lifecycle_removes_deleted_assets_and_updates_renames(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             before = build_outputs(snapshot([repository(10, "RenamedLater"), repository(11, "DeletedLater")]), CONFIG)
             self.assertTrue(apply_outputs(root, before))
+            (root / '.github/assets/projects/10.gif').write_bytes(b'kept')
+            (root / '.github/assets/projects/11.gif').write_bytes(b'removed')
             unrelated = root / ".github/assets/projects/handmade.svg"
             unrelated.write_text("<svg/>")
             after = build_outputs(snapshot([repository(10, "NewName")]), CONFIG)
@@ -44,6 +88,8 @@ class ProfileBehavior(unittest.TestCase):
             self.assertIn("https://github.com/PixelGG/NewName", web)
             self.assertFalse((root / ".github/assets/projects/11.svg").exists())
             self.assertFalse((root / ".github/assets/projects/11-mobile.svg").exists())
+            self.assertFalse((root / ".github/assets/projects/11.gif").exists())
+            self.assertTrue((root / ".github/assets/projects/10.gif").exists())
             self.assertTrue((root / ".github/assets/projects/10.svg").exists())
             self.assertTrue(unrelated.exists())
             self.assertTrue(apply_outputs(root, after, check=True))

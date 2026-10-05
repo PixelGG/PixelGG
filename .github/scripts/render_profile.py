@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 from html import escape
+from hashlib import sha256
 import json
 from pathlib import Path
 import re
@@ -17,9 +18,11 @@ import xml.etree.ElementTree as ET
 from pixel_world import pixel_text, render_world
 from profile_sections import render_intro, render_section, render_contact, render_nav, render_endcap
 from profile_web import render_web
+from motion_frames import has_motion, motion_recipe
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = Path(".github/assets")
+MOTION_ASSET_VERSION = 1
 LEGACY = (
     "hero.svg", "signal.svg", "footer.svg",
     "hero-dark.svg", "hero-light.svg", "hero-mobile-dark.svg", "hero-mobile-light.svg",
@@ -271,23 +274,45 @@ def catalog_band(mobile: bool = False) -> str:
             + '</g></svg>\n')
 
 
-def picture(asset: str, alt: str, width: str = "100%") -> str:
-    """Adjacent top-aligned images avoid paragraph and baseline gaps on GitHub."""
-    return ('<picture><source media="(max-width: 600px)" '
-            f'srcset="./.github/assets/{asset}-mobile.svg">'
-            f'<img src="./.github/assets/{asset}.svg" width="{width}" align="top" '
+def picture(assets: dict[Path, str], asset: str, alt: str, width: str = "100%") -> str:
+    """Serve GIF motion on GitHub and preserve SVGs for reduced-motion readers."""
+    def source(mobile: bool, animated: bool = False) -> str:
+        stem = asset + ("-mobile" if mobile else "")
+        svg = assets[ASSETS / f"{stem}.svg"]
+        animated = animated and has_motion(svg)
+        extension = "gif" if animated else "svg"
+        # A new source or renderer version gets a fresh GitHub image-cache URL.
+        payload = svg.encode("utf-8")
+        if animated:
+            payload += f"\ngif-v{MOTION_ASSET_VERSION}:{motion_recipe()}".encode("ascii")
+        version = sha256(payload).hexdigest()[:12]
+        return f"./.github/assets/{stem}.{extension}?v={version}"
+
+    animated = has_motion(assets[ASSETS / f"{asset}.svg"])
+    sources = []
+    if animated:
+        sources += [
+            '<source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" '
+            f'srcset="{source(True)}">',
+            '<source media="(prefers-reduced-motion: reduce)" '
+            f'srcset="{source(False)}">',
+        ]
+    sources.append('<source media="(max-width: 600px)" '
+                   f'srcset="{source(True, animated)}">')
+    return ('<picture>' + ''.join(sources)
+            + f'<img src="{source(False, animated)}" width="{width}" align="top" '
             f'alt="{escape(alt, quote=True)}"></picture>')
 
 
-def readme(snapshot: dict, config: dict, repos: list[dict]) -> str:
+def readme(snapshot: dict, config: dict, repos: list[dict], assets: dict[Path, str]) -> str:
     owner = config["owner"]
     base = f"https://github.com/{owner}"
     sections = [
-        picture("world", "PixelGG: eine animierte nächtliche Entwicklerinsel mit Werkstatt, Brücken, Bäumen und Wasserfall."),
-        '<a href="#projekte">' + picture("nav-workbench", "Zu den Projekten", "50%") + '</a>'
-        '<a href="#kontakt">' + picture("nav-contact", "Zum Kontakt", "50%") + '</a>',
-        picture("intro", f'Die Werkstatt. {config["name"]} / {owner}. {config["intro"]}'),
-        '<div><a name="projekte"></a>' + picture("workbench", f'{len(repos)} öffentliche Projekte. Neueste Arbeit zuerst.'
+        picture(assets, "world", "PixelGG: eine animierte nächtliche Entwicklerinsel mit Werkstatt, Brücken, Bäumen und Wasserfall."),
+        '<a href="#projekte">' + picture(assets, "nav-workbench", "Zu den Projekten", "50%") + '</a>'
+        '<a href="#kontakt">' + picture(assets, "nav-contact", "Zum Kontakt", "50%") + '</a>',
+        picture(assets, "intro", f'Die Werkstatt. {config["name"]} / {owner}. {config["intro"]}'),
+        '<div><a name="projekte"></a>' + picture(assets, "workbench", f'{len(repos)} öffentliche Projekte. Neueste Arbeit zuerst.'
             if repos else 'Aktuell sind keine öffentlichen, aktiven Original-Repositories vorhanden.') + '</div>',
     ]
     text_fallback = []
@@ -297,17 +322,17 @@ def readme(snapshot: dict, config: dict, repos: list[dict]) -> str:
         language = escape(repo.get("language") or "Keine Hauptsprache")
         alt = (f'Projekt {index:02d}: {repo["name"]}. {description_excerpt(description)} '
                f'{repo.get("language") or "Keine Hauptsprache"}. {date_label(repo["pushed_at"])}. Repository öffnen.')
-        sections.append(f'<a href="{url}">' + picture(f"projects/{rid}", alt) + '</a>')
+        sections.append(f'<a href="{url}">' + picture(assets, f"projects/{rid}", alt) + '</a>')
         text_fallback.append(
             f'<h3><a href="{url}">{name}</a></h3>\n'
             f'<p>{escape(description)}</p>\n'
             f'<p>{language} · {escape(date_label(repo["pushed_at"]))}</p>'
         )
     sections += [
-        f'<a href="{base}?tab=repositories">' + picture("catalog", "Alle Repositories auf GitHub ansehen") + '</a>',
+        f'<a href="{base}?tab=repositories">' + picture(assets, "catalog", "Alle Repositories auf GitHub ansehen") + '</a>',
         '<div><a name="kontakt"></a>' + f'<a href="{base}/{owner}/issues/new">'
-        + picture("contact", "Eine Idee oder eine Frage? Kontakt aufnehmen: einen GitHub-Issue öffnen.") + '</a></div>',
-        picture("endcap", f"{owner} / {config['name']}"),
+        + picture(assets, "contact", "Eine Idee oder eine Frage? Kontakt aufnehmen: einen GitHub-Issue öffnen.") + '</a></div>',
+        picture(assets, "endcap", f"{owner} / {config['name']}"),
     ]
     fallback = (f'<h2>{escape(config["name"])} / {escape(owner)}</h2>\n'
                 f'<p>{escape(config["intro"])}</p>\n' + "\n\n".join(text_fallback)
@@ -321,7 +346,6 @@ def readme(snapshot: dict, config: dict, repos: list[dict]) -> str:
 def build_outputs(snapshot: dict, config: dict) -> dict[Path, str]:
     repos = validate(snapshot, config)
     outputs = {
-        Path("README.md"): readme(snapshot, config, repos),
         ASSETS / "world.svg": page_segment(render_world(repos, owner=config["owner"]), hero=True),
         ASSETS / "world-mobile.svg": page_segment(render_world(repos, owner=config["owner"], mobile=True), mobile=True, hero=True),
     }
@@ -343,6 +367,7 @@ def build_outputs(snapshot: dict, config: dict) -> dict[Path, str]:
     for path, content in outputs.items():
         if path.suffix == ".svg":
             ET.fromstring(content)
+    outputs[Path("README.md")] = readme(snapshot, config, repos, outputs)
     outputs[Path("web/index.html")] = render_web(config, repos, outputs)
     return outputs
 
@@ -352,8 +377,8 @@ def obsolete_outputs(root: Path, outputs: dict[Path, str]) -> list[Path]:
     directory = root / ASSETS / "projects"
     if directory.exists():
         obsolete += [file.relative_to(root) for file in directory.iterdir()
-                     if re.fullmatch(r"\d+(?:-mobile)?\.svg", file.name)
-                     and file.relative_to(root) not in outputs]
+                     if re.fullmatch(r"\d+(?:-mobile)?\.(?:svg|gif)", file.name)
+                     and file.relative_to(root).with_suffix(".svg") not in outputs]
     return obsolete
 
 
