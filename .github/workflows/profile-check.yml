@@ -1,0 +1,27 @@
+name: Profile checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Test snapshot synchronization
+        run: python3 -m unittest discover -s .github/scripts -p 'test_*.py'
+
+      - name: Verify generated profile
+        run: python3 .github/scripts/render_profile.py --check
+
+      - name: Validate local images and SVGs
+        run: python3 .github/scripts/check_profile.py

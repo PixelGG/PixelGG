@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "owner": "PixelGG",
+  "repositories": [
+    {
+      "id": 1342344809,
+      "name": "Synex_Framework",
+      "description": "⚡ **Synex** — A modern, modular & extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory & banking to phones, radio, vehicles, jobs and beyond.",
+      "url": "https://github.com/PixelGG/Synex_Framework",
+      "language": "Lua",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-08-31T04:01:37Z",
+      "default_branch": "main",
+      "topics": []
+    },
+    {
+      "id": 1267389937,
+      "name": "DXForge",
+      "description": "DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips, themes, and reusable UI components.",
+      "url": "https://github.com/PixelGG/DXForge",
+      "language": "Lua",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-07-02T13:58:01Z",
+      "default_branch": "main",
+      "topics": []
+    }
+  ],
+  "observed_at": "2026-10-05T00:37:52Z"
+}
