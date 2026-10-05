@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="114" viewBox="0 0 480 114" role="img" aria-labelledby="title desc">
+<title id="title">PixelGG</title>
+<desc id="desc">GitHub-Profil von PixelGG</desc>
+<rect x="0" y="0" width="480" height="114" fill="#10192e"/>
+<rect x="8" y="0" width="4" height="114" fill="#344969"/>
+<rect x="12" y="0" width="4" height="114" fill="#1a2641"/>
+<rect x="468" y="0" width="4" height="114" fill="#344969"/>
+<rect x="464" y="0" width="4" height="114" fill="#1a2641"/>
+<rect x="36" y="4" width="408" height="2" fill="#344969"/>
+<text x="36" y="48" font-family="monospace" font-size="23" font-weight="400" fill="#a9bdd8">PixelGG</text>
+<g shape-rendering="crispEdges">
+<rect x="334" y="80" width="4" height="20" fill="#344255"/>
+<path d="M334 66h4v6h4v6h4v6h4v6h-28v-6h4v-6h4v-6h4Z" fill="#294251"/>
+<rect x="356" y="75" width="4" height="25" fill="#344255"/>
+<path d="M356 55h4v6h4v6h4v6h4v6h-28v-6h4v-6h4v-6h4Z" fill="#294251"/>
+<rect x="384" y="82" width="4" height="18" fill="#344255"/>
+<path d="M384 70h4v6h4v6h4v6h4v6h-28v-6h4v-6h4v-6h4Z" fill="#294251"/>
+<rect x="408" y="77" width="4" height="23" fill="#344255"/>
+<path d="M408 60h4v6h4v6h4v6h4v6h-28v-6h4v-6h4v-6h4Z" fill="#294251"/>
+<rect x="432" y="84" width="4" height="16" fill="#344255"/>
+<path d="M432 74h4v6h4v6h4v6h4v6h-28v-6h4v-6h4v-6h4Z" fill="#294251"/>
+<rect x="324" y="51" width="3" height="3" fill="#647b8f"/>
+<rect x="410" y="38" width="3" height="3" fill="#647b8f"/>
+<rect x="441" y="59" width="3" height="3" fill="#647b8f"/>
+<rect x="8" y="106" width="464" height="4" fill="#344969"/>
+<rect x="16" y="110" width="448" height="4" fill="#1a2641"/>
+</g>
+</svg>

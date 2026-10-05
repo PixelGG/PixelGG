@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="599" viewBox="0 0 480 599" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="559" viewBox="0 0 480 559" role="img" aria-labelledby="title desc"><g shape-rendering="crispEdges"><rect width="480" height="559" fill="#10192e"/><path d="M8 0h4v559H8ZM468 0h4v559h-4Z" fill="#344969"/><path d="M12 0h4v559h-4ZM464 0h4v559h-4Z" fill="#1a2641"/></g><svg xmlns="http://www.w3.org/2000/svg" width="432" height="539" viewBox="0 0 480 599" role="img" aria-labelledby="title desc" x="24" y="0">
 <title id="title">Synex_Framework</title>
 <desc id="desc">⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory &amp; banking to phones, radio, vehicles, jobs and beyond. Lua. Letzter Push 31.08.2026. Repository öffnen.</desc>
 <g shape-rendering="crispEdges">
@@ -47,4 +47,5 @@
 <path transform="translate(398 532)" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/>
 </g>
 <text x="56" y="549" fill="#d3eedf" font-size="22" font-weight="400" font-family="Arial,Helvetica,sans-serif">Repository öffnen</text>
+</svg>
 </svg>

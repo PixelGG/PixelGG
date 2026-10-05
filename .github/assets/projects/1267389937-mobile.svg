@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="568" viewBox="0 0 480 568" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="531" viewBox="0 0 480 531" role="img" aria-labelledby="title desc"><g shape-rendering="crispEdges"><rect width="480" height="531" fill="#10192e"/><path d="M8 0h4v531H8ZM468 0h4v531h-4Z" fill="#344969"/><path d="M12 0h4v531h-4ZM464 0h4v531h-4Z" fill="#1a2641"/></g><svg xmlns="http://www.w3.org/2000/svg" width="432" height="511" viewBox="0 0 480 568" role="img" aria-labelledby="title desc" x="24" y="0">
 <title id="title">DXForge</title>
 <desc id="desc">DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips, themes, and reusable UI components. Lua. Letzter Push 02.07.2026. Repository öffnen.</desc>
 <g shape-rendering="crispEdges">
@@ -46,4 +46,5 @@
 <path transform="translate(398 501)" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/>
 </g>
 <text x="56" y="518" fill="#d3eedf" font-size="22" font-weight="400" font-family="Arial,Helvetica,sans-serif">Repository öffnen</text>
+</svg>
 </svg>
