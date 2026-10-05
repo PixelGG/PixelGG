@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="150" viewBox="0 0 1000 150" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="104" viewBox="0 0 1000 104" role="img" aria-labelledby="title desc">
 <title id="title">Synex_Framework</title>
 <desc id="desc">Automatisch erzeugter Projekteingang. Der vollständige Text und Link stehen auch in der README.</desc>
-<path d="M8 0H992V4H996V8H1000V142H996V146H992V150H8V146H4V142H0V8H4V4H8Z" fill="#111c34"/>
-<path d="M8 1H992M1 8V142M999 8V142M8 149H992" stroke="#283753" fill="none"/>
+<path d="M8 0H992V4H996V8H1000V96H996V100H992V104H8V100H4V96H0V8H4V4H8Z" fill="#111c34"/>
+<path d="M8 1H992M1 8V96M999 8V96M8 103H992" stroke="#283753" fill="none"/>
 <rect x="24" y="25" width="5" height="5" fill="#90d99b"/>
-<text x="38" y="31" fill="#90d99b" font-size="12" font-weight="700" font-family="monospace">PROJECT 01</text>
-<text x="24" y="79" fill="#edf3ff" font-size="34" font-weight="700" font-family="Arial,Helvetica,sans-serif">Synex_Framework</text>
-<text x="24" y="125" fill="#a9bdd8" font-size="15" font-weight="400" font-family="Arial,Helvetica,sans-serif">Lua</text>
-<g transform="translate(886 42) scale(1.5)" shape-rendering="crispEdges">
+<text x="38" y="31" fill="#90d99b" font-size="14" font-weight="700" font-family="monospace">PROJEKT 01</text>
+<text x="24" y="75" fill="#edf3ff" font-size="32" font-weight="700" font-family="monospace">Synex_Framework</text>
+<g transform="translate(886 20) scale(1.25)" shape-rendering="crispEdges">
 <path d="M0 10H5V5H10V0H28V5H33V10H38V45H0Z" fill="#344969"/>
 <path d="M7 12H12V7H26V12H31V45H7Z" fill="#0b1326"/>
 <path d="M12 13H26V40H12Z" fill="#90d99b"/>

@@ -5,47 +5,46 @@
   <img src="./.github/assets/world.svg" width="100%" alt="PixelGG: eine animierte nächtliche Entwicklerinsel mit Werkstatt, Brücken, Bäumen und Wasserfall.">
 </picture>
 
-<p><strong>Mike / PixelGG</strong><br>Ich entwickle Systeme für Spiele, eigene Oberflächen und Werkzeuge zur Automatisierung.</p>
+<h2 align="center">Mike / PixelGG</h2>
 
-<p><a href="https://github.com/PixelGG?tab=repositories">Repositories</a> &nbsp; · &nbsp; <a href="https://github.com/PixelGG/PixelGG/issues/new">Kontakt</a> &nbsp; · &nbsp; <a href="./docs/profile-design.md">Wie dieses Profil funktioniert</a></p>
+<p align="center">Ich entwickle Systeme für Spiele, eigene Oberflächen und Werkzeuge zur Automatisierung.</p>
+
+<p align="center"><a href="https://github.com/PixelGG?tab=repositories">Alle Repositories ↗</a> &nbsp; · &nbsp; <a href="https://github.com/PixelGG/PixelGG/issues/new">Kontakt aufnehmen ↗</a></p>
 
 ## Auf der Werkbank
 
-<p>Aktuelle öffentliche Projekte, nach dem letzten Push sortiert.</p>
+<p><strong>02 Projekte</strong> &nbsp; / &nbsp; Öffentlich &amp; aktiv &nbsp; / &nbsp; Neueste Arbeit zuerst</p>
 
+<table width="100%">
+<tr><td>
 <a href="https://github.com/PixelGG/Synex_Framework">
   <picture>
     <source media="(max-width: 600px)" srcset="./.github/assets/projects/1342344809-mobile.svg">
     <img src="./.github/assets/projects/1342344809.svg" width="100%" alt="Projekt 01: Synex_Framework. Repository öffnen.">
   </picture>
 </a>
+<p>⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory…</p>
+<p><code>Lua</code> &nbsp; · &nbsp; <sub>Letzter Push 31.08.2026</sub></p>
+<p><a href="https://github.com/PixelGG/Synex_Framework"><strong>Repository öffnen ↗</strong></a></p>
+</td></tr>
+</table>
 
-<p>⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory &amp; banking to phones, radio, vehicles, jobs and beyond.</p>
-
-<p><a href="https://github.com/PixelGG/Synex_Framework"><strong>Synex_Framework ↗</strong></a> &nbsp; · &nbsp; <sub>Letzter Push 31.08.2026</sub></p>
-
+<table width="100%">
+<tr><td>
 <a href="https://github.com/PixelGG/DXForge">
   <picture>
     <source media="(max-width: 600px)" srcset="./.github/assets/projects/1267389937-mobile.svg">
     <img src="./.github/assets/projects/1267389937.svg" width="100%" alt="Projekt 02: DXForge. Repository öffnen.">
   </picture>
 </a>
+<p>DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips…</p>
+<p><code>Lua</code> &nbsp; · &nbsp; <sub>Letzter Push 02.07.2026</sub></p>
+<p><a href="https://github.com/PixelGG/DXForge"><strong>Repository öffnen ↗</strong></a></p>
+</td></tr>
+</table>
 
-<p>DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips, themes, and reusable UI components.</p>
+<p align="right"><a href="https://github.com/PixelGG?tab=repositories">Alle Repositories ansehen →</a></p>
 
-<p><a href="https://github.com/PixelGG/DXForge"><strong>DXForge ↗</strong></a> &nbsp; · &nbsp; <sub>Letzter Push 02.07.2026</sub></p>
+---
 
-<details>
-<summary>Automatische Pflege & Quellcode</summary>
-
-<p>Projektname, Beschreibung, Sprache, Reihenfolge und Links stammen aus der GitHub API. Der vollständige öffentliche Bestand wird regelmäßig neu abgeglichen. Gelöschte oder private Projekte verschwinden beim nächsten erfolgreichen Abgleich; Umbenennungen werden übernommen. Forks, archivierte und deaktivierte Repositories sowie dieses Profilrepo sind ausgeblendet.</p>
-
-<p>Datenstand: 05.10.2026, 00:37 UTC. Geplanter Abgleich: stündlich. GitHub kann geplante Läufe verzögern oder deaktivieren. Bei einem fehlgeschlagenen Abruf bleibt der letzte vollständige Stand erhalten. Ein unveränderter Bestand erzeugt keinen neuen Commit.</p>
-
-<p>Die Pixelwelt, Animationen und Projektgrafiken entstehen aus eigenem Code. Keine externen Bild-Widgets, Grafikbibliotheken, Statistikdienste oder Schrift-Downloads. Die Python-Skripte benötigen nur die Standardbibliothek.</p>
-
-<p><a href="https://github.com/PixelGG/PixelGG/actions/workflows/profile-sync.yml">Abgleich & letzte Läufe</a> · <a href="./.github/scripts/render_profile.py">Renderer</a> · <a href="./.github/scripts/pixel_world.py">Pixelwelt</a></p>
-
-</details>
-
-<p><sub>Eigene Welt. Eigener Code. Schritt für Schritt gebaut.</sub></p>
+<p align="center"><strong>Eine Idee oder eine Frage?</strong><br><a href="https://github.com/PixelGG/PixelGG/issues/new">Lass uns darüber sprechen ↗</a></p>
