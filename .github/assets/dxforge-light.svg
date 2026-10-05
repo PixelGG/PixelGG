@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="204" viewBox="0 0 960 204" role="img" aria-labelledby="title desc">
+<title id="title">DXForge — Lua Interface Library</title>
+<desc id="desc">Abstrakte Illustration eigener UI-Bausteine; kein Produkt-Screenshot.</desc>
+<rect x="0" y="0" width="960" height="204" fill="#f2f0e9" rx="12"/>
+<text x="34" y="37" fill="#b83d1b" font-family="'Courier New',monospace" font-size="13" font-weight="700" letter-spacing="1.4">02 / UI ENGINEERING</text>
+<text x="30" y="119" fill="#232629" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="700" letter-spacing="-2.5">DXFORGE</text>
+<text x="34" y="165" fill="#62635f" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" >Lua Interface Library</text>
+<path d="M517 28L517 176" stroke="#ccc9c0" fill="none" />
+<rect x="612" y="27" width="258" height="129" fill="#e8e5dd" rx="7" stroke="#ccc9c0"/>
+<rect x="586" y="49" width="258" height="129" fill="#f2f0e9" rx="7" stroke="#62635f"/>
+<path d="M586 74L844 74" stroke="#ccc9c0" fill="none" />
+<rect x="600" y="59" width="7" height="7" fill="#b83d1b" />
+<path d="M616 62L673 62" stroke="#ccc9c0" fill="none" stroke-width="3"/>
+<rect x="600" y="87" width="50" height="77" fill="#e8e5dd" rx="3"/>
+<path d="M609 101L639 101" stroke="#b83d1b" fill="none" stroke-width="3"/>
+<path d="M609 115L633 115" stroke="#ccc9c0" fill="none" stroke-width="3"/>
+<path d="M609 129L637 129" stroke="#ccc9c0" fill="none" stroke-width="3"/>
+<path d="M664 96L741 96" stroke="#62635f" fill="none" stroke-width="3"/>
+<rect x="664" y="109" width="158" height="6" fill="#e8e5dd" rx="3"/>
+<rect x="664" y="109" width="108" height="6" fill="#b83d1b" rx="3"/>
+<rect x="664" y="132" width="69" height="28" fill="#b83d1b" rx="4"/>
+<rect x="743" y="132" width="79" height="28" fill="#e8e5dd" rx="4"/>
+</svg>

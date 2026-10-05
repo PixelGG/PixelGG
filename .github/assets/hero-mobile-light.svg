@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="580" viewBox="0 0 480 580" role="img" aria-labelledby="title desc">
+<title id="title">Mike / PixelGG — From pixels to systems.</title>
+<desc id="desc">Eigene Pixel-P-Marke aus orangefarbenen, räumlich gezeichneten Kacheln. Game-Systeme, Oberflächen und Werkzeuge.</desc>
+<style>.tile{animation:assemble 900ms cubic-bezier(.2,.8,.2,1) both}@keyframes assemble{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.tile{animation:none}}</style>
+<rect x="0" y="0" width="480" height="580" fill="#f2f0e9" rx="14"/>
+<rect x="28" y="34" width="9" height="9" fill="#b83d1b" />
+<text x="48" y="43" fill="#62635f" font-family="'Courier New',monospace" font-size="13" font-weight="400" letter-spacing="1.4">MIKE / DEVELOPER</text>
+<text x="26" y="141" fill="#232629" font-family="Arial,Helvetica,sans-serif" font-size="76" font-weight="700" letter-spacing="-5">PixelGG</text>
+<rect x="302" y="128" width="12" height="12" fill="#b83d1b" />
+<text x="29" y="194" fill="#232629" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="400" letter-spacing="-1">From pixels</text>
+<text x="29" y="234" fill="#62635f" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="400" letter-spacing="-1">to systems.</text>
+<rect x="160" y="280" width="25" height="25" fill="#dfdcd4" />
+<rect x="190" y="280" width="25" height="25" fill="#dfdcd4" />
+<rect x="220" y="280" width="25" height="25" fill="#dfdcd4" />
+<rect x="250" y="280" width="25" height="25" fill="#dfdcd4" />
+<rect x="280" y="280" width="25" height="25" fill="#dfdcd4" />
+<rect x="160" y="310" width="25" height="25" fill="#dfdcd4" />
+<rect x="190" y="310" width="25" height="25" fill="#dfdcd4" />
+<rect x="220" y="310" width="25" height="25" fill="#dfdcd4" />
+<rect x="250" y="310" width="25" height="25" fill="#dfdcd4" />
+<rect x="280" y="310" width="25" height="25" fill="#dfdcd4" />
+<rect x="160" y="340" width="25" height="25" fill="#dfdcd4" />
+<rect x="190" y="340" width="25" height="25" fill="#dfdcd4" />
+<rect x="220" y="340" width="25" height="25" fill="#dfdcd4" />
+<rect x="250" y="340" width="25" height="25" fill="#dfdcd4" />
+<rect x="280" y="340" width="25" height="25" fill="#dfdcd4" />
+<rect x="160" y="370" width="25" height="25" fill="#dfdcd4" />
+<rect x="190" y="370" width="25" height="25" fill="#dfdcd4" />
+<rect x="220" y="370" width="25" height="25" fill="#dfdcd4" />
+<rect x="250" y="370" width="25" height="25" fill="#dfdcd4" />
+<rect x="280" y="370" width="25" height="25" fill="#dfdcd4" />
+<rect x="160" y="400" width="25" height="25" fill="#dfdcd4" />
+<rect x="190" y="400" width="25" height="25" fill="#dfdcd4" />
+<rect x="220" y="400" width="25" height="25" fill="#dfdcd4" />
+<rect x="250" y="400" width="25" height="25" fill="#dfdcd4" />
+<rect x="280" y="400" width="25" height="25" fill="#dfdcd4" />
+<rect x="160" y="430" width="25" height="25" fill="#dfdcd4" />
+<rect x="190" y="430" width="25" height="25" fill="#dfdcd4" />
+<rect x="220" y="430" width="25" height="25" fill="#dfdcd4" />
+<rect x="250" y="430" width="25" height="25" fill="#dfdcd4" />
+<rect x="280" y="430" width="25" height="25" fill="#dfdcd4" />
+<rect x="160" y="460" width="25" height="25" fill="#dfdcd4" />
+<rect x="190" y="460" width="25" height="25" fill="#dfdcd4" />
+<rect x="220" y="460" width="25" height="25" fill="#dfdcd4" />
+<rect x="250" y="460" width="25" height="25" fill="#dfdcd4" />
+<rect x="280" y="460" width="25" height="25" fill="#dfdcd4" />
+<g class="tile" style="animation-delay:0ms">
+<path d="M185 280l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M160 305l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="160" y="280" width="25" height="25" fill="#ffad7d" />
+<path d="M161 281L184 281" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:18ms">
+<path d="M215 280l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M190 305l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="190" y="280" width="25" height="25" fill="#ffad7d" />
+<path d="M191 281L214 281" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:36ms">
+<path d="M245 280l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M220 305l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="220" y="280" width="25" height="25" fill="#ffad7d" />
+<path d="M221 281L244 281" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:54ms">
+<path d="M275 280l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M250 305l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="250" y="280" width="25" height="25" fill="#ffad7d" />
+<path d="M251 281L274 281" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:90ms">
+<path d="M185 310l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M160 335l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="160" y="310" width="25" height="25" fill="#ff9868" />
+<path d="M161 311L184 311" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:108ms">
+<path d="M215 310l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M190 335l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="190" y="310" width="25" height="25" fill="#ff9868" />
+<path d="M191 311L214 311" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:144ms">
+<path d="M275 310l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M250 335l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="250" y="310" width="25" height="25" fill="#ff9868" />
+<path d="M251 311L274 311" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:162ms">
+<path d="M305 310l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M280 335l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="280" y="310" width="25" height="25" fill="#ff9868" />
+<path d="M281 311L304 311" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:180ms">
+<path d="M185 340l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M160 365l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="160" y="340" width="25" height="25" fill="#ff8354" />
+<path d="M161 341L184 341" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:198ms">
+<path d="M215 340l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M190 365l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="190" y="340" width="25" height="25" fill="#ff8354" />
+<path d="M191 341L214 341" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:234ms">
+<path d="M275 340l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M250 365l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="250" y="340" width="25" height="25" fill="#ff8354" />
+<path d="M251 341L274 341" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:252ms">
+<path d="M305 340l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M280 365l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="280" y="340" width="25" height="25" fill="#ff8354" />
+<path d="M281 341L304 341" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:270ms">
+<path d="M185 370l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M160 395l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="160" y="370" width="25" height="25" fill="#f36c43" />
+<path d="M161 371L184 371" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:288ms">
+<path d="M215 370l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M190 395l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="190" y="370" width="25" height="25" fill="#f36c43" />
+<path d="M191 371L214 371" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:306ms">
+<path d="M245 370l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M220 395l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="220" y="370" width="25" height="25" fill="#f36c43" />
+<path d="M221 371L244 371" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:324ms">
+<path d="M275 370l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M250 395l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="250" y="370" width="25" height="25" fill="#f36c43" />
+<path d="M251 371L274 371" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:360ms">
+<path d="M185 400l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M160 425l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="160" y="400" width="25" height="25" fill="#e35b35" />
+<path d="M161 401L184 401" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:378ms">
+<path d="M215 400l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M190 425l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="190" y="400" width="25" height="25" fill="#e35b35" />
+<path d="M191 401L214 401" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:450ms">
+<path d="M185 430l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M160 455l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="160" y="430" width="25" height="25" fill="#ce4b2b" />
+<path d="M161 431L184 431" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:468ms">
+<path d="M215 430l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M190 455l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="190" y="430" width="25" height="25" fill="#ce4b2b" />
+<path d="M191 431L214 431" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:540ms">
+<path d="M185 460l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M160 485l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="160" y="460" width="25" height="25" fill="#b93e23" />
+<path d="M161 461L184 461" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<g class="tile" style="animation-delay:558ms">
+<path d="M215 460l7 7v25l-7 -7Z" fill="#87351f"/>
+<path d="M190 485l7 7h25l-7 -7Z" fill="#a94126"/>
+<rect x="190" y="460" width="25" height="25" fill="#b93e23" />
+<path d="M191 461L214 461" stroke="#ffe1bf" fill="none" opacity=".55"/>
+</g>
+<path d="M28 533L452 533" stroke="#ccc9c0" fill="none" />
+<text x="28" y="556" fill="#62635f" font-family="'Courier New',monospace" font-size="12" font-weight="400" >GAMES / INTERFACES / TOOLS</text>
+</svg>
