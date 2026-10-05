@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "recipe": "6c7ad669abb49e2417887b4fe4ab23438a06cb135c0cb76f2890ff71d1ca6993",
+  "assets": {
+    ".github/assets/endcap-mobile.gif": {
+      "source": "594a4d7d6bd6c0ecf1859e2d671b6a768bfe339a7cdada950733228d74c856cc",
+      "sha256": "073a424cd12a8138658616c7b1f4879e806e856184b27f1b9ecfc10bd9d1e89e",
+      "width": 480,
+      "height": 132,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/endcap.gif": {
+      "source": "3a613afeaa2801aaf24e0bcd6fd33adfc68969e41df6c5ec384fbc6125740886",
+      "sha256": "1406cfd3474ff85a92bcf499ffea7b09c3c812fe4d6bb82c5c4774ae85bfef1e",
+      "width": 1000,
+      "height": 132,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/intro.gif": {
+      "source": "231f3e028097198088552fb521ce14a9bf404675236ea50117a81237a57b7504",
+      "sha256": "ab73fd686a27db64c71e01cacd3f7b470fc25093678ada00ccd1e229318d5868",
+      "width": 1000,
+      "height": 276,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/nav-contact-mobile.gif": {
+      "source": "7e51a2a502567ae1988ec63d1d18cf697f644eb3246bca0812d6b69c834ab762",
+      "sha256": "c649c594912460722d009d6324b2aee253f1925259c799cab55533106fc6d7ba",
+      "width": 240,
+      "height": 88,
+      "frames": 7,
+      "duration_ms": 6000
+    },
+    ".github/assets/nav-contact.gif": {
+      "source": "83d99899860aaf6dcd2342f3a32113f82ccb339ba7e539a9d50ded4d3fc82d11",
+      "sha256": "2d209f65de1fc75622212fb5cc417aacb6f86e7749b4095c4aade190c3052704",
+      "width": 500,
+      "height": 100,
+      "frames": 7,
+      "duration_ms": 6000
+    },
+    ".github/assets/nav-workbench-mobile.gif": {
+      "source": "59460ff01df2b9505e39cf67f481ffcacde8bb2933eb305610dd060c220eb3a2",
+      "sha256": "9826ccca1691882cc8d063f2562148ec1b4a22d6cc5d4823ea4c79088a59e117",
+      "width": 240,
+      "height": 88,
+      "frames": 7,
+      "duration_ms": 6000
+    },
+    ".github/assets/nav-workbench.gif": {
+      "source": "1c9430a57c14009b056e7bc39f3d40b9eb83cee2920b61911f4032003bed2b94",
+      "sha256": "04ccca6ff1f298b5c3d63b43a6b56dcb8bdb845cd17d61f1c902c4a9e94968c1",
+      "width": 500,
+      "height": 100,
+      "frames": 7,
+      "duration_ms": 6000
+    },
+    ".github/assets/projects/1267389937-mobile.gif": {
+      "source": "37351603396b660083b236af417baaeb019b6117a4240d5991f45b0c5a6b07d0",
+      "sha256": "1b142bdc512f0d596758a72819fb6ce8b0e33871cdfa324ee2755fa04918340d",
+      "width": 480,
+      "height": 531,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/projects/1267389937.gif": {
+      "source": "553b2b148f00aac746366f9f80ecc1e4246ee98886e86f3969ca4e0469f4ede1",
+      "sha256": "9eafcaa74c9c1b5484a5bb70ef470b43dde8fa01bd118c305e8cae358bc72873",
+      "width": 1000,
+      "height": 379,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/projects/1342344809-mobile.gif": {
+      "source": "646dc661341565d2019a4309ae41d7a6781633b39d0f9a7c00eb3c3e30a8de4a",
+      "sha256": "9e2b1b69a7494d55808346cede33dd4da35d7641ee5749e09b7a9bc7f76727b4",
+      "width": 480,
+      "height": 559,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/projects/1342344809.gif": {
+      "source": "086551053ab8c29ce32680eaed2a8852e646710540fe99c86f3c5d679c628f94",
+      "sha256": "e6ca9986b115f5e7aca94f37c9375a2213d0951943d49be4d9a583deb3cd9efa",
+      "width": 1000,
+      "height": 379,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/world-mobile.gif": {
+      "source": "a131b5c12ea9638205926f87ee8ca976427fc1ccb16d962d0f2403fa93671c8a",
+      "sha256": "600643c344876ced2e5e36594272910d889a5f3ece4b0cfd52d4a3b623583720",
+      "width": 480,
+      "height": 280,
+      "frames": 48,
+      "duration_ms": 6000
+    },
+    ".github/assets/world.gif": {
+      "source": "4d8839f2826194ae2b322191f892355619bb27c29f69c1d2bdf3605cd03140fb",
+      "sha256": "361d1916382f83eaa65caf08b9022d9a5997feecc2af768cd670dfdee4ddda19",
+      "width": 1000,
+      "height": 560,
+      "frames": 48,
+      "duration_ms": 6000
+    }
+  }
+}

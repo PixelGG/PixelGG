@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="88" viewBox="0 0 240 88" role="img" aria-labelledby="title desc">
+<title id="title">Projekte</title>
+<desc id="desc">Zum Bereich Projekte</desc>
+<rect x="0" y="0" width="240" height="88" fill="#10192e"/>
+<style>@keyframes pg-nav-projects-step{0%,70%,100%{transform:translateY(0)}80%,90%{transform:translateY(3px)}}.pg-nav-projects-chevron{animation:pg-nav-projects-step 5.5s steps(1,end) infinite}@media(prefers-reduced-motion:reduce){.pg-nav-projects-chevron{animation:none!important}}</style>
+<rect x="8" y="0" width="4" height="88" fill="#344969"/>
+<rect x="12" y="0" width="4" height="88" fill="#1a2641"/>
+<g class="pg-nav-panel" shape-rendering="crispEdges">
+<path d="M32 13H224v4h4v4h4V65h-4v4h-4v4H32v-4h-4v-4h-4V21h4v-4h4Z" transform="translate(0 4)" fill="#0b1324"/>
+<path d="M32 13H224v4h4v4h4V65h-4v4h-4v4H32v-4h-4v-4h-4V21h4v-4h4Z" fill="#344969"/>
+<path class="pg-nav-fill" d="M34 18H222v3h5V65h-5v3H34v-3h-5V21h5Z" fill="#1a2641"/>
+<rect x="36" y="17" width="184" height="2" fill="#51627a"/>
+<path d="M39 32h3v3h-3zM42 32h3v3h-3zM45 32h3v3h-3zM48 32h3v3h-3zM39 35h3v3h-3zM42 35h3v3h-3zM48 35h3v3h-3zM51 35h3v3h-3zM39 38h3v3h-3zM42 38h3v3h-3zM48 38h3v3h-3zM51 38h3v3h-3zM39 41h3v3h-3zM42 41h3v3h-3zM45 41h3v3h-3zM48 41h3v3h-3zM39 44h3v3h-3zM42 44h3v3h-3zM39 47h3v3h-3zM42 47h3v3h-3zM39 50h3v3h-3zM42 50h3v3h-3zM57 32h3v3h-3zM60 32h3v3h-3zM63 32h3v3h-3zM66 32h3v3h-3zM57 35h3v3h-3zM60 35h3v3h-3zM66 35h3v3h-3zM69 35h3v3h-3zM57 38h3v3h-3zM60 38h3v3h-3zM66 38h3v3h-3zM69 38h3v3h-3zM57 41h3v3h-3zM60 41h3v3h-3zM63 41h3v3h-3zM66 41h3v3h-3zM57 44h3v3h-3zM60 44h3v3h-3zM63 44h3v3h-3zM57 47h3v3h-3zM60 47h3v3h-3zM66 47h3v3h-3zM57 50h3v3h-3zM60 50h3v3h-3zM66 50h3v3h-3zM69 50h3v3h-3zM78 32h3v3h-3zM81 32h3v3h-3zM84 32h3v3h-3zM75 35h3v3h-3zM78 35h3v3h-3zM84 35h3v3h-3zM87 35h3v3h-3zM75 38h3v3h-3zM78 38h3v3h-3zM84 38h3v3h-3zM87 38h3v3h-3zM75 41h3v3h-3zM78 41h3v3h-3zM84 41h3v3h-3zM87 41h3v3h-3zM75 44h3v3h-3zM78 44h3v3h-3zM84 44h3v3h-3zM87 44h3v3h-3zM75 47h3v3h-3zM78 47h3v3h-3zM84 47h3v3h-3zM87 47h3v3h-3zM78 50h3v3h-3zM81 50h3v3h-3zM84 50h3v3h-3zM99 32h3v3h-3zM102 32h3v3h-3zM105 32h3v3h-3zM102 35h3v3h-3zM102 38h3v3h-3zM102 41h3v3h-3zM93 44h3v3h-3zM96 44h3v3h-3zM102 44h3v3h-3zM93 47h3v3h-3zM96 47h3v3h-3zM102 47h3v3h-3zM96 50h3v3h-3zM99 50h3v3h-3zM111 32h3v3h-3zM114 32h3v3h-3zM117 32h3v3h-3zM120 32h3v3h-3zM123 32h3v3h-3zM111 35h3v3h-3zM114 35h3v3h-3zM111 38h3v3h-3zM114 38h3v3h-3zM111 41h3v3h-3zM114 41h3v3h-3zM117 41h3v3h-3zM120 41h3v3h-3zM111 44h3v3h-3zM114 44h3v3h-3zM111 47h3v3h-3zM114 47h3v3h-3zM111 50h3v3h-3zM114 50h3v3h-3zM117 50h3v3h-3zM120 50h3v3h-3zM123 50h3v3h-3zM129 32h3v3h-3zM132 32h3v3h-3zM138 32h3v3h-3zM141 32h3v3h-3zM129 35h3v3h-3zM132 35h3v3h-3zM138 35h3v3h-3zM141 35h3v3h-3zM129 38h3v3h-3zM132 38h3v3h-3zM135 38h3v3h-3zM138 38h3v3h-3zM129 41h3v3h-3zM132 41h3v3h-3zM135 41h3v3h-3zM129 44h3v3h-3zM132 44h3v3h-3zM135 44h3v3h-3zM138 44h3v3h-3zM129 47h3v3h-3zM132 47h3v3h-3zM138 47h3v3h-3zM141 47h3v3h-3zM129 50h3v3h-3zM132 50h3v3h-3zM138 50h3v3h-3zM141 50h3v3h-3zM147 32h3v3h-3zM150 32h3v3h-3zM153 32h3v3h-3zM156 32h3v3h-3zM159 32h3v3h-3zM153 35h3v3h-3zM153 38h3v3h-3zM153 41h3v3h-3zM153 44h3v3h-3zM153 47h3v3h-3zM153 50h3v3h-3zM165 32h3v3h-3zM168 32h3v3h-3zM171 32h3v3h-3zM174 32h3v3h-3zM177 32h3v3h-3zM165 35h3v3h-3zM168 35h3v3h-3zM165 38h3v3h-3zM168 38h3v3h-3zM165 41h3v3h-3zM168 41h3v3h-3zM171 41h3v3h-3zM174 41h3v3h-3zM165 44h3v3h-3zM168 44h3v3h-3zM165 47h3v3h-3zM168 47h3v3h-3zM165 50h3v3h-3zM168 50h3v3h-3zM171 50h3v3h-3zM174 50h3v3h-3zM177 50h3v3h-3z" fill="#edf0d9"/>
+<g transform="translate(196 36)">
+<g class="pg-nav-projects-chevron">
+<path d="M0 0h4v4h4v4h4V4h4V0h4v4h-4v4h-4v4H8V8H4V4H0Z" fill="#82cbb9"/>
+</g></g></g>
+</svg>

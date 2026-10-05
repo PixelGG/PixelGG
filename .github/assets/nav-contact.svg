@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="100" viewBox="0 0 500 100" role="img" aria-labelledby="title desc">
+<title id="title">Kontakt</title>
+<desc id="desc">Zum Bereich Kontakt</desc>
+<rect x="0" y="0" width="500" height="100" fill="#10192e"/>
+<style>@keyframes pg-nav-contact-step{0%,70%,100%{transform:translateY(0)}80%,90%{transform:translateY(3px)}}.pg-nav-contact-chevron{animation:pg-nav-contact-step 5.5s steps(1,end) infinite}@media(prefers-reduced-motion:reduce){.pg-nav-contact-chevron{animation:none!important}}</style>
+<rect x="488" y="0" width="4" height="100" fill="#344969"/>
+<rect x="484" y="0" width="4" height="100" fill="#1a2641"/>
+<g class="pg-nav-panel" shape-rendering="crispEdges">
+<path d="M16 13H468v4h4v4h4V77h-4v4h-4v4H16v-4h-4v-4h-4V21h4v-4h4Z" transform="translate(0 4)" fill="#0b1324"/>
+<path d="M16 13H468v4h4v4h4V77h-4v4h-4v4H16v-4h-4v-4h-4V21h4v-4h4Z" fill="#344969"/>
+<path class="pg-nav-fill" d="M18 18H466v3h5V77h-5v3H18v-3h-5V21h5Z" fill="#1a2641"/>
+<rect x="20" y="17" width="444" height="2" fill="#51627a"/>
+<path d="M142 35h4v4h-4zM146 35h4v4h-4zM154 35h4v4h-4zM158 35h4v4h-4zM142 39h4v4h-4zM146 39h4v4h-4zM154 39h4v4h-4zM158 39h4v4h-4zM142 43h4v4h-4zM146 43h4v4h-4zM150 43h4v4h-4zM154 43h4v4h-4zM142 47h4v4h-4zM146 47h4v4h-4zM150 47h4v4h-4zM142 51h4v4h-4zM146 51h4v4h-4zM150 51h4v4h-4zM154 51h4v4h-4zM142 55h4v4h-4zM146 55h4v4h-4zM154 55h4v4h-4zM158 55h4v4h-4zM142 59h4v4h-4zM146 59h4v4h-4zM154 59h4v4h-4zM158 59h4v4h-4zM170 35h4v4h-4zM174 35h4v4h-4zM178 35h4v4h-4zM166 39h4v4h-4zM170 39h4v4h-4zM178 39h4v4h-4zM182 39h4v4h-4zM166 43h4v4h-4zM170 43h4v4h-4zM178 43h4v4h-4zM182 43h4v4h-4zM166 47h4v4h-4zM170 47h4v4h-4zM178 47h4v4h-4zM182 47h4v4h-4zM166 51h4v4h-4zM170 51h4v4h-4zM178 51h4v4h-4zM182 51h4v4h-4zM166 55h4v4h-4zM170 55h4v4h-4zM178 55h4v4h-4zM182 55h4v4h-4zM170 59h4v4h-4zM174 59h4v4h-4zM178 59h4v4h-4zM190 35h4v4h-4zM194 35h4v4h-4zM206 35h4v4h-4zM190 39h4v4h-4zM194 39h4v4h-4zM206 39h4v4h-4zM190 43h4v4h-4zM194 43h4v4h-4zM198 43h4v4h-4zM206 43h4v4h-4zM190 47h4v4h-4zM194 47h4v4h-4zM198 47h4v4h-4zM202 47h4v4h-4zM206 47h4v4h-4zM190 51h4v4h-4zM194 51h4v4h-4zM202 51h4v4h-4zM206 51h4v4h-4zM190 55h4v4h-4zM194 55h4v4h-4zM206 55h4v4h-4zM190 59h4v4h-4zM194 59h4v4h-4zM206 59h4v4h-4zM214 35h4v4h-4zM218 35h4v4h-4zM222 35h4v4h-4zM226 35h4v4h-4zM230 35h4v4h-4zM222 39h4v4h-4zM222 43h4v4h-4zM222 47h4v4h-4zM222 51h4v4h-4zM222 55h4v4h-4zM222 59h4v4h-4zM242 35h4v4h-4zM246 35h4v4h-4zM250 35h4v4h-4zM238 39h4v4h-4zM242 39h4v4h-4zM250 39h4v4h-4zM254 39h4v4h-4zM238 43h4v4h-4zM242 43h4v4h-4zM250 43h4v4h-4zM254 43h4v4h-4zM238 47h4v4h-4zM242 47h4v4h-4zM246 47h4v4h-4zM250 47h4v4h-4zM254 47h4v4h-4zM238 51h4v4h-4zM242 51h4v4h-4zM250 51h4v4h-4zM254 51h4v4h-4zM238 55h4v4h-4zM242 55h4v4h-4zM250 55h4v4h-4zM254 55h4v4h-4zM238 59h4v4h-4zM242 59h4v4h-4zM250 59h4v4h-4zM254 59h4v4h-4zM262 35h4v4h-4zM266 35h4v4h-4zM274 35h4v4h-4zM278 35h4v4h-4zM262 39h4v4h-4zM266 39h4v4h-4zM274 39h4v4h-4zM278 39h4v4h-4zM262 43h4v4h-4zM266 43h4v4h-4zM270 43h4v4h-4zM274 43h4v4h-4zM262 47h4v4h-4zM266 47h4v4h-4zM270 47h4v4h-4zM262 51h4v4h-4zM266 51h4v4h-4zM270 51h4v4h-4zM274 51h4v4h-4zM262 55h4v4h-4zM266 55h4v4h-4zM274 55h4v4h-4zM278 55h4v4h-4zM262 59h4v4h-4zM266 59h4v4h-4zM274 59h4v4h-4zM278 59h4v4h-4zM286 35h4v4h-4zM290 35h4v4h-4zM294 35h4v4h-4zM298 35h4v4h-4zM302 35h4v4h-4zM294 39h4v4h-4zM294 43h4v4h-4zM294 47h4v4h-4zM294 51h4v4h-4zM294 55h4v4h-4zM294 59h4v4h-4z" fill="#edf0d9"/>
+<g transform="translate(322 43)">
+<g class="pg-nav-contact-chevron">
+<path d="M0 0h4v4h4v4h4V4h4V0h4v4h-4v4h-4v4H8V8H4V4H0Z" fill="#82cbb9"/>
+</g></g></g>
+</svg>
