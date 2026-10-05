@@ -15,33 +15,32 @@
 
 <p><strong>02 Projekte</strong> &nbsp; / &nbsp; Öffentlich &amp; aktiv &nbsp; / &nbsp; Neueste Arbeit zuerst</p>
 
-<table width="100%">
-<tr><td>
 <a href="https://github.com/PixelGG/Synex_Framework">
   <picture>
     <source media="(max-width: 600px)" srcset="./.github/assets/projects/1342344809-mobile.svg">
-    <img src="./.github/assets/projects/1342344809.svg" width="100%" alt="Projekt 01: Synex_Framework. Repository öffnen.">
+    <img src="./.github/assets/projects/1342344809.svg" width="100%" alt="Projekt 01: Synex_Framework. ⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory… Lua. Letzter Push 31.08.2026. Repository öffnen.">
   </picture>
 </a>
-<p>⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory…</p>
-<p><code>Lua</code> &nbsp; · &nbsp; <sub>Letzter Push 31.08.2026</sub></p>
-<p><a href="https://github.com/PixelGG/Synex_Framework"><strong>Repository öffnen ↗</strong></a></p>
-</td></tr>
-</table>
 
-<table width="100%">
-<tr><td>
 <a href="https://github.com/PixelGG/DXForge">
   <picture>
     <source media="(max-width: 600px)" srcset="./.github/assets/projects/1267389937-mobile.svg">
-    <img src="./.github/assets/projects/1267389937.svg" width="100%" alt="Projekt 02: DXForge. Repository öffnen.">
+    <img src="./.github/assets/projects/1267389937.svg" width="100%" alt="Projekt 02: DXForge. DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips… Lua. Letzter Push 02.07.2026. Repository öffnen.">
   </picture>
 </a>
-<p>DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips…</p>
-<p><code>Lua</code> &nbsp; · &nbsp; <sub>Letzter Push 02.07.2026</sub></p>
-<p><a href="https://github.com/PixelGG/DXForge"><strong>Repository öffnen ↗</strong></a></p>
-</td></tr>
-</table>
+
+<details>
+<summary>Projektübersicht als Text</summary>
+
+<h3><a href="https://github.com/PixelGG/Synex_Framework">Synex_Framework</a></h3>
+<p>⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory &amp; banking to phones, radio, vehicles, jobs and beyond.</p>
+<p>Lua · Letzter Push 31.08.2026</p>
+
+<h3><a href="https://github.com/PixelGG/DXForge">DXForge</a></h3>
+<p>DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips, themes, and reusable UI components.</p>
+<p>Lua · Letzter Push 02.07.2026</p>
+
+</details>
 
 <p align="right"><a href="https://github.com/PixelGG?tab=repositories">Alle Repositories ansehen →</a></p>
 

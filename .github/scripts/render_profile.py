@@ -11,9 +11,10 @@ import re
 import tempfile
 import os
 import textwrap
+import unicodedata
 import xml.etree.ElementTree as ET
 
-from pixel_world import render_world
+from pixel_world import pixel_text, render_world
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = Path(".github/assets")
@@ -23,7 +24,6 @@ LEGACY = (
     "synex-dark.svg", "synex-light.svg", "dxforge-dark.svg", "dxforge-light.svg",
     "footer-dark.svg", "footer-light.svg",
 )
-COLORS = ("#68dbe1", "#b4a4ff", "#90d99b", "#f5c783")
 OWNER = re.compile(r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?\Z")
 REPO = re.compile(r"[A-Za-z0-9_.-]{1,100}\Z")
 
@@ -90,38 +90,100 @@ def svg_text(x: int, y: int, content: str, size: int, color: str,
             f'font-weight="{weight}" font-family="{family}">{escape(content)}</text>')
 
 
+def wrap_cells(value: str, width: int) -> list[str]:
+    """Wrap monospaced copy, counting wide Unicode glyphs as two cells."""
+    def cells(text: str) -> int:
+        return sum(0 if unicodedata.combining(c) else
+                   2 if unicodedata.east_asian_width(c) in {"W", "F"} else 1 for c in text)
+
+    result, line = [], ""
+    for word in value.split():
+        if line and cells(line + " " + word) <= width:
+            line += " " + word
+            continue
+        if line:
+            result.append(line)
+            line = ""
+        for char in word:
+            if cells(line + char) > width:
+                result.append(line)
+                line = ""
+            line += char
+    if line:
+        result.append(line)
+    return result or [""]
+
+
+def stepped_panel(x: int, y: int, width: int, height: int, color: str, step: int = 8) -> str:
+    right, bottom = x + width, y + height
+    return (f'<path d="M{x+2*step} {y}H{right-2*step}V{y+step}H{right-step}'
+            f'V{y+2*step}H{right}V{bottom-2*step}H{right-step}V{bottom-step}'
+            f'H{right-2*step}V{bottom}H{x+2*step}V{bottom-step}H{x+step}'
+            f'V{bottom-2*step}H{x}V{y+2*step}H{x+step}V{y+step}H{x+2*step}Z" fill="{color}"/>')
+
+
 def project_card(repo: dict, index: int, mobile: bool = False) -> str:
-    w, h = (480, 112) if mobile else (1000, 104)
-    accent = COLORS[(repo["id"] % 997) % len(COLORS)]
-    max_chars = 24 if mobile else 36
-    name_lines = textwrap.wrap(repo["name"], width=max_chars, break_long_words=True,
-                               break_on_hyphens=True)
-    # All allowed GitHub repository names remain visible, even at 100 characters.
-    h += (len(name_lines) - 1) * (31 if mobile else 37)
+    w, pad = (480, 36) if mobile else (1000, 44)
+    name_size, name_gap = (28, 36) if mobile else (34, 42)
+    name_lines = textwrap.wrap(repo["name"], width=24 if mobile else 40,
+                               break_long_words=True, break_on_hyphens=False)
+    description = description_excerpt(repo["description"]) or "Code und weitere Informationen stehen im Repository."
+    body_lines = wrap_cells(description, 28 if mobile else 60)
+    body_size, body_gap = (23, 31) if mobile else (24, 32)
+    body_y = 105 + (len(name_lines)-1)*name_gap + 42
+    divider_y = body_y + (len(body_lines)-1)*body_gap + 30
+    language_lines = wrap_cells(repo.get("language") or "Keine Hauptsprache", 28 if mobile else 36)
+    # Metadata and the action stack on mobile; every row contributes to height.
+    date_y = divider_y + 70 + (len(language_lines)-1)*29
+    button_y = date_y + 22 if mobile else divider_y + 22
+    h = (button_y + 82) if mobile else (date_y + 44)
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">',
         f'<title id="title">{escape(repo["name"])}</title>',
-        '<desc id="desc">Automatisch erzeugter Projekteingang. Der vollständige Text und Link stehen auch in der README.</desc>',
-        f'<path d="M8 0H{w-8}V4H{w-4}V8H{w}V{h-8}H{w-4}V{h-4}H{w-8}V{h}H8V{h-4}H4V{h-8}H0V8H4V4H8Z" fill="#111c34"/>',
-        f'<path d="M8 1H{w-8}M1 8V{h-8}M{w-1} 8V{h-8}M8 {h-1}H{w-8}" stroke="#283753" fill="none"/>',
-        f'<rect x="24" y="25" width="5" height="5" fill="{accent}"/>',
-        svg_text(38, 31, f"PROJEKT {index:02d}", 13 if mobile else 14, accent, 700, "monospace"),
+        f'<desc id="desc">{escape(clean_description(repo["description"]))} '
+        f'{escape(repo.get("language") or "Keine Hauptsprache")}. {escape(date_label(repo["pushed_at"]))}. Repository öffnen.</desc>',
+        '<g shape-rendering="crispEdges">',
+        stepped_panel(4, 8, w-8, h-8, "#080f1d"),
+        stepped_panel(0, 0, w, h-8, "#344969"),
+        stepped_panel(4, 4, w-8, h-16, "#51627a"),
+        stepped_panel(8, 8, w-16, h-24, "#10192e"),
+        stepped_panel(12, 12, w-24, h-32, "#1a2641"),
+        f'<path d="M24 4H{w-24}V8H24Z" fill="#8592a0"/>',
+        f'<path d="M24 {h-20}H{w-24}V{h-16}H24Z" fill="#0c1426"/>',
+        f'<path d="M{pad} {divider_y}H{w-pad}v2H{pad}Z" fill="#344969"/>',
+        f'<path d="M{pad} {divider_y}h40v2H{pad}Z" fill="#82cbb9"/>',
     ]
-    start, size, gap = (72, 26, 31) if mobile else (75, 32, 37)
-    for i, value in enumerate(name_lines):
-        lines.append(svg_text(24, start+i*gap, value, size, "#edf3ff", 700, "monospace"))
-    # Hand-drawn doorway: a visual continuation of the workshop world.
-    x = w - (55 if mobile else 114)
-    y = 36 if mobile else 20
-    scale = 1 if mobile else 1.25
-    lines.append(f'<g transform="translate({x} {y}) scale({scale})" shape-rendering="crispEdges">')
+    # Small fittings repeat the stone, timber and lantern palette of the island.
+    for x, y in ((20,20), (w-26,20), (20,h-34), (w-26,h-34)):
+        lines.append(f'<rect x="{x}" y="{y}" width="6" height="6" fill="#8592a0"/>')
+        lines.append(f'<rect x="{x+2}" y="{y+2}" width="4" height="4" fill="#344969"/>')
     lines += [
-        '<path d="M0 10H5V5H10V0H28V5H33V10H38V45H0Z" fill="#344969"/>',
-        '<path d="M7 12H12V7H26V12H31V45H7Z" fill="#0b1326"/>',
-        f'<path d="M12 13H26V40H12Z" fill="{accent}"/>',
-        '<path d="M12 13H17V40H12Z" fill="#f1f6ff" opacity=".3"/>',
-        '<path d="M-5 45H43V49H-5Z" fill="#6c80a0"/>',
-        '</g>', '</svg>',
+        pixel_text(f"PROJEKT {index:02d}", pad, 35, 3, "#82cbb9"),
+        f'<g transform="translate({w-74} 30)">',
+        '<path d="M6 0H24V4H28V8H24V12H22V8H8V12H6V8H2V4H6Z" fill="#947368"/>',
+        '<path d="M8 10H22V14H26V36H4V14H8Z" fill="#0c1426"/>',
+        '<path d="M8 15H22V31H8Z" fill="#b0785b"/>',
+        '<path d="M11 17H19V28H11Z" fill="#ffcc7f"/>',
+        '<path d="M13 17H17V25H13Z" fill="#edf0d9"/>',
+        '<path d="M6 32H24V36H6Z" fill="#947368"/>',
+        '</g>', '</g>',
+    ]
+    for i, value in enumerate(name_lines):
+        lines.append(svg_text(pad, 105+i*name_gap, value, name_size, "#edf0d9", 700, "monospace"))
+    for i, value in enumerate(body_lines):
+        lines.append(svg_text(pad, body_y+i*body_gap, value, body_size, "#c1ccda", family="monospace"))
+    for i, value in enumerate(language_lines):
+        lines.append(svg_text(pad, divider_y+38+i*29, value, 23 if mobile else 22, "#82cbb9", 700, "monospace"))
+    lines.append(svg_text(pad, date_y, date_label(repo["pushed_at"]), 22 if mobile else 21, "#a9bdd8", family="monospace"))
+    bx, bw = (pad, w-2*pad) if mobile else (w-pad-296, 296)
+    lines += [
+        '<g shape-rendering="crispEdges">',
+        stepped_panel(bx, button_y, bw, 50, "#426c67", step=4),
+        stepped_panel(bx+4, button_y+4, bw-8, 42, "#24474a", step=4),
+        f'<path transform="translate({bx+bw-46} {button_y+15})" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/>',
+        '</g>',
+        svg_text(bx+20, button_y+32, "Repository öffnen", 22, "#d3eedf", family="Arial,Helvetica,sans-serif"),
+        '</svg>',
     ]
     return "\n".join(lines) + "\n"
 
@@ -161,24 +223,27 @@ def readme(snapshot: dict, config: dict, repos: list[dict]) -> str:
     ]
     if not repos:
         parts.append("<p>Aktuell sind keine öffentlichen, aktiven Original-Repositories vorhanden.</p>")
+    text_fallback = []
     for index, repo in enumerate(repos, 1):
         rid, name, url = repo["id"], escape(repo["name"]), escape(repo["url"], quote=True)
-        description = description_excerpt(repo["description"]) or "Code und weitere Informationen stehen im Repository."
+        description = clean_description(repo["description"]) or "Code und weitere Informationen stehen im Repository."
         language = escape(repo.get("language") or "Keine Hauptsprache")
-        # A single table cell keeps artwork, native text and actions together.
-        # Native description text reflows on narrow GitHub profile columns.
+        alt = escape(f'Projekt {index:02d}: {repo["name"]}. {description_excerpt(description)} '
+                     f'{repo.get("language") or "Keine Hauptsprache"}. {date_label(repo["pushed_at"])}. Repository öffnen.', quote=True)
         parts.append(
-            '<table width="100%">\n<tr><td>\n'
             f'<a href="{url}">\n  <picture>\n'
             f'    <source media="(max-width: 600px)" srcset="./.github/assets/projects/{rid}-mobile.svg">\n'
-            f'    <img src="./.github/assets/projects/{rid}.svg" width="100%" alt="Projekt {index:02d}: {name}. Repository öffnen.">\n'
-            '  </picture>\n</a>\n'
-            f'<p>{escape(description)}</p>\n'
-            f'<p><code>{language}</code> &nbsp; · &nbsp; '
-            f'<sub>{escape(date_label(repo["pushed_at"]))}</sub></p>\n'
-            f'<p><a href="{url}"><strong>Repository öffnen ↗</strong></a></p>\n'
-            '</td></tr>\n</table>'
+            f'    <img src="./.github/assets/projects/{rid}.svg" width="100%" alt="{alt}">\n'
+            '  </picture>\n</a>'
         )
+        text_fallback.append(
+            f'<h3><a href="{url}">{name}</a></h3>\n'
+            f'<p>{escape(description)}</p>\n'
+            f'<p>{language} · {escape(date_label(repo["pushed_at"]))}</p>'
+        )
+    if text_fallback:
+        parts.append('<details>\n<summary>Projektübersicht als Text</summary>\n\n'
+                     + "\n\n".join(text_fallback) + '\n\n</details>')
     parts += [
         f'<p align="right"><a href="{base}?tab=repositories">Alle Repositories ansehen →</a></p>',
         "---",

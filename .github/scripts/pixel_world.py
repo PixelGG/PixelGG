@@ -55,6 +55,18 @@ _LETTERS = {
 }
 
 
+def pixel_text(text: str, x: float, y: float, scale: float, color: str) -> str:
+    """Draw the shared pixel alphabet as one dependency-free SVG path."""
+    d = []
+    for i, char in enumerate(text.upper()):
+        for row, cells in enumerate(_LETTERS.get(char, _LETTERS[" "])):
+            for col, bit in enumerate(cells):
+                if bit == "1":
+                    px, py = x + (i * 6 + col) * scale, y + row * scale
+                    d.append(f"M{px:g} {py:g}h{scale:g}v{scale:g}h{-scale:g}z")
+    return f'<path d="{"".join(d)}" fill="{color}"/>'
+
+
 def render_world(repositories: list[dict], owner: str = "PixelGG", mobile: bool = False) -> str:
     """Return a self-contained SVG; ``repositories`` supplies waypoint count.
 
@@ -83,14 +95,7 @@ def render_world(repositories: list[dict], owner: str = "PixelGG", mobile: bool 
 
     def lettering(text: str, x: float, y: float, scale: float, color: str) -> None:
         # A single path keeps the wordmark compact and independent of web fonts.
-        d = []
-        for i, char in enumerate(text.upper()):
-            for row, cells in enumerate(_LETTERS.get(char, _LETTERS[" "])):
-                for col, bit in enumerate(cells):
-                    if bit == "1":
-                        px, py = x + (i * 6 + col) * scale, y + row * scale
-                        d.append(f"M{px:g} {py:g}h{scale:g}v{scale:g}h{-scale:g}z")
-        add(f'<path d="{"".join(d)}" fill="{color}"/>')
+        add(pixel_text(text, x, y, scale, color))
 
     def pine(x: int, y: int, size: float = 1, tint: str = "main") -> None:
         colors = {"main": ("#233f53", "#315c64", "#4a7a78"),

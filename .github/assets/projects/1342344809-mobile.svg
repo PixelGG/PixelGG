@@ -1,16 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="112" viewBox="0 0 480 112" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="599" viewBox="0 0 480 599" role="img" aria-labelledby="title desc">
 <title id="title">Synex_Framework</title>
-<desc id="desc">Automatisch erzeugter Projekteingang. Der vollständige Text und Link stehen auch in der README.</desc>
-<path d="M8 0H472V4H476V8H480V104H476V108H472V112H8V108H4V104H0V8H4V4H8Z" fill="#111c34"/>
-<path d="M8 1H472M1 8V104M479 8V104M8 111H472" stroke="#283753" fill="none"/>
-<rect x="24" y="25" width="5" height="5" fill="#90d99b"/>
-<text x="38" y="31" fill="#90d99b" font-size="13" font-weight="700" font-family="monospace">PROJEKT 01</text>
-<text x="24" y="72" fill="#edf3ff" font-size="26" font-weight="700" font-family="monospace">Synex_Framework</text>
-<g transform="translate(425 36) scale(1)" shape-rendering="crispEdges">
-<path d="M0 10H5V5H10V0H28V5H33V10H38V45H0Z" fill="#344969"/>
-<path d="M7 12H12V7H26V12H31V45H7Z" fill="#0b1326"/>
-<path d="M12 13H26V40H12Z" fill="#90d99b"/>
-<path d="M12 13H17V40H12Z" fill="#f1f6ff" opacity=".3"/>
-<path d="M-5 45H43V49H-5Z" fill="#6c80a0"/>
+<desc id="desc">⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory &amp; banking to phones, radio, vehicles, jobs and beyond. Lua. Letzter Push 31.08.2026. Repository öffnen.</desc>
+<g shape-rendering="crispEdges">
+<path d="M20 8H460V16H468V24H476V583H468V591H460V599H20V591H12V583H4V24H12V16H20Z" fill="#080f1d"/>
+<path d="M16 0H464V8H472V16H480V575H472V583H464V591H16V583H8V575H0V16H8V8H16Z" fill="#344969"/>
+<path d="M20 4H460V12H468V20H476V571H468V579H460V587H20V579H12V571H4V20H12V12H20Z" fill="#51627a"/>
+<path d="M24 8H456V16H464V24H472V567H464V575H456V583H24V575H16V567H8V24H16V16H24Z" fill="#10192e"/>
+<path d="M28 12H452V20H460V28H468V563H460V571H452V579H28V571H20V563H12V28H20V20H28Z" fill="#1a2641"/>
+<path d="M24 4H456V8H24Z" fill="#8592a0"/>
+<path d="M24 579H456V583H24Z" fill="#0c1426"/>
+<path d="M36 425H444v2H36Z" fill="#344969"/>
+<path d="M36 425h40v2H36Z" fill="#82cbb9"/>
+<rect x="20" y="20" width="6" height="6" fill="#8592a0"/>
+<rect x="22" y="22" width="4" height="4" fill="#344969"/>
+<rect x="454" y="20" width="6" height="6" fill="#8592a0"/>
+<rect x="456" y="22" width="4" height="4" fill="#344969"/>
+<rect x="20" y="565" width="6" height="6" fill="#8592a0"/>
+<rect x="22" y="567" width="4" height="4" fill="#344969"/>
+<rect x="454" y="565" width="6" height="6" fill="#8592a0"/>
+<rect x="456" y="567" width="4" height="4" fill="#344969"/>
+<path d="M36 35h3v3h-3zM39 35h3v3h-3zM42 35h3v3h-3zM45 35h3v3h-3zM36 38h3v3h-3zM39 38h3v3h-3zM45 38h3v3h-3zM48 38h3v3h-3zM36 41h3v3h-3zM39 41h3v3h-3zM45 41h3v3h-3zM48 41h3v3h-3zM36 44h3v3h-3zM39 44h3v3h-3zM42 44h3v3h-3zM45 44h3v3h-3zM36 47h3v3h-3zM39 47h3v3h-3zM36 50h3v3h-3zM39 50h3v3h-3zM36 53h3v3h-3zM39 53h3v3h-3zM54 35h3v3h-3zM57 35h3v3h-3zM60 35h3v3h-3zM63 35h3v3h-3zM54 38h3v3h-3zM57 38h3v3h-3zM63 38h3v3h-3zM66 38h3v3h-3zM54 41h3v3h-3zM57 41h3v3h-3zM63 41h3v3h-3zM66 41h3v3h-3zM54 44h3v3h-3zM57 44h3v3h-3zM60 44h3v3h-3zM63 44h3v3h-3zM54 47h3v3h-3zM57 47h3v3h-3zM60 47h3v3h-3zM54 50h3v3h-3zM57 50h3v3h-3zM63 50h3v3h-3zM54 53h3v3h-3zM57 53h3v3h-3zM63 53h3v3h-3zM66 53h3v3h-3zM75 35h3v3h-3zM78 35h3v3h-3zM81 35h3v3h-3zM72 38h3v3h-3zM75 38h3v3h-3zM81 38h3v3h-3zM84 38h3v3h-3zM72 41h3v3h-3zM75 41h3v3h-3zM81 41h3v3h-3zM84 41h3v3h-3zM72 44h3v3h-3zM75 44h3v3h-3zM81 44h3v3h-3zM84 44h3v3h-3zM72 47h3v3h-3zM75 47h3v3h-3zM81 47h3v3h-3zM84 47h3v3h-3zM72 50h3v3h-3zM75 50h3v3h-3zM81 50h3v3h-3zM84 50h3v3h-3zM75 53h3v3h-3zM78 53h3v3h-3zM81 53h3v3h-3zM96 35h3v3h-3zM99 35h3v3h-3zM102 35h3v3h-3zM99 38h3v3h-3zM99 41h3v3h-3zM99 44h3v3h-3zM90 47h3v3h-3zM93 47h3v3h-3zM99 47h3v3h-3zM90 50h3v3h-3zM93 50h3v3h-3zM99 50h3v3h-3zM93 53h3v3h-3zM96 53h3v3h-3zM108 35h3v3h-3zM111 35h3v3h-3zM114 35h3v3h-3zM117 35h3v3h-3zM120 35h3v3h-3zM108 38h3v3h-3zM111 38h3v3h-3zM108 41h3v3h-3zM111 41h3v3h-3zM108 44h3v3h-3zM111 44h3v3h-3zM114 44h3v3h-3zM117 44h3v3h-3zM108 47h3v3h-3zM111 47h3v3h-3zM108 50h3v3h-3zM111 50h3v3h-3zM108 53h3v3h-3zM111 53h3v3h-3zM114 53h3v3h-3zM117 53h3v3h-3zM120 53h3v3h-3zM126 35h3v3h-3zM129 35h3v3h-3zM135 35h3v3h-3zM138 35h3v3h-3zM126 38h3v3h-3zM129 38h3v3h-3zM135 38h3v3h-3zM138 38h3v3h-3zM126 41h3v3h-3zM129 41h3v3h-3zM132 41h3v3h-3zM135 41h3v3h-3zM126 44h3v3h-3zM129 44h3v3h-3zM132 44h3v3h-3zM126 47h3v3h-3zM129 47h3v3h-3zM132 47h3v3h-3zM135 47h3v3h-3zM126 50h3v3h-3zM129 50h3v3h-3zM135 50h3v3h-3zM138 50h3v3h-3zM126 53h3v3h-3zM129 53h3v3h-3zM135 53h3v3h-3zM138 53h3v3h-3zM144 35h3v3h-3zM147 35h3v3h-3zM150 35h3v3h-3zM153 35h3v3h-3zM156 35h3v3h-3zM150 38h3v3h-3zM150 41h3v3h-3zM150 44h3v3h-3zM150 47h3v3h-3zM150 50h3v3h-3zM150 53h3v3h-3zM183 35h3v3h-3zM186 35h3v3h-3zM189 35h3v3h-3zM180 38h3v3h-3zM183 38h3v3h-3zM189 38h3v3h-3zM192 38h3v3h-3zM180 41h3v3h-3zM183 41h3v3h-3zM189 41h3v3h-3zM192 41h3v3h-3zM180 44h3v3h-3zM183 44h3v3h-3zM189 44h3v3h-3zM192 44h3v3h-3zM180 47h3v3h-3zM183 47h3v3h-3zM189 47h3v3h-3zM192 47h3v3h-3zM180 50h3v3h-3zM183 50h3v3h-3zM189 50h3v3h-3zM192 50h3v3h-3zM183 53h3v3h-3zM186 53h3v3h-3zM189 53h3v3h-3zM204 35h3v3h-3zM201 38h3v3h-3zM204 38h3v3h-3zM204 41h3v3h-3zM204 44h3v3h-3zM204 47h3v3h-3zM204 50h3v3h-3zM201 53h3v3h-3zM204 53h3v3h-3zM207 53h3v3h-3z" fill="#82cbb9"/>
+<g transform="translate(406 30)">
+<path d="M6 0H24V4H28V8H24V12H22V8H8V12H6V8H2V4H6Z" fill="#947368"/>
+<path d="M8 10H22V14H26V36H4V14H8Z" fill="#0c1426"/>
+<path d="M8 15H22V31H8Z" fill="#b0785b"/>
+<path d="M11 17H19V28H11Z" fill="#ffcc7f"/>
+<path d="M13 17H17V25H13Z" fill="#edf0d9"/>
+<path d="M6 32H24V36H6Z" fill="#947368"/>
 </g>
+</g>
+<text x="36" y="105" fill="#edf0d9" font-size="28" font-weight="700" font-family="monospace">Synex_Framework</text>
+<text x="36" y="147" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">⚡ Synex — A modern, modular</text>
+<text x="36" y="178" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">&amp; extensible FiveM framework</text>
+<text x="36" y="209" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">built for performance,</text>
+<text x="36" y="240" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">scalability and clean</text>
+<text x="36" y="271" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">development. Powered by a</text>
+<text x="36" y="302" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">robust core and a growing</text>
+<text x="36" y="333" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">ecosystem of official</text>
+<text x="36" y="364" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">resources — from characters,</text>
+<text x="36" y="395" fill="#c1ccda" font-size="23" font-weight="400" font-family="monospace">inventory…</text>
+<text x="36" y="463" fill="#82cbb9" font-size="23" font-weight="700" font-family="monospace">Lua</text>
+<text x="36" y="495" fill="#a9bdd8" font-size="22" font-weight="400" font-family="monospace">Letzter Push 31.08.2026</text>
+<g shape-rendering="crispEdges">
+<path d="M44 517H436V521H440V525H444V559H440V563H436V567H44V563H40V559H36V525H40V521H44Z" fill="#426c67"/>
+<path d="M48 521H432V525H436V529H440V555H436V559H432V563H48V559H44V555H40V529H44V525H48Z" fill="#24474a"/>
+<path transform="translate(398 532)" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/>
+</g>
+<text x="56" y="549" fill="#d3eedf" font-size="22" font-weight="400" font-family="Arial,Helvetica,sans-serif">Repository öffnen</text>
 </svg>
