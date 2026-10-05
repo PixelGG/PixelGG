@@ -271,8 +271,8 @@ def readme(snapshot: dict, config: dict, repos: list[dict]) -> str:
         '<a href="#projekte">' + picture("nav-workbench", "Zu den Projekten", "50%") + '</a>'
         '<a href="#kontakt">' + picture("nav-contact", "Zum Kontakt", "50%") + '</a>',
         picture("intro", f'Die Werkstatt. {config["name"]} / {owner}. {config["intro"]}'),
-        '<a name="projekte"></a>' + picture("workbench", f'{len(repos)} öffentliche Projekte. Neueste Arbeit zuerst.'
-            if repos else 'Aktuell sind keine öffentlichen, aktiven Original-Repositories vorhanden.'),
+        '<div><a name="projekte"></a>' + picture("workbench", f'{len(repos)} öffentliche Projekte. Neueste Arbeit zuerst.'
+            if repos else 'Aktuell sind keine öffentlichen, aktiven Original-Repositories vorhanden.') + '</div>',
     ]
     text_fallback = []
     for index, repo in enumerate(repos, 1):
@@ -289,8 +289,8 @@ def readme(snapshot: dict, config: dict, repos: list[dict]) -> str:
         )
     sections += [
         f'<a href="{base}?tab=repositories">' + picture("catalog", "Alle Repositories auf GitHub ansehen") + '</a>',
-        '<a name="kontakt"></a>' + f'<a href="{base}/{owner}/issues/new">'
-        + picture("contact", "Eine Idee oder eine Frage? Kontakt aufnehmen: einen GitHub-Issue öffnen.") + '</a>',
+        '<div><a name="kontakt"></a>' + f'<a href="{base}/{owner}/issues/new">'
+        + picture("contact", "Eine Idee oder eine Frage? Kontakt aufnehmen: einen GitHub-Issue öffnen.") + '</a></div>',
         picture("endcap", f"{owner} / {config['name']}"),
     ]
     fallback = (f'<h2>{escape(config["name"])} / {escape(owner)}</h2>\n'
