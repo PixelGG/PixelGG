@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 190" role="img" aria-labelledby="title desc">
+  <title id="title">PixelGG engineering statement</title>
+  <desc id="desc">Designed for failure, built for recovery, documented for humans.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050D17"/>
+      <stop offset=".5" stop-color="#0A1928"/>
+      <stop offset="1" stop-color="#050D17"/>
+    </linearGradient>
+    <linearGradient id="line" x1="80" y1="0" x2="1320" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF" stop-opacity=".05"/>
+      <stop offset=".5" stop-color="#D8B36A"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity=".05"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .beacon{animation:beacon 4.2s ease-in-out infinite}
+      .signal{animation:signal 6s linear infinite}
+      @keyframes beacon{0%,100%{opacity:.3}50%{opacity:1}}
+      @keyframes signal{0%{transform:translateX(-40px)}100%{transform:translateX(1280px)}}
+      @media (prefers-reduced-motion:reduce){.beacon{animation:none;opacity:.7}.signal{display:none}}
+    </style>
+    <clipPath id="clip"><rect width="1400" height="190" rx="22"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1400" height="190" fill="url(#bg)"/>
+    <path d="M80 47H1320M80 143H1320" stroke="url(#line)"/>
+    <g class="signal">
+      <circle cx="80" cy="47" r="4" fill="#D8B36A" filter="url(#glow)"/>
+      <circle cx="80" cy="143" r="3" fill="#2DD4BF"/>
+    </g>
+    <path d="M80 47h62l18 18h180M1320 143h-62l-18-18h-180" fill="none" stroke="#29465A"/>
+    <circle cx="700" cy="47" r="5" fill="#D8B36A" class="beacon" filter="url(#glow)"/>
+    <circle cx="700" cy="143" r="4" fill="#2DD4BF" class="beacon"/>
+    <text x="700" y="101" text-anchor="middle" fill="#ECF2F6" font-family="Consolas,'Courier New',monospace" font-size="21" font-weight="700" letter-spacing="2">
+      DESIGNED FOR FAILURE · BUILT FOR RECOVERY · DOCUMENTED FOR HUMANS
+    </text>
+  </g>
+  <rect x=".75" y=".75" width="1398.5" height="188.5" rx="21.25" fill="none" stroke="#294157" stroke-width="1.5"/>
+</svg>

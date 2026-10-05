@@ -1,201 +1,335 @@
-#!/usr/bin/env python3
-"""Draw PixelGG's profile assets. Python standard library; no network or packages."""
-from __future__ import annotations
-
-import argparse
-from dataclasses import dataclass
-from html import escape
+import html
+import os
+import sys
+from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
+
+import requests
+
+
+OWNER = os.environ.get("OWNER")
+TOKEN = os.environ.get("GITHUB_TOKEN")
+REPO_LIMIT = int(os.environ.get("REPO_LIMIT", "6"))
 
 ROOT = Path(__file__).resolve().parents[2]
-ASSETS = ROOT / ".github" / "assets"
+PROFILE_ASSETS = ROOT / ".github" / "assets"
+PROFILE_ASSETS.mkdir(parents=True, exist_ok=True)
 
+session = requests.Session()
+session.headers.update(
+    {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "pixelgg-profile-v5",
+    }
+)
+if TOKEN:
+    session.headers["Authorization"] = f"Bearer {TOKEN}"
 
-@dataclass(frozen=True)
-class Palette:
-    background: str
-    panel: str
-    ink: str
-    muted: str
-    line: str
-    accent: str
-    ghost: str
-
-
-PALETTES = {
-    "dark": Palette("#151719", "#1d2023", "#f3f0e9", "#a4a5a2", "#35393c", "#ff784f", "#25282b"),
-    "light": Palette("#f2f0e9", "#e8e5dd", "#232629", "#62635f", "#ccc9c0", "#b83d1b", "#dfdcd4"),
+PROJECT_COPY = {
+    "Arvox_Core": "Sicherer Plattformkern für Accounts, Sessions, Characters und Permissions.",
+    "Arvox_Inventory": "Transaktionssicheres Inventarsystem für Arvox Core.",
+    "Arvox_Phone": "Gerätebasiertes, serverautorisiertes Game-Phone mit PulseOS.",
+    "DXForge": "Strukturierte DX9-Lua-UI-Bibliothek für hochwertige In-Game-Overlays.",
+    "LuaScripts": "Experimentierfeld und Sammlung wiederverwendbarer Lua-Systeme.",
 }
 
-
-def text(x: float, y: float, value: str, size: int, color: str,
-         weight: int = 400, mono: bool = False, extra: str = "") -> str:
-    family = "'Courier New',monospace" if mono else "Arial,Helvetica,sans-serif"
-    return (f'<text x="{x:g}" y="{y:g}" fill="{color}" font-family="{family}" '
-            f'font-size="{size}" font-weight="{weight}" {extra}>{escape(value)}</text>')
-
-
-def rect(x: float, y: float, w: float, h: float, color: str, extra: str = "") -> str:
-    return f'<rect x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" fill="{color}" {extra}/>'
+PALETTE = (
+    "#2DD4BF",
+    "#D8B36A",
+    "#55A6CF",
+    "#78C8C0",
+    "#A6B9C8",
+    "#8C7FC2",
+)
 
 
-def line(x1: float, y1: float, x2: float, y2: float, color: str, extra: str = "") -> str:
-    return f'<path d="M{x1:g} {y1:g}L{x2:g} {y2:g}" stroke="{color}" fill="none" {extra}/>'
+def gh(url: str):
+    response = session.get(url, timeout=30)
+    response.raise_for_status()
+    return response.json()
 
 
-def svg(w: int, h: int, title: str, description: str, body: list[str]) -> str:
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
-            f'viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">\n'
-            f'<title id="title">{escape(title)}</title>\n'
-            f'<desc id="desc">{escape(description)}</desc>\n'
-            + "\n".join(body) + "\n</svg>\n")
+def fetch_all_repos(owner: str):
+    repos = []
+    page = 1
+    while True:
+        url = (
+            f"https://api.github.com/users/{quote(owner)}/repos"
+            f"?per_page=100&page={page}&sort=pushed&direction=desc"
+        )
+        data = gh(url)
+        if not data:
+            break
+        repos.extend(data)
+        if len(data) < 100 or page >= 10:
+            break
+        page += 1
 
-
-def pixel_mark(x: int, y: int, size: int, p: Palette) -> str:
-    """An original seven-row P: orthogonal pixels with shallow extruded faces."""
-    rows = ("11110", "11011", "11011", "11110", "11000", "11000", "11000")
-    step, depth = size + 5, 7
-    parts = []
-    for row in range(7):
-        for col in range(5):
-            xx, yy = x + col * step, y + row * step
-            parts.append(rect(xx, yy, size, size, p.ghost))
-    colors = ("#ffad7d", "#ff9868", "#ff8354", "#f36c43", "#e35b35", "#ce4b2b", "#b93e23")
-    for row, cells in enumerate(rows):
-        for col, cell in enumerate(cells):
-            if cell == "0":
-                continue
-            xx, yy = x + col * step, y + row * step
-            delay = (row * 5 + col) * 18
-            parts.append(f'<g class="tile" style="animation-delay:{delay}ms">')
-            parts.append(f'<path d="M{xx+size} {yy}l{depth} {depth}v{size}l-{depth} -{depth}Z" fill="#87351f"/>')
-            parts.append(f'<path d="M{xx} {yy+size}l{depth} {depth}h{size}l-{depth} -{depth}Z" fill="#a94126"/>')
-            parts.append(rect(xx, yy, size, size, colors[row]))
-            parts.append(line(xx+1, yy+1, xx+size-1, yy+1, "#ffe1bf", 'opacity=".55"'))
-            parts.append("</g>")
-    return "\n".join(parts)
-
-
-def hero(p: Palette, mobile: bool = False) -> str:
-    w, h = (480, 580) if mobile else (960, 480)
-    margin = 28 if mobile else 48
-    body = [
-        "<style>.tile{animation:assemble 900ms cubic-bezier(.2,.8,.2,1) both}"
-        "@keyframes assemble{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}"
-        "@media(prefers-reduced-motion:reduce){.tile{animation:none}}</style>",
-        rect(0, 0, w, h, p.background, 'rx="14"'),
-        rect(margin, 34, 9, 9, p.accent),
-        text(margin+20, 43, "MIKE / DEVELOPER", 13, p.muted, mono=True, extra='letter-spacing="1.4"'),
+    profile_full_name = f"{owner}/{owner}".lower()
+    return [
+        repo
+        for repo in repos
+        if not repo.get("private")
+        and not repo.get("fork")
+        and repo.get("full_name", "").lower() != profile_full_name
     ]
-    if mobile:
-        body += [
-            text(26, 141, "PixelGG", 76, p.ink, 700, extra='letter-spacing="-5"'),
-            rect(302, 128, 12, 12, p.accent),
-            text(29, 194, "From pixels", 32, p.ink, extra='letter-spacing="-1"'),
-            text(29, 234, "to systems.", 32, p.muted, extra='letter-spacing="-1"'),
-            pixel_mark(160, 280, 25, p),
-            line(28, 533, 452, 533, p.line),
-            text(28, 556, "GAMES / INTERFACES / TOOLS", 12, p.muted, mono=True),
-        ]
+
+
+def fetch_languages(url: str):
+    if not url:
+        return {}
+    try:
+        return gh(url)
+    except Exception:
+        return {}
+
+
+def dt(iso: str) -> datetime:
+    if not iso:
+        return datetime(1970, 1, 1, tzinfo=timezone.utc)
+    try:
+        return datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    except Exception:
+        return datetime(1970, 1, 1, tzinfo=timezone.utc)
+
+
+def iso_date(iso: str) -> str:
+    return dt(iso).strftime("%Y-%m-%d")
+
+
+def truncate(text: str, limit: int) -> str:
+    normalized = " ".join((text or "").split())
+    return normalized if len(normalized) <= limit else normalized[: limit - 1] + "…"
+
+
+def primary_language(languages: dict) -> str:
+    if not languages:
+        return "—"
+    return max(languages.items(), key=lambda item: item[1])[0]
+
+
+def percent_label(value: float) -> str:
+    if 0 < value < 0.05:
+        return "&lt;0.1%"
+    return f"{value:.1f}%"
+
+
+def build_language_signal(language_totals: dict, repo_count: int, star_count: int):
+    ordered = sorted(language_totals.items(), key=lambda item: item[1], reverse=True)
+    if len(ordered) > 6:
+        ordered = ordered[:5] + [("Other", sum(value for _, value in ordered[5:]))]
+
+    total = sum(value for _, value in ordered)
+    entries = [
+        (name, value / total * 100 if total else 0.0)
+        for name, value in ordered
+    ]
+    if not entries:
+        entries = [("No public language data", 100.0)]
+
+    segments = []
+    cursor = 72.0
+    bar_width = 1256.0
+    for index, (_, percentage) in enumerate(entries):
+        width = bar_width * percentage / 100
+        segments.append(
+            f'<rect x="{cursor:.2f}" y="111" width="{max(width, 1):.2f}" '
+            f'height="30" fill="{PALETTE[index % len(PALETTE)]}"/>'
+        )
+        cursor += width
+
+    cards = []
+    for index, (name, percentage) in enumerate(entries[:6]):
+        column = index % 3
+        row = index // 3
+        x = 72 + column * 424
+        y = 178 + row * 82
+        color = PALETTE[index % len(PALETTE)]
+        safe_name = html.escape(name)
+        safe_percentage = percent_label(percentage)
+        progress_width = max(2, 318 * percentage / 100)
+        cards.append(
+            f"""
+            <g transform="translate({x} {y})">
+              <circle cx="5" cy="7" r="5" fill="{color}"/>
+              <text x="22" y="13" class="sans" fill="#E7EEF4" font-size="17"
+                    font-weight="700">{safe_name}</text>
+              <text x="358" y="13" class="mono" fill="#9CB0BF" font-size="14"
+                    text-anchor="end">{safe_percentage}</text>
+              <rect y="30" width="358" height="5" rx="2.5" fill="#152B3B"/>
+              <rect y="30" width="{progress_width:.2f}" height="5" rx="2.5" fill="{color}"/>
+            </g>"""
+        )
+
+    top_language = entries[0]
+    star_part = f" · {star_count:02d} STARS" if star_count else ""
+    summary = (
+        f"{repo_count:02d} PUBLIC REPOSITORIES{star_part} · "
+        f"PRIMARY SIGNAL {html.escape(top_language[0].upper())} {top_language[1]:.1f}%"
+    )
+
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 370"
+     role="img" aria-labelledby="title desc">
+  <title id="title">PixelGG public code signal</title>
+  <desc id="desc">Automatically generated language distribution across public repositories.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050D17"/>
+      <stop offset=".5" stop-color="#0A1928"/>
+      <stop offset="1" stop-color="#050D17"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0v36" fill="none" stroke="#8BA7BC" stroke-opacity=".045"/>
+    </pattern>
+    <clipPath id="bar"><rect x="72" y="111" width="1256" height="30" rx="8"/></clipPath>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .sans{{font-family:"Segoe UI",Arial,sans-serif}}
+      .mono{{font-family:Consolas,"Courier New",monospace}}
+      .sweep{{animation:sweep 6s linear infinite}}
+      @keyframes sweep{{0%{{transform:translateX(-80px)}}100%{{transform:translateX(1336px)}}}}
+      @media (prefers-reduced-motion:reduce){{.sweep{{display:none}}}}
+    </style>
+  </defs>
+  <rect width="1400" height="370" rx="24" fill="url(#bg)"/>
+  <rect width="1400" height="370" rx="24" fill="url(#grid)"/>
+  <circle cx="76" cy="62" r="5" fill="#2DD4BF"/>
+  <text x="94" y="68" class="mono" fill="#D8B36A" font-size="15"
+        font-weight="700" letter-spacing="2.4">PUBLIC CODE SIGNAL</text>
+  <text x="1328" y="68" class="mono" fill="#617C90" font-size="12"
+        text-anchor="end" letter-spacing="1.8">GENERATED DAILY / GITHUB ACTIONS</text>
+  <g clip-path="url(#bar)">
+    {''.join(segments)}
+    <rect class="sweep" x="-80" y="111" width="60" height="30" fill="#FFFFFF"
+          opacity=".18" transform="skewX(-18)"/>
+  </g>
+  {''.join(cards)}
+  <path d="M72 332H1328" stroke="#233F53"/>
+  <text x="72" y="352" class="mono" fill="#6E879A" font-size="11"
+        letter-spacing="1.6">{summary}</text>
+  <circle cx="1324" cy="348" r="4" fill="#2DD4BF" filter="url(#glow)"/>
+  <rect x=".75" y=".75" width="1398.5" height="368.5" rx="23.25"
+        fill="none" stroke="#294157" stroke-width="1.5"/>
+</svg>
+"""
+    (PROFILE_ASSETS / "signal.svg").write_text(svg, encoding="utf-8", newline="\n")
+
+
+def build_projects_table(repos, language_map) -> str:
+    chosen = sorted(
+        repos,
+        key=lambda repo: dt(repo.get("pushed_at") or repo.get("updated_at")),
+        reverse=True,
+    )[:REPO_LIMIT]
+    if not chosen:
+        return '<div align="center"><i>Keine öffentlichen Repositories.</i></div>'
+
+    cells = []
+    for repo in chosen:
+        full_name = repo["full_name"]
+        name = repo["name"]
+        description = truncate(
+            PROJECT_COPY.get(name) or repo.get("description") or "",
+            116,
+        )
+        language = primary_language(language_map.get(full_name) or {})
+        updated = iso_date(repo.get("pushed_at") or repo.get("updated_at") or "")
+        stars = int(repo.get("stargazers_count") or 0)
+
+        safe_url = quote(full_name, safe="/")
+        safe_name = html.escape(name)
+        safe_description = (
+            html.escape(description)
+            if description
+            else "<i>Noch ohne Kurzbeschreibung</i>"
+        )
+        safe_language = html.escape(language)
+        star_part = f" · {stars} stars" if stars else ""
+
+        cells.append(
+            '<td align="left" valign="top" width="50%">'
+            f'<sub><code>{safe_language} · {updated}{star_part}</code></sub><br/><br/>'
+            f'<a href="https://github.com/{safe_url}"><b>{safe_name}</b></a><br/>'
+            f'<sub>{safe_description}</sub><br/><br/>'
+            f'<a href="https://github.com/{safe_url}"><sub>OPEN REPOSITORY →</sub></a>'
+            "</td>"
+        )
+
+    rows = []
+    for index in range(0, len(cells), 2):
+        row = cells[index : index + 2]
+        if len(row) == 1:
+            row.append('<td width="50%"></td>')
+        rows.append("<tr>" + "".join(row) + "</tr>")
+
+    return '<div align="center">\n<table>\n' + "\n".join(rows) + "\n</table>\n</div>"
+
+
+def replace_between(text: str, start_marker: str, end_marker: str, replacement: str):
+    if start_marker not in text or end_marker not in text:
+        raise SystemExit(f"Marker {start_marker} / {end_marker} nicht gefunden.")
+    start = text.index(start_marker)
+    end = text.index(end_marker, start)
+    return (
+        text[: start + len(start_marker)]
+        + "\n\n"
+        + replacement
+        + "\n\n"
+        + text[end:]
+    )
+
+
+def main():
+    if not OWNER:
+        print("OWNER fehlt.", file=sys.stderr)
+        sys.exit(1)
+
+    repos = fetch_all_repos(OWNER)
+    language_map = {}
+    language_totals = {}
+    for repo in repos:
+        languages = fetch_languages(repo.get("languages_url", ""))
+        language_map[repo["full_name"]] = languages
+        for language, size in languages.items():
+            language_totals[language] = language_totals.get(language, 0) + int(size)
+
+    total_stars = sum(int(repo.get("stargazers_count") or 0) for repo in repos)
+    build_language_signal(language_totals, len(repos), total_stars)
+
+    if language_totals:
+        top_language, top_size = max(language_totals.items(), key=lambda item: item[1])
+        top_percentage = top_size / sum(language_totals.values()) * 100
+        primary_part = f"<b>{html.escape(top_language)}</b> {top_percentage:.1f}%"
     else:
-        body += [
-            text(912, 43, "INDEPENDENT WORK / GERMANY", 12, p.muted, mono=True, extra='text-anchor="end"'),
-            line(48, 72, 912, 72, p.line),
-            text(43, 196, "PixelGG", 100, p.ink, 700, extra='letter-spacing="-6"'),
-            rect(409, 180, 15, 15, p.accent),
-            text(48, 270, "From pixels", 45, p.ink, extra='letter-spacing="-1.8"'),
-            text(48, 323, "to systems.", 45, p.muted, extra='letter-spacing="-1.8"'),
-            text(50, 371, "CODE. FORM. FUNCTION.", 12, p.muted, mono=True, extra='letter-spacing="1.8"'),
-            pixel_mark(670, 120, 34, p),
-            line(626, 112, 644, 112, p.muted), line(635, 103, 635, 121, p.muted),
-            line(883, 393, 901, 393, p.muted), line(892, 384, 892, 402, p.muted),
-            line(48, 426, 912, 426, p.line),
-            text(48, 453, "GAME SYSTEMS", 13, p.muted, mono=True, extra='letter-spacing="1"'),
-            text(386, 453, "UI ENGINEERING", 13, p.muted, mono=True, extra='letter-spacing="1"'),
-            text(912, 453, "AUTOMATION", 13, p.muted, mono=True, extra='text-anchor="end" letter-spacing="1"'),
-        ]
-    return svg(w, h, "Mike / PixelGG — From pixels to systems.",
-               "Eigene Pixel-P-Marke aus orangefarbenen, räumlich gezeichneten Kacheln. Game-Systeme, Oberflächen und Werkzeuge.", body)
+        primary_part = "—"
 
+    star_part = f" · <b>{total_stars}</b> Stars" if total_stars else ""
+    metrics_summary = (
+        f"<sub><b>{len(repos)}</b> Public Repositories{star_part} "
+        f"· Primary Signal {primary_part} · updated daily</sub>"
+    )
 
-def project(p: Palette, name: str) -> str:
-    synex = name == "synex"
-    body = [rect(0, 0, 960, 204, p.background, 'rx="12"'),
-            text(34, 37, "01 / GAME SYSTEMS" if synex else "02 / UI ENGINEERING", 13, p.accent, 700, True, 'letter-spacing="1.4"'),
-            text(30, 119, "SYNEX" if synex else "DXFORGE", 64, p.ink, 700, extra='letter-spacing="-2.5"'),
-            text(34, 165, "FiveM Framework" if synex else "Lua Interface Library", 21, p.muted),
-            line(517, 28, 517, 176, p.line)]
-    if synex:
-        # Abstract module illustration; not a screenshot or a status display.
-        body += [line(583, 100, 882, 100, p.line, 'stroke-width="2"'),
-                 line(733, 43, 733, 162, p.line, 'stroke-width="2"')]
-        for x, y in ((574, 70), (844, 70), (703, 24), (703, 122)):
-            body += [rect(x, y, 58, 58, p.panel, f'rx="6" stroke="{p.line}"'),
-                     rect(x+21, y+21, 16, 16, p.muted)]
-        body += [rect(686, 59, 94, 84, p.accent, 'rx="8"'),
-                 text(733, 108, "S", 36, p.background, 700, extra='text-anchor="middle"')]
-    else:
-        body += [rect(612, 27, 258, 129, p.panel, f'rx="7" stroke="{p.line}"'),
-                 rect(586, 49, 258, 129, p.background, f'rx="7" stroke="{p.muted}"'),
-                 line(586, 74, 844, 74, p.line),
-                 rect(600, 59, 7, 7, p.accent),
-                 line(616, 62, 673, 62, p.line, 'stroke-width="3"'),
-                 rect(600, 87, 50, 77, p.panel, 'rx="3"'),
-                 line(609, 101, 639, 101, p.accent, 'stroke-width="3"'),
-                 line(609, 115, 633, 115, p.line, 'stroke-width="3"'),
-                 line(609, 129, 637, 129, p.line, 'stroke-width="3"'),
-                 line(664, 96, 741, 96, p.muted, 'stroke-width="3"'),
-                 rect(664, 109, 158, 6, p.panel, 'rx="3"'),
-                 rect(664, 109, 108, 6, p.accent, 'rx="3"'),
-                 rect(664, 132, 69, 28, p.accent, 'rx="4"'),
-                 rect(743, 132, 79, 28, p.panel, 'rx="4"')]
-    return svg(960, 204, "SYNEX — FiveM Framework" if synex else "DXForge — Lua Interface Library",
-               "Abstrakte Illustration eines modularen Systems." if synex else
-               "Abstrakte Illustration eigener UI-Bausteine; kein Produkt-Screenshot.", body)
-
-
-def footer(p: Palette) -> str:
-    return svg(960, 82, "PixelGG / Code und Gestaltung", "Einzelne Pixel. Eigene Systeme.", [
-        line(0, 1, 960, 1, p.line),
-        rect(0, 30, 10, 10, p.accent), rect(14, 30, 10, 10, p.accent), rect(0, 44, 10, 10, p.accent),
-        text(40, 48, "PIXELGG", 16, p.ink, 700, True, 'letter-spacing="2"'),
-        text(960, 48, "SMALL DETAILS. COMPLETE SYSTEMS.", 13, p.muted, mono=True, extra='text-anchor="end"'),
-    ])
-
-
-def build_assets() -> dict[str, str]:
-    outputs = {}
-    for theme, palette in PALETTES.items():
-        outputs[f"hero-{theme}.svg"] = hero(palette)
-        outputs[f"hero-mobile-{theme}.svg"] = hero(palette, mobile=True)
-        for name in ("synex", "dxforge"):
-            outputs[f"{name}-{theme}.svg"] = project(palette, name)
-        outputs[f"footer-{theme}.svg"] = footer(palette)
-    return outputs
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="Check committed assets without writing files.")
-    args = parser.parse_args()
-    outputs = build_assets()
-    stale = []
-    if not args.check:
-        ASSETS.mkdir(parents=True, exist_ok=True)
-    for name, content in outputs.items():
-        path = ASSETS / name
-        if args.check:
-            if not path.is_file() or path.read_bytes() != content.encode("utf-8"):
-                stale.append(name)
-        else:
-            path.write_bytes(content.encode("utf-8"))
-    if stale:
-        print("Regenerate profile assets: " + ", ".join(stale))
-        return 1
-    total = sum(len(content.encode("utf-8")) for content in outputs.values())
-    print(f"{'Checked' if args.check else 'Rendered'} {len(outputs)} SVGs ({total:,} bytes). No external packages or network.")
-    return 0
+    readme_path = ROOT / "README.md"
+    readme = readme_path.read_text(encoding="utf-8")
+    readme = replace_between(
+        readme,
+        "<!-- start: metrics-summary -->",
+        "<!-- end: metrics-summary -->",
+        metrics_summary,
+    )
+    readme = replace_between(
+        readme,
+        "<!-- start: projects-latest -->",
+        "<!-- end: projects-latest -->",
+        build_projects_table(repos, language_map),
+    )
+    readme_path.write_text(readme, encoding="utf-8", newline="\n")
+    print("README und .github/assets/signal.svg aktualisiert.")
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
