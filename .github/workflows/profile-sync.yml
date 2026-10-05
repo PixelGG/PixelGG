@@ -51,7 +51,7 @@ jobs:
         env:
           PROFILE_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
-          git add -- README.md .github/profile/public-repos.json .github/assets
+          git add -- README.md web/index.html .github/profile/public-repos.json .github/assets
           if git diff --cached --quiet; then
             echo "Public repository data is unchanged."
             exit 0

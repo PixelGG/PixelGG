@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="559" viewBox="0 0 480 559" role="img" aria-labelledby="title desc"><g shape-rendering="crispEdges"><rect width="480" height="559" fill="#10192e"/><path d="M8 0h4v559H8ZM468 0h4v559h-4Z" fill="#344969"/><path d="M12 0h4v559h-4ZM464 0h4v559h-4Z" fill="#1a2641"/></g><svg xmlns="http://www.w3.org/2000/svg" width="432" height="539" viewBox="0 0 480 599" role="img" aria-labelledby="title desc" x="24" y="0">
 <title id="title">Synex_Framework</title>
 <desc id="desc">⚡ Synex — A modern, modular &amp; extensible FiveM framework built for performance, scalability and clean development. Powered by a robust core and a growing ecosystem of official resources — from characters, inventory &amp; banking to phones, radio, vehicles, jobs and beyond. Lua. Letzter Push 31.08.2026. Repository öffnen.</desc>
+<style>@keyframes pc-light{0%,100%{opacity:.8}48%{opacity:1}63%{opacity:.9}}@keyframes pc-ember{0%,65%,100%{opacity:0}75%,85%{opacity:.7}}.pc-lantern{animation:pc-light 6s ease-in-out infinite}.pc-ember{animation:pc-ember 11s steps(2,end) infinite}@media(prefers-reduced-motion:reduce){.pc-lantern,.pc-ember{animation:none}}</style>
 <g shape-rendering="crispEdges">
 <path d="M20 8H460V16H468V24H476V583H468V591H460V599H20V591H12V583H4V24H12V16H20Z" fill="#080f1d"/>
 <path d="M16 0H464V8H472V16H480V575H472V583H464V591H16V583H8V575H0V16H8V8H16Z" fill="#344969"/>
-<path d="M20 4H460V12H468V20H476V571H468V579H460V587H20V579H12V571H4V20H12V12H20Z" fill="#51627a"/>
+<path d="M20 4H460V12H468V20H476V571H468V579H460V587H20V579H12V571H4V20H12V12H20Z" fill="#51627a" class="pc-rim"/>
 <path d="M24 8H456V16H464V24H472V567H464V575H456V583H24V575H16V567H8V24H16V16H24Z" fill="#10192e"/>
-<path d="M28 12H452V20H460V28H468V563H460V571H452V579H28V571H20V563H12V28H20V20H28Z" fill="#1a2641"/>
+<path d="M28 12H452V20H460V28H468V563H460V571H452V579H28V571H20V563H12V28H20V20H28Z" fill="#1a2641" class="pc-surface"/>
 <path d="M24 4H456V8H24Z" fill="#8592a0"/>
 <path d="M24 579H456V583H24Z" fill="#0c1426"/>
 <path d="M36 425H444v2H36Z" fill="#344969"/>
@@ -24,9 +25,10 @@
 <path d="M6 0H24V4H28V8H24V12H22V8H8V12H6V8H2V4H6Z" fill="#947368"/>
 <path d="M8 10H22V14H26V36H4V14H8Z" fill="#0c1426"/>
 <path d="M8 15H22V31H8Z" fill="#b0785b"/>
-<path d="M11 17H19V28H11Z" fill="#ffcc7f"/>
+<path class="pc-lantern" d="M11 17H19V28H11Z" fill="#ffcc7f"/>
 <path d="M13 17H17V25H13Z" fill="#edf0d9"/>
 <path d="M6 32H24V36H6Z" fill="#947368"/>
+<path class="pc-ember" d="M-6 14h3v3h-3ZM32 5h3v3h-3Z" fill="#ffcc7f" opacity="0"/>
 </g>
 </g>
 <text x="36" y="105" fill="#edf0d9" font-size="28" font-weight="700" font-family="monospace">Synex_Framework</text>
@@ -43,8 +45,8 @@
 <text x="36" y="495" fill="#a9bdd8" font-size="22" font-weight="400" font-family="monospace">Letzter Push 31.08.2026</text>
 <g shape-rendering="crispEdges">
 <path d="M44 517H436V521H440V525H444V559H440V563H436V567H44V563H40V559H36V525H40V521H44Z" fill="#426c67"/>
-<path d="M48 521H432V525H436V529H440V555H436V559H432V563H48V559H44V555H40V529H44V525H48Z" fill="#24474a"/>
-<path transform="translate(398 532)" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/>
+<path d="M48 521H432V525H436V529H440V555H436V559H432V563H48V559H44V555H40V529H44V525H48Z" fill="#24474a" class="pc-button-fill"/>
+<g transform="translate(398 532)"><path class="pc-arrow" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/></g>
 </g>
 <text x="56" y="549" fill="#d3eedf" font-size="22" font-weight="400" font-family="Arial,Helvetica,sans-serif">Repository öffnen</text>
 </svg>

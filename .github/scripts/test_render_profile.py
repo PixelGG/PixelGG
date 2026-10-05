@@ -38,6 +38,10 @@ class ProfileBehavior(unittest.TestCase):
             self.assertNotIn("DeletedLater", readme)
             self.assertNotIn("RenamedLater", readme)
             self.assertIn("https://github.com/PixelGG/NewName", readme)
+            web = (root / "web/index.html").read_text()
+            self.assertNotIn("DeletedLater", web)
+            self.assertNotIn("RenamedLater", web)
+            self.assertIn("https://github.com/PixelGG/NewName", web)
             self.assertFalse((root / ".github/assets/projects/11.svg").exists())
             self.assertFalse((root / ".github/assets/projects/11-mobile.svg").exists())
             self.assertTrue((root / ".github/assets/projects/10.svg").exists())
@@ -61,6 +65,10 @@ class ProfileBehavior(unittest.TestCase):
         self.assertIn("&lt;img", md)
         self.assertNotIn('<img src="https://attacker.test', md)
         self.assertNotIn("<script>", md)
+        web = outputs[Path("web/index.html")]
+        self.assertIn("&lt;img", web)
+        self.assertNotIn('<img src="https://attacker.test', web)
+        self.assertNotIn("<script>", web)
         for path, content in outputs.items():
             if path.suffix == ".svg":
                 tree = ET.fromstring(content)

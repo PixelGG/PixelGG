@@ -189,10 +189,11 @@ def render_world(repositories: list[dict], owner: str = "PixelGG", mobile: bool 
     rect(398, 35, 3, 2, "#f0edd1")
 
     # The lettering is deliberately part of the artwork; body copy lives in Markdown.
-    lettering("PIXELGG", 32, 31, 3, "#36465e")
-    lettering("PIXELGG", 32, 28, 3, "#edf0d9")
-    rect(32, 57, 17, 2, "#82cbb9")
-    lettering("MIKE / DEVELOPER", 32, 66, 1, "#92aaa9")
+    title_scale = 4 if mobile else 3
+    lettering("PIXELGG", 32, 31, title_scale, "#36465e")
+    lettering("PIXELGG", 32, 28, title_scale, "#edf0d9")
+    rect(32, 63 if mobile else 57, 24 if mobile else 17, 2, "#82cbb9")
+    lettering("MIKE / DEVELOPER", 32, 73 if mobile else 66, 1.5 if mobile else 1, "#92aaa9")
 
     # Distant mountain silhouettes, with a sparse, tiny faraway settlement.
     poly([(0, 154), (0, 143), (20, 143), (20, 134), (31, 134), (31, 126), (43, 126),
@@ -547,7 +548,7 @@ def render_world(repositories: list[dict], owner: str = "PixelGG", mobile: bool 
         add('</g>')
 
     # A quiet map legend: the count is real, not an invented contribution metric.
-    lettering(f"{count:02} PROJECTS", 32, 256, 0.8, "#809a9e")
+    lettering(f"{count:02} PROJECTS", 32, 256, 1.5 if mobile else 0.8, "#809a9e")
     rect(32, 249, 8, 1, "#5c8e87")
     add('</g></svg>')
     return "\n".join(p) + "\n"

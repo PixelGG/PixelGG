@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="531" viewBox="0 0 480 531" role="img" aria-labelledby="title desc"><g shape-rendering="crispEdges"><rect width="480" height="531" fill="#10192e"/><path d="M8 0h4v531H8ZM468 0h4v531h-4Z" fill="#344969"/><path d="M12 0h4v531h-4ZM464 0h4v531h-4Z" fill="#1a2641"/></g><svg xmlns="http://www.w3.org/2000/svg" width="432" height="511" viewBox="0 0 480 568" role="img" aria-labelledby="title desc" x="24" y="0">
 <title id="title">DXForge</title>
 <desc id="desc">DXForge is a DX9 Lua UI library focused on building customizable in-game overlay interfaces with draggable windows, tabs, groupboxes, buttons, toggles, sliders, keybinds, color pickers, notifications, tooltips, themes, and reusable UI components. Lua. Letzter Push 02.07.2026. Repository öffnen.</desc>
+<style>@keyframes pc-light{0%,100%{opacity:.8}48%{opacity:1}63%{opacity:.9}}@keyframes pc-ember{0%,65%,100%{opacity:0}75%,85%{opacity:.7}}.pc-lantern{animation:pc-light 6s ease-in-out infinite}.pc-ember{animation:pc-ember 11s steps(2,end) infinite}@media(prefers-reduced-motion:reduce){.pc-lantern,.pc-ember{animation:none}}</style>
 <g shape-rendering="crispEdges">
 <path d="M20 8H460V16H468V24H476V552H468V560H460V568H20V560H12V552H4V24H12V16H20Z" fill="#080f1d"/>
 <path d="M16 0H464V8H472V16H480V544H472V552H464V560H16V552H8V544H0V16H8V8H16Z" fill="#344969"/>
-<path d="M20 4H460V12H468V20H476V540H468V548H460V556H20V548H12V540H4V20H12V12H20Z" fill="#51627a"/>
+<path d="M20 4H460V12H468V20H476V540H468V548H460V556H20V548H12V540H4V20H12V12H20Z" fill="#51627a" class="pc-rim"/>
 <path d="M24 8H456V16H464V24H472V536H464V544H456V552H24V544H16V536H8V24H16V16H24Z" fill="#10192e"/>
-<path d="M28 12H452V20H460V28H468V532H460V540H452V548H28V540H20V532H12V28H20V20H28Z" fill="#1a2641"/>
+<path d="M28 12H452V20H460V28H468V532H460V540H452V548H28V540H20V532H12V28H20V20H28Z" fill="#1a2641" class="pc-surface"/>
 <path d="M24 4H456V8H24Z" fill="#8592a0"/>
 <path d="M24 548H456V552H24Z" fill="#0c1426"/>
 <path d="M36 394H444v2H36Z" fill="#344969"/>
@@ -24,9 +25,10 @@
 <path d="M6 0H24V4H28V8H24V12H22V8H8V12H6V8H2V4H6Z" fill="#947368"/>
 <path d="M8 10H22V14H26V36H4V14H8Z" fill="#0c1426"/>
 <path d="M8 15H22V31H8Z" fill="#b0785b"/>
-<path d="M11 17H19V28H11Z" fill="#ffcc7f"/>
+<path class="pc-lantern" d="M11 17H19V28H11Z" fill="#ffcc7f"/>
 <path d="M13 17H17V25H13Z" fill="#edf0d9"/>
 <path d="M6 32H24V36H6Z" fill="#947368"/>
+<path class="pc-ember" d="M-6 14h3v3h-3ZM32 5h3v3h-3Z" fill="#ffcc7f" opacity="0"/>
 </g>
 </g>
 <text x="36" y="105" fill="#edf0d9" font-size="28" font-weight="700" font-family="monospace">DXForge</text>
@@ -42,8 +44,8 @@
 <text x="36" y="464" fill="#a9bdd8" font-size="22" font-weight="400" font-family="monospace">Letzter Push 02.07.2026</text>
 <g shape-rendering="crispEdges">
 <path d="M44 486H436V490H440V494H444V528H440V532H436V536H44V532H40V528H36V494H40V490H44Z" fill="#426c67"/>
-<path d="M48 490H432V494H436V498H440V524H436V528H432V532H48V528H44V524H40V498H44V494H48Z" fill="#24474a"/>
-<path transform="translate(398 501)" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/>
+<path d="M48 490H432V494H436V498H440V524H436V528H432V532H48V528H44V524H40V498H44V494H48Z" fill="#24474a" class="pc-button-fill"/>
+<g transform="translate(398 501)"><path class="pc-arrow" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/></g>
 </g>
 <text x="56" y="518" fill="#d3eedf" font-size="22" font-weight="400" font-family="Arial,Helvetica,sans-serif">Repository öffnen</text>
 </svg>

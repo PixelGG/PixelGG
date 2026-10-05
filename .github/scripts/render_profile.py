@@ -16,6 +16,7 @@ import xml.etree.ElementTree as ET
 
 from pixel_world import pixel_text, render_world
 from profile_sections import render_intro, render_section, render_contact, render_nav, render_endcap
+from profile_web import render_web
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = Path(".github/assets")
@@ -115,12 +116,14 @@ def wrap_cells(value: str, width: int) -> list[str]:
     return result or [""]
 
 
-def stepped_panel(x: int, y: int, width: int, height: int, color: str, step: int = 8) -> str:
+def stepped_panel(x: int, y: int, width: int, height: int, color: str, step: int = 8,
+                  css_class: str = "") -> str:
     right, bottom = x + width, y + height
     return (f'<path d="M{x+2*step} {y}H{right-2*step}V{y+step}H{right-step}'
             f'V{y+2*step}H{right}V{bottom-2*step}H{right-step}V{bottom-step}'
             f'H{right-2*step}V{bottom}H{x+2*step}V{bottom-step}H{x+step}'
-            f'V{bottom-2*step}H{x}V{y+2*step}H{x+step}V{y+step}H{x+2*step}Z" fill="{color}"/>')
+            f'V{bottom-2*step}H{x}V{y+2*step}H{x+step}V{y+step}H{x+2*step}Z" fill="{color}"'
+            + (f' class="{css_class}"' if css_class else '') + '/>')
 
 
 def project_card(repo: dict, index: int, mobile: bool = False) -> str:
@@ -143,12 +146,19 @@ def project_card(repo: dict, index: int, mobile: bool = False) -> str:
         f'<title id="title">{escape(repo["name"])}</title>',
         f'<desc id="desc">{escape(clean_description(repo["description"]))} '
         f'{escape(repo.get("language") or "Keine Hauptsprache")}. {escape(date_label(repo["pushed_at"]))}. Repository öffnen.</desc>',
+        '<style>'
+        '@keyframes pc-light{0%,100%{opacity:.8}48%{opacity:1}63%{opacity:.9}}'
+        '@keyframes pc-ember{0%,65%,100%{opacity:0}75%,85%{opacity:.7}}'
+        '.pc-lantern{animation:pc-light 6s ease-in-out infinite}'
+        '.pc-ember{animation:pc-ember 11s steps(2,end) infinite}'
+        '@media(prefers-reduced-motion:reduce){.pc-lantern,.pc-ember{animation:none}}'
+        '</style>',
         '<g shape-rendering="crispEdges">',
         stepped_panel(4, 8, w-8, h-8, "#080f1d"),
         stepped_panel(0, 0, w, h-8, "#344969"),
-        stepped_panel(4, 4, w-8, h-16, "#51627a"),
+        stepped_panel(4, 4, w-8, h-16, "#51627a", css_class="pc-rim"),
         stepped_panel(8, 8, w-16, h-24, "#10192e"),
-        stepped_panel(12, 12, w-24, h-32, "#1a2641"),
+        stepped_panel(12, 12, w-24, h-32, "#1a2641", css_class="pc-surface"),
         f'<path d="M24 4H{w-24}V8H24Z" fill="#8592a0"/>',
         f'<path d="M24 {h-20}H{w-24}V{h-16}H24Z" fill="#0c1426"/>',
         f'<path d="M{pad} {divider_y}H{w-pad}v2H{pad}Z" fill="#344969"/>',
@@ -164,9 +174,10 @@ def project_card(repo: dict, index: int, mobile: bool = False) -> str:
         '<path d="M6 0H24V4H28V8H24V12H22V8H8V12H6V8H2V4H6Z" fill="#947368"/>',
         '<path d="M8 10H22V14H26V36H4V14H8Z" fill="#0c1426"/>',
         '<path d="M8 15H22V31H8Z" fill="#b0785b"/>',
-        '<path d="M11 17H19V28H11Z" fill="#ffcc7f"/>',
+        '<path class="pc-lantern" d="M11 17H19V28H11Z" fill="#ffcc7f"/>',
         '<path d="M13 17H17V25H13Z" fill="#edf0d9"/>',
         '<path d="M6 32H24V36H6Z" fill="#947368"/>',
+        '<path class="pc-ember" d="M-6 14h3v3h-3ZM32 5h3v3h-3Z" fill="#ffcc7f" opacity="0"/>',
         '</g>', '</g>',
     ]
     for i, value in enumerate(name_lines):
@@ -180,8 +191,8 @@ def project_card(repo: dict, index: int, mobile: bool = False) -> str:
     lines += [
         '<g shape-rendering="crispEdges">',
         stepped_panel(bx, button_y, bw, 50, "#426c67", step=4),
-        stepped_panel(bx+4, button_y+4, bw-8, 42, "#24474a", step=4),
-        f'<path transform="translate({bx+bw-46} {button_y+15})" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/>',
+        stepped_panel(bx+4, button_y+4, bw-8, 42, "#24474a", step=4, css_class="pc-button-fill"),
+        f'<g transform="translate({bx+bw-46} {button_y+15})"><path class="pc-arrow" d="M14 0H18V4H22V8H26V12H22V16H18V20H14V12H0V8H14Z" fill="#b4e0ce"/></g>',
         '</g>',
         svg_text(bx+20, button_y+32, "Repository öffnen", 22, "#d3eedf", family="Arial,Helvetica,sans-serif"),
         '</svg>',
@@ -233,7 +244,12 @@ def page_segment(svg: str, mobile: bool = False, hero: bool = False) -> str:
     if hero:
         background, rail_lines = rails.split('<path', 1)
         backdrop = background + '</g>'
-        overlay = '<g shape-rendering="crispEdges"><path' + rail_lines
+        overlay = ('<g shape-rendering="crispEdges"><path' + rail_lines
+                   + f'<path d="M8 24h4V16h8V8h12V4H{w-32}V8h12V16h8V24h4V12h-8V4h-12V0H28V4H16V12H8Z" fill="#344969"/>')
+        clip = (f'<defs><clipPath id="hero-frame"><path d="M28 0H{w-28}V4h12V12h8V20h8V{height}'
+                'H0V20h8V12h8V4h12Z"/></clipPath></defs>')
+        backdrop = clip + '<g clip-path="url(#hero-frame)">' + backdrop
+        overlay += '</g>'
     else:
         backdrop, overlay = rails, ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{height}" '
@@ -250,7 +266,7 @@ def catalog_band(mobile: bool = False) -> str:
             '<title id="title">Alle Repositories</title><desc id="desc">Alle öffentlichen Repositories auf GitHub ansehen.</desc>'
             + page_rails(w, h) + '<g shape-rendering="crispEdges">'
             + stepped_panel(x, 16, bw, 60, "#426c67", step=4)
-            + stepped_panel(x+4, 20, bw-8, 52, "#24474a", step=4)
+            + stepped_panel(x+4, 20, bw-8, 52, "#24474a", step=4, css_class="catalog-fill")
             + pixel_text("ALLE REPOSITORIES", (w-16*18)//2, 35, 3, "#d3eedf")
             + '</g></svg>\n')
 
@@ -327,6 +343,7 @@ def build_outputs(snapshot: dict, config: dict) -> dict[Path, str]:
     for path, content in outputs.items():
         if path.suffix == ".svg":
             ET.fromstring(content)
+    outputs[Path("web/index.html")] = render_web(config, repos, outputs)
     return outputs
 
 
@@ -382,7 +399,8 @@ def main() -> int:
     except (OSError, ValueError, KeyError, TypeError, ET.ParseError) as error:
         print(f"Profile rendering failed: {error}")
         return 1
-    print(f"{'Checked' if args.check else 'Rendered'} README and {len(outputs)-1} SVGs from {len(snapshot['repositories'])} public projects.")
+    svg_count = sum(path.suffix == '.svg' for path in outputs)
+    print(f"{'Checked' if args.check else 'Rendered'} README, web view and {svg_count} SVGs from {len(snapshot['repositories'])} public projects.")
     return 0
 
 
